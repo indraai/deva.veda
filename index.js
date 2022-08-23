@@ -1,4 +1,5 @@
 // Copyright (c)2021 Quinn Michaels
+// The Rig Veda Deva
 const fs = require('fs');
 const path = require('path');
 
@@ -33,7 +34,7 @@ const VEDAS = new Deva({
     books(packet) {
       return new Promise((resolve, reject) => {
         if (!packet) return reject('NO PACKET');
-        const {title, describe, data} = require(__dirname, path.join('json', 'index.json'));
+        const {title, describe, data} = require(path.join(__dirname, 'json', 'index.json'));
         if (!data) return reject(`${this.vars.messages.error} NO BOOK`);
         const _text = [
           `## ${title}`,
@@ -49,7 +50,9 @@ const VEDAS = new Deva({
             html:feecting.a.html,
             data,
           });
-        }).catch(reject);
+        }).catch(err => {
+          return this.error(err, packet, reject);
+        });
       })
     },
 
@@ -76,6 +79,8 @@ const VEDAS = new Deva({
             html:feecting.a.html,
             data,
           });
+        }).catch(err => {
+          return this.error(err, packet, reject);
         });
       });
     },
