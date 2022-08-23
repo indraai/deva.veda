@@ -1,5 +1,17 @@
-# vedas
+## Veda Deva
 
-This is the main help file for Vedas Deva.
+p:With the Veda Deva you can read the Rig Veda right in your terminal.
 
-The Deva for reading the Vedas
+### Methods
+
+cmd:#veda books
+p:This command will return the books for the Rig Veda.
+
+cmd:#veda book 1
+p:This command will return book 1 for the Rig Veda
+
+cmd:#veda view 01001
+p:This command will view hymn 1 in book 1.
+
+#color = var(--color-black)
+#bgcolor = var(--color-white)

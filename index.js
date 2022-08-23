@@ -103,15 +103,15 @@ const VEDAS = new Deva({
         const _text = [
           `## ${parsed.title}`,
           parsed.feecting,
-          `::begin:commands`,
-          `cmd[next]:#${this.agent.key} view ${parsed.meta.next}`,
+          `::begin:buttons`,
           `cmd[previous]:#${this.agent.key} view ${parsed.meta.previous}`,
+          `cmd[next]:#${this.agent.key} view ${parsed.meta.next}`,
           `cmd[book]:#${this.agent.key} book ${parsed.meta.book}`,
-          `::end:commands`,
-          `::begin:links`,
-          `link[Original]:${parsed.meta.original}`,
-          `link[Sanskrit]:${parsed.meta.sanskrit}`,
-          `::end:links`,
+          `::end:buttons`,
+          `::begin:buttons`,
+          `cmd[Oirinal]:#web get ${parsed.meta.original}`,
+          `cmd[Sanskrit]:#web get ${parsed.meta.sanskrit}`,
+          `::end:buttons`,
         ].join('\n')
         this.question(`#feecting parse:${this.agent.key} ${_text}`).then(feecting => {
           return resolve({
