@@ -107,7 +107,7 @@ const VEDAS = new Deva({
           `cmd[Previous]:#${this.agent.key} view ${parsed.meta.previous}`,
           `cmd[Next]:#${this.agent.key} view ${parsed.meta.next}`,
           `cmd[Book]:#${this.agent.key} book ${parsed.meta.book}`,
-          `cmd[Oirinal]:#web get ${parsed.meta.original}`,
+          `cmd[Original]:#web get ${parsed.meta.original}`,
           `cmd[Sanskrit]:#web get ${parsed.meta.sanskrit}`,
           `::end:buttons`,
         ].join('\n')
