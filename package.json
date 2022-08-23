@@ -1,6 +1,6 @@
 {
   "name": "@indra.ai/vedadeva",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "The Rig Veda Deva",
   "main": "index.js",
   "scripts": {
