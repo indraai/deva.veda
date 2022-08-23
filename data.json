@@ -5,12 +5,12 @@
   "data": {
     "agent": {
       "uid": "5374781538154",
-      "key": "vedas",
-      "name": "Vedas Deva",
-      "describe": "The Deva for reading the Vedas",
+      "key": "veda",
+      "name": "Veda Deva",
+      "describe": "The Deva for reading the Rig Veda",
       "prompt": {
         "emoji": "📙",
-        "text": "vedas",
+        "text": "veda",
         "colors": {
           "label": {
             "R": 0,
