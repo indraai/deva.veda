@@ -1,0 +1,27 @@
+{
+  "name": "@indra.ai/vedadeva",
+  "version": "0.0.1",
+  "description": "The Rig Veda Deva",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/indraai/VedaDeva.git"
+  },
+  "keywords": [
+    "Rig",
+    "Veda",
+    "Deva"
+  ],
+  "author": "Quinn Michaels",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/indraai/VedaDeva/issues"
+  },
+  "dependencies": {
+    "@indra.ai/deva": "^1.0.25"
+  },
+  "homepage": "https://github.com/indraai/VedaDeva#readme"
+}

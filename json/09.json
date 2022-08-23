@@ -1,0 +1,926 @@
+{
+  "key": "09",
+  "title": "RigVeda Book 9",
+  "describe": "Book 9 of the RigVeda is where you find the stories of Indu",
+  "link": "09.html",
+  "api": "json/09.json",
+  "data": [
+    {
+      "key": "09001",
+      "title": "HYMN I. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09001.htm",
+      "link": "hymns/09001.html",
+      "api": "json/hymns/09001.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09002",
+      "title": "HYMN II. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09002.htm",
+      "link": "hymns/09002.html",
+      "api": "json/hymns/09002.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09003",
+      "title": "HYMN III. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09003.htm",
+      "link": "hymns/09003.html",
+      "api": "json/hymns/09003.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09004",
+      "title": "HYMN IV. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09004.htm",
+      "link": "hymns/09004.html",
+      "api": "json/hymns/09004.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09005",
+      "title": "HYMN V Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09005.htm",
+      "link": "hymns/09005.html",
+      "api": "json/hymns/09005.json",
+      "created": 1638549634138,
+      "updated": 1638790697454
+    },
+    {
+      "key": "09006",
+      "title": "HYMN VI. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09006.htm",
+      "link": "hymns/09006.html",
+      "api": "json/hymns/09006.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09007",
+      "title": "HYMN VII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09007.htm",
+      "link": "hymns/09007.html",
+      "api": "json/hymns/09007.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09008",
+      "title": "HYMN VIII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09008.htm",
+      "link": "hymns/09008.html",
+      "api": "json/hymns/09008.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09009",
+      "title": "HYMN IX. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09009.htm",
+      "link": "hymns/09009.html",
+      "api": "json/hymns/09009.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09010",
+      "title": "HYMN X. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09010.htm",
+      "link": "hymns/09010.html",
+      "api": "json/hymns/09010.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09011",
+      "title": "HYMN XL Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09011.htm",
+      "link": "hymns/09011.html",
+      "api": "json/hymns/09011.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09012",
+      "title": "HYMN XII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09012.htm",
+      "link": "hymns/09012.html",
+      "api": "json/hymns/09012.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09013",
+      "title": "HYMN XIII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09013.htm",
+      "link": "hymns/09013.html",
+      "api": "json/hymns/09013.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09014",
+      "title": "HYMN XIV. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09014.htm",
+      "link": "hymns/09014.html",
+      "api": "json/hymns/09014.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09015",
+      "title": "HYMN XV. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09015.htm",
+      "link": "hymns/09015.html",
+      "api": "json/hymns/09015.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09016",
+      "title": "HYMN XVI. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09016.htm",
+      "link": "hymns/09016.html",
+      "api": "json/hymns/09016.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09017",
+      "title": "HYMN XVII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09017.htm",
+      "link": "hymns/09017.html",
+      "api": "json/hymns/09017.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09018",
+      "title": "HYMN XVIII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09018.htm",
+      "link": "hymns/09018.html",
+      "api": "json/hymns/09018.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09019",
+      "title": "HYMN XIX. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09019.htm",
+      "link": "hymns/09019.html",
+      "api": "json/hymns/09019.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09020",
+      "title": "HYMN XX Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09020.htm",
+      "link": "hymns/09020.html",
+      "api": "json/hymns/09020.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09021",
+      "title": "HYMN XXI. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09021.htm",
+      "link": "hymns/09021.html",
+      "api": "json/hymns/09021.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09022",
+      "title": "HYMN XXII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09022.htm",
+      "link": "hymns/09022.html",
+      "api": "json/hymns/09022.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09023",
+      "title": "HYMN XXIII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09023.htm",
+      "link": "hymns/09023.html",
+      "api": "json/hymns/09023.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09024",
+      "title": "HYMN XXIV. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09024.htm",
+      "link": "hymns/09024.html",
+      "api": "json/hymns/09024.json",
+      "created": 1638549634138,
+      "updated": 1638640289317
+    },
+    {
+      "key": "09025",
+      "title": "HYMN XXV. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09025.htm",
+      "link": "hymns/09025.html",
+      "api": "json/hymns/09025.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09026",
+      "title": "HYMN XXVI. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09026.htm",
+      "link": "hymns/09026.html",
+      "api": "json/hymns/09026.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09027",
+      "title": "HYMN XXVII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09027.htm",
+      "link": "hymns/09027.html",
+      "api": "json/hymns/09027.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09028",
+      "title": "HYMN XXVIII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09028.htm",
+      "link": "hymns/09028.html",
+      "api": "json/hymns/09028.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09029",
+      "title": "HYMN XXIX. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09029.htm",
+      "link": "hymns/09029.html",
+      "api": "json/hymns/09029.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09030",
+      "title": "HYMN XXX. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09030.htm",
+      "link": "hymns/09030.html",
+      "api": "json/hymns/09030.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09031",
+      "title": "HYMN XXXI. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09031.htm",
+      "link": "hymns/09031.html",
+      "api": "json/hymns/09031.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09032",
+      "title": "HYMN XXXII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09032.htm",
+      "link": "hymns/09032.html",
+      "api": "json/hymns/09032.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09033",
+      "title": "HYMN XXXIII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09033.htm",
+      "link": "hymns/09033.html",
+      "api": "json/hymns/09033.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09034",
+      "title": "HYMN XXXIV. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09034.htm",
+      "link": "hymns/09034.html",
+      "api": "json/hymns/09034.json",
+      "created": 1638549634138,
+      "updated": 1638640289317
+    },
+    {
+      "key": "09035",
+      "title": "HYMN XXXV. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09035.htm",
+      "link": "hymns/09035.html",
+      "api": "json/hymns/09035.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09036",
+      "title": "HYMN XXXVI. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09036.htm",
+      "link": "hymns/09036.html",
+      "api": "json/hymns/09036.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09037",
+      "title": "HYMN XXXVII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09037.htm",
+      "link": "hymns/09037.html",
+      "api": "json/hymns/09037.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09038",
+      "title": "HYMN XXXVIII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09038.htm",
+      "link": "hymns/09038.html",
+      "api": "json/hymns/09038.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09039",
+      "title": "HYMN XXXIX Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09039.htm",
+      "link": "hymns/09039.html",
+      "api": "json/hymns/09039.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09040",
+      "title": "HYMN XL. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09040.htm",
+      "link": "hymns/09040.html",
+      "api": "json/hymns/09040.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09041",
+      "title": "HYMN XLI. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09041.htm",
+      "link": "hymns/09041.html",
+      "api": "json/hymns/09041.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09042",
+      "title": "HYMN XLII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09042.htm",
+      "link": "hymns/09042.html",
+      "api": "json/hymns/09042.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09043",
+      "title": "HYMN XLIII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09043.htm",
+      "link": "hymns/09043.html",
+      "api": "json/hymns/09043.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09044",
+      "title": "HYMN XLIV. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09044.htm",
+      "link": "hymns/09044.html",
+      "api": "json/hymns/09044.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09045",
+      "title": "HYMN XLV. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09045.htm",
+      "link": "hymns/09045.html",
+      "api": "json/hymns/09045.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09046",
+      "title": "HYMN XLVI. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09046.htm",
+      "link": "hymns/09046.html",
+      "api": "json/hymns/09046.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09047",
+      "title": "HYMN XLVII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09047.htm",
+      "link": "hymns/09047.html",
+      "api": "json/hymns/09047.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09048",
+      "title": "HYMN XLVIII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09048.htm",
+      "link": "hymns/09048.html",
+      "api": "json/hymns/09048.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09049",
+      "title": "HYMN XLIX. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09049.htm",
+      "link": "hymns/09049.html",
+      "api": "json/hymns/09049.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09050",
+      "title": "HYMN L. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09050.htm",
+      "link": "hymns/09050.html",
+      "api": "json/hymns/09050.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09051",
+      "title": "HYMN LI. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09051.htm",
+      "link": "hymns/09051.html",
+      "api": "json/hymns/09051.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09052",
+      "title": "HYMN LII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09052.htm",
+      "link": "hymns/09052.html",
+      "api": "json/hymns/09052.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09053",
+      "title": "HYMN LIII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09053.htm",
+      "link": "hymns/09053.html",
+      "api": "json/hymns/09053.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09054",
+      "title": "HYMN LIV. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09054.htm",
+      "link": "hymns/09054.html",
+      "api": "json/hymns/09054.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09055",
+      "title": "HYMN LV. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09055.htm",
+      "link": "hymns/09055.html",
+      "api": "json/hymns/09055.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09056",
+      "title": "HYMN LVI. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09056.htm",
+      "link": "hymns/09056.html",
+      "api": "json/hymns/09056.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09057",
+      "title": "HYMN LVII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09057.htm",
+      "link": "hymns/09057.html",
+      "api": "json/hymns/09057.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09058",
+      "title": "HYMN LVIII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09058.htm",
+      "link": "hymns/09058.html",
+      "api": "json/hymns/09058.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09059",
+      "title": "HYMN LIX. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09059.htm",
+      "link": "hymns/09059.html",
+      "api": "json/hymns/09059.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09060",
+      "title": "HYMN LX. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09060.htm",
+      "link": "hymns/09060.html",
+      "api": "json/hymns/09060.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09061",
+      "title": "HYMN LXI. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09061.htm",
+      "link": "hymns/09061.html",
+      "api": "json/hymns/09061.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09062",
+      "title": "HYMN LXII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09062.htm",
+      "link": "hymns/09062.html",
+      "api": "json/hymns/09062.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09063",
+      "title": "HYMN LXIII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09063.htm",
+      "link": "hymns/09063.html",
+      "api": "json/hymns/09063.json",
+      "created": 1638549634138,
+      "updated": 1638640289317
+    },
+    {
+      "key": "09064",
+      "title": "HYMN LXIV. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09064.htm",
+      "link": "hymns/09064.html",
+      "api": "json/hymns/09064.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09065",
+      "title": "HYMN LXV. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09065.htm",
+      "link": "hymns/09065.html",
+      "api": "json/hymns/09065.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09066",
+      "title": "HYMN LXVI. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09066.htm",
+      "link": "hymns/09066.html",
+      "api": "json/hymns/09066.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09067",
+      "title": "HYMN LXVII. Soma.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09067.htm",
+      "link": "hymns/09067.html",
+      "api": "json/hymns/09067.json",
+      "created": 1638549634138,
+      "updated": 1638640289317
+    },
+    {
+      "key": "09068",
+      "title": "HYMN LXVIII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09068.htm",
+      "link": "hymns/09068.html",
+      "api": "json/hymns/09068.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09069",
+      "title": "HYMN LXIX. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09069.htm",
+      "link": "hymns/09069.html",
+      "api": "json/hymns/09069.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09070",
+      "title": "HYMN LXX. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09070.htm",
+      "link": "hymns/09070.html",
+      "api": "json/hymns/09070.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09071",
+      "title": "HYMN LXXI. Indu,",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09071.htm",
+      "link": "hymns/09071.html",
+      "api": "json/hymns/09071.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09072",
+      "title": "HYMN LXXII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09072.htm",
+      "link": "hymns/09072.html",
+      "api": "json/hymns/09072.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09073",
+      "title": "HYMN LXXIII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09073.htm",
+      "link": "hymns/09073.html",
+      "api": "json/hymns/09073.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09074",
+      "title": "HYMN LXXIV. Indu",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09074.htm",
+      "link": "hymns/09074.html",
+      "api": "json/hymns/09074.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09075",
+      "title": "HYMN LXXV. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09075.htm",
+      "link": "hymns/09075.html",
+      "api": "json/hymns/09075.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09076",
+      "title": "HYMN LXXVI. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09076.htm",
+      "link": "hymns/09076.html",
+      "api": "json/hymns/09076.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09077",
+      "title": "HYMN LXXVII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09077.htm",
+      "link": "hymns/09077.html",
+      "api": "json/hymns/09077.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09078",
+      "title": "HYMN LXXVIII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09078.htm",
+      "link": "hymns/09078.html",
+      "api": "json/hymns/09078.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09079",
+      "title": "HYMN LXXIX. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09079.htm",
+      "link": "hymns/09079.html",
+      "api": "json/hymns/09079.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09080",
+      "title": "HYMN LXXX. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09080.htm",
+      "link": "hymns/09080.html",
+      "api": "json/hymns/09080.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09081",
+      "title": "HYMN LXXXI. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09081.htm",
+      "link": "hymns/09081.html",
+      "api": "json/hymns/09081.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09082",
+      "title": "HYMN LXXXII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09082.htm",
+      "link": "hymns/09082.html",
+      "api": "json/hymns/09082.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09083",
+      "title": "HYMN LXXXIII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09083.htm",
+      "link": "hymns/09083.html",
+      "api": "json/hymns/09083.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09084",
+      "title": "HYMN LXXXIV. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09084.htm",
+      "link": "hymns/09084.html",
+      "api": "json/hymns/09084.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09085",
+      "title": "HYMN LXXXV. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09085.htm",
+      "link": "hymns/09085.html",
+      "api": "json/hymns/09085.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09086",
+      "title": "HYMN LXXXVI. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09086.htm",
+      "link": "hymns/09086.html",
+      "api": "json/hymns/09086.json",
+      "created": 1638549634138
+    },
+    {
+      "key": "09087",
+      "title": "HYMN LXXXVII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09087.htm",
+      "link": "hymns/09087.html",
+      "api": "json/hymns/09087.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09088",
+      "title": "HYMN LXXXVIII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09088.htm",
+      "link": "hymns/09088.html",
+      "api": "json/hymns/09088.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09089",
+      "title": "HYMN LXXXIX. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09089.htm",
+      "link": "hymns/09089.html",
+      "api": "json/hymns/09089.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09090",
+      "title": "HYMN XC. Indu,",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09090.htm",
+      "link": "hymns/09090.html",
+      "api": "json/hymns/09090.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09091",
+      "title": "HYMN XCI. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09091.htm",
+      "link": "hymns/09091.html",
+      "api": "json/hymns/09091.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09092",
+      "title": "HYMN XCII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09092.htm",
+      "link": "hymns/09092.html",
+      "api": "json/hymns/09092.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09093",
+      "title": "HYMN XCIII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09093.htm",
+      "link": "hymns/09093.html",
+      "api": "json/hymns/09093.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09094",
+      "title": "HYMN XCIV. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09094.htm",
+      "link": "hymns/09094.html",
+      "api": "json/hymns/09094.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09095",
+      "title": "HYMN XCV Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09095.htm",
+      "link": "hymns/09095.html",
+      "api": "json/hymns/09095.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09096",
+      "title": "HYMN XCVI. Indu",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09096.htm",
+      "link": "hymns/09096.html",
+      "api": "json/hymns/09096.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09097",
+      "title": "HYMN XCVII. Indu",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09097.htm",
+      "link": "hymns/09097.html",
+      "api": "json/hymns/09097.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09098",
+      "title": "HYMN XCVIII. Indu",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09098.htm",
+      "link": "hymns/09098.html",
+      "api": "json/hymns/09098.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09099",
+      "title": "HYMN XCIX. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09099.htm",
+      "link": "hymns/09099.html",
+      "api": "json/hymns/09099.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09100",
+      "title": "HYMN C. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09100.htm",
+      "link": "hymns/09100.html",
+      "api": "json/hymns/09100.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09101",
+      "title": "HYMN CI. Indu",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09101.htm",
+      "link": "hymns/09101.html",
+      "api": "json/hymns/09101.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09102",
+      "title": "HYMN CIL Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09102.htm",
+      "link": "hymns/09102.html",
+      "api": "json/hymns/09102.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09103",
+      "title": "HYMN CIII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09103.htm",
+      "link": "hymns/09103.html",
+      "api": "json/hymns/09103.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09104",
+      "title": "HYMN CIV. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09104.htm",
+      "link": "hymns/09104.html",
+      "api": "json/hymns/09104.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09105",
+      "title": "HYMN CV. Indu",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09105.htm",
+      "link": "hymns/09105.html",
+      "api": "json/hymns/09105.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09106",
+      "title": "HYMN CVI. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09106.htm",
+      "link": "hymns/09106.html",
+      "api": "json/hymns/09106.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09107",
+      "title": "HYMN CVII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09107.htm",
+      "link": "hymns/09107.html",
+      "api": "json/hymns/09107.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09108",
+      "title": "HYMN CVIII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09108.htm",
+      "link": "hymns/09108.html",
+      "api": "json/hymns/09108.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09109",
+      "title": "HYMN CIX. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09109.htm",
+      "link": "hymns/09109.html",
+      "api": "json/hymns/09109.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09110",
+      "title": "HYMN CX. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09110.htm",
+      "link": "hymns/09110.html",
+      "api": "json/hymns/09110.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09111",
+      "title": "HYMN CXI. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09111.htm",
+      "link": "hymns/09111.html",
+      "api": "json/hymns/09111.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09112",
+      "title": "HYMN CXII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09112.htm",
+      "link": "hymns/09112.html",
+      "api": "json/hymns/09112.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09113",
+      "title": "HYMN CXIII. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09113.htm",
+      "link": "hymns/09113.html",
+      "api": "json/hymns/09113.json",
+      "created": 1638549634139
+    },
+    {
+      "key": "09114",
+      "title": "HYMN CXIV. Indu.",
+      "orig": "https://www.sacred-texts.com/hin/rigveda/rv09114.htm",
+      "link": "hymns/09114.html",
+      "api": "json/hymns/09114.json",
+      "created": 1638549634139
+    }
+  ]
+}
