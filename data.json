@@ -29,8 +29,8 @@
         "speed": 1
       },
       "profile": {
-        "emoji": "/public/devas/vedas/emoji.png",
-        "avatar": "/public/devas/vedas/avatar.png",
+        "emoji": "/public/devas/veda/emoji.png",
+        "avatar": "/public/devas/veda/avatar.png",
         "background": "/public/devas/vedas/background.png",
         "describe": "The Deva for reading the Vedas",
         "gender": "M"
