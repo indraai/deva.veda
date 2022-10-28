@@ -1,5 +1,5 @@
 {
-  "name": "@feecting/vedadeva",
+  "name": "@indra.ai/vedadeva",
   "version": "0.0.8",
   "description": "The Rig Veda Deva",
   "main": "index.js",
@@ -21,7 +21,7 @@
     "url": "https://github.com/indraai/VedaDeva/issues"
   },
   "dependencies": {
-    "@feecting/deva": "^1.0.25"
+    "@indra.ai/deva": "^1.0.25"
   },
   "homepage": "https://github.com/indraai/VedaDeva#readme"
 }
