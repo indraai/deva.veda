@@ -98,7 +98,7 @@ const VEDAS = new Deva({
         const hymnExists = fs.existsSync(hymnPath);
 
         if (!hymnExists) return resolve(this.vars.messages.notfound);
-
+        // parse hymns
         const _hymn = require(hymnPath);
         const parsed = this.agent.parse(this.lib.decode(_hymn.orig));
         const _text = [
