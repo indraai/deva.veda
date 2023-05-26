@@ -1,6 +1,5 @@
 // Copyright (c)2021 Quinn Michaels. All Rights Reserved
 const he = require('he'); // used for html entity encoding and decoding.
-
 module.exports = (input, process=true) => {
   // global replace
   const decoded = he.decode(input)
