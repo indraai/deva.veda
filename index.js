@@ -1,9 +1,7 @@
 // Copyright (c)2021 Quinn Michaels
 // The Rig Veda Deva
-
 const fs = require('fs');
 const path = require('path');
-
 const package = require('./package.json');
 const info = {
   id: package.id,
@@ -119,9 +117,9 @@ const VEDA = new Deva({
     params: packet
     describe: The View function returns a specific hymn from one of the Books.
     ***************/
-    view(h) {
+    hymn(h) {
       return new Promise((resolve, reject) => {
-        if (!h) return reject('NO HYMN');
+        if (!h) return reject(this._messages.notext);
         const hymnPath = path.join(__dirname, 'json', 'hymns', `${h}.json`);
         const hymnExists = fs.existsSync(hymnPath);
 
@@ -133,13 +131,12 @@ const VEDA = new Deva({
           `## ${parsed.title}`,
           parsed.feecting,
         ].join('\n')
-        this.question(`#feecting parse:${this.agent.key} ${_text}`).then(feecting => {
-          return resolve({
-            text:feecting.a.text,
-            html:feecting.a.html,
-            data:_hymn.data,
-          })
-        }).catch(reject);
+
+        return resolve({
+          text:feecting.a.text,
+          html:feecting.a.html,
+          data:_hymn.data,
+        })
       });
     },
     learn(packet) {
@@ -235,12 +232,12 @@ const VEDA = new Deva({
     },
 
     /**************
-    method: view
+    method: hymn
     params: packet
     describe: Call the view function to read a specific book
     ***************/
-    view(packet) {
-      return this.func.view(packet.q.text);
+    hymn(packet) {
+      return this.func.hymn(packet.q.text);
     },
 
     /**************
