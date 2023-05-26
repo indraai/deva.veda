@@ -4,11 +4,26 @@
 const fs = require('fs');
 const path = require('path');
 
+const package = require('./package.json');
+const info = {
+  id: package.id,
+  name: package.name,
+  describe: package.description,
+  version: package.version,
+  url: package.homepage,
+  git: package.repository.url,
+  bugs: package.bugs.url,
+  author: package.author,
+  license: package.license,
+  copyright: package.copyright,
+};
+
 const data_path = path.join(__dirname, 'data.json');
-const {agent,vars} = require(data_path).data;
+const {agent,vars} = require(data_path).DATA;
 
 const Deva = require('@indra.ai/deva');
-const VEDAS = new Deva({
+const VEDA = new Deva({
+  info,
   agent: {
     uid: agent.uid,
     key: agent.key,
@@ -27,6 +42,19 @@ const VEDAS = new Deva({
   modules: {},
   deva: {},
   func: {
+
+    // code from old open ai work on that deva.
+    // async hymns() {
+    //   const book = await this.question(`#veda book ${this.vars.veda.book}`);
+    //   this.vars.veda.hymns = book.a.data.map(b => b.key);
+    //   return this.vars.veda.hymns;
+    // },
+    // hymn() {
+    //   if (!this.vars.veda.hymns.length) this.func.hymns();
+    //   return this.vars.veda.hymns.shift();
+    // }
+
+
     /**************
     func: books
     params: packet
@@ -114,6 +142,78 @@ const VEDAS = new Deva({
         }).catch(reject);
       });
     },
+    learn(packet) {
+      return new Promise((resolve, reject) => {
+        const data = {};
+
+        const { rules, cleaner, max_len } = this.vars.veda;
+
+        if (!this.vars.veda.hymn1) {
+          this.vars.veda.hymn1 = this.func.hymn();
+          this.vars.veda.hymn2 = this.func.hymn();
+          this.vars.veda.hymn3 = this.func.hymn();
+        }
+        else {
+          this.vars.veda.hymn1 = this.vars.veda.hymn2;
+          this.vars.veda.hymn2 = this.vars.veda.hymn3;
+          this.vars.veda.hymn3 = this.func.hymn();
+        }
+
+        this.vars.veda.text = this.lib.copy(rules);
+
+        this.prompt(`hymns: ${this.vars.veda.hymn1} ${this.vars.veda.hymn1} ${this.vars.veda.hymn1}`)
+
+        this.prompt(`get hymn 1: ${this.vars.veda.hymn1}`)
+        this.question(`#veda view ${this.vars.veda.hymn1}`).then(hymn1 => {
+          temp = cleanText(hymn1.a.text.substring(0, max_len), cleaner)
+          this.vars.veda.text.push('::begin:hymn1');
+          this.vars.veda.text.push(temp);
+          this.vars.veda.text.push('::end:hymn1');
+          data.hymn1 = hymn1.a.data // set the data into an object for retrieval later.
+
+          this.prompt(`get hymn 2: ${this.vars.veda.hymn2}`)
+          return this.question(`#veda view ${this.vars.veda.hymn2}`)
+        }).then(hymn2 => {
+          temp = cleanText(hymn2.a.text.substring(0, max_len), cleaner)
+          this.vars.veda.text.push('::begin:hymn2');
+          this.vars.veda.text.push(temp);
+          this.vars.veda.text.push('::end:hymn2');
+          data.hymn2 = hymn2.a.data // set the data into an object for retrieval later.
+
+          this.prompt(`get hymn 3: ${this.vars.veda.hymn3}`)
+          return this.question(`#veda view ${this.vars.veda.hymn3}`)
+        }).then(hymn3 => {
+          temp = cleanText(hymn3.a.text.substring(0, max_len), cleaner);
+          this.vars.veda.text.push('::begin:hymn1');
+          this.vars.veda.text.push(temp);
+          this.vars.veda.text.push('::end:hymn2');
+
+          this.prompt(`get watson analysis`)
+          return this.question(`#watson language ${this.vars.veda.text.join('\n')}`)
+        }).then(watson => {
+          this.vars.veda.text.push('::begin:analysis');
+          this.vars.veda.text.push(watson.a.text);
+          this.vars.veda.text.push('::end:analysis');
+          data.watson = watson.a.data // set the data into an object for retrieval later.
+
+          packet.q.text = this.vars.veda.text.join('\n');
+
+          this.prompt(`send to gpt`)
+          packet.q.meta.params[1] = 'indra';
+          packet.q.meta.params[2] = 'deva';
+
+          return this.func.chat(packet.q);
+        }).then(gpt => {
+          data.gpt = gpt.data;
+          return resolve({
+            text: `\n${gpt.text}`,
+            html: gpt.html,
+            data,
+          });
+        }).catch(reject)
+      });
+    },
+
   },
   methods: {
     /**************
@@ -181,4 +281,4 @@ const VEDAS = new Deva({
     }
   },
 });
-module.exports = VEDAS
+module.exports = VEDA

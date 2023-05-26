@@ -2,6 +2,11 @@
 
 p:With the Veda Deva you can read the Rig Veda right in your terminal.
 
+id: 6642777683539
+key: development
+name: Development Deva
+describe: Providing support to deva.world.
+
 ### Methods
 
 cmd:#veda books
