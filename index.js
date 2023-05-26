@@ -126,7 +126,7 @@ const VEDA = new Deva({
         if (!hymnExists) return resolve(this.vars.messages.notfound);
         // parse hymns
         const _hymn = require(hymnPath);
-        const parsed = this.agent.parse(this.lib.decode(_hymn.orig));
+        const parsed = this.agent.parse(_hymn.orig);
         const _text = [
           `## ${parsed.title}`,
           parsed.feecting,

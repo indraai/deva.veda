@@ -1,8 +1,10 @@
 // Copyright (c)2021 Quinn Michaels. All Rights Reserved
+const he = reuqire('he'); // used for html entity encoding and decoding.
 
 module.exports = (input, process=true) => {
   // global replace
-  let firstpass = input.replace(/Indra-Varuṇa|Indra-Soma|Maghavan|Savitar|Viṣṇu/g, 'Indra')
+  const decoded = he.decode(input)
+  let firstpass = decoded.replace(/Indra-Varuṇa|Indra-Soma|Maghavan|Savitar|Viṣṇu/g, 'Indra')
             .replace(/Indra, Etc|Varuṇa|Mitra-Indra/g, 'Indra')
             .replace(/Indra and Others/g, 'Indra')
             .replace(/Śakra/g, 'Indra')
