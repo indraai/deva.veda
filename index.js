@@ -355,7 +355,7 @@ const VEDA = new Deva({
     ***************/
     chat(packet) {
       return new Promise((resolve, reject) => {
-        this.func.chat(paclet).then(answer => {
+        this.func.chat(packet).then(answer => {
           return this.question(`#feecting parse ${answer.a.text}`);
         }).then(feecting => {
 
