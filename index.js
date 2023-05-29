@@ -354,11 +354,17 @@ const VEDA = new Deva({
     describe: The chat relay interface to talk with the @api and @ui
     ***************/
     chat(packet) {
+      let data;
       return new Promise((resolve, reject) => {
         this.func.chat(packet).then(answer => {
-          return this.question(`#feecting parse ${answer.a.text}`);
+          data = answer.data;
+          return this.question(`#feecting parse ${answer.text}`);
         }).then(feecting => {
-
+          return resolve({
+            text: feecting.a.text,
+            html: feecting.a.html,
+            data,
+          })
         }).catch(err => {
           return this.error(err, packet, reject)
         })
