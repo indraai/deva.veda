@@ -1,0 +1,25 @@
+{
+  "name": "The Groups Data Files",
+  "describe": "The Groups Data File is used to define the various groupings in the Rig Veda",
+  "copyright": "Copyright (c) Quinn Michaels. All rights reserved.",
+  "DATA": [
+    "Devas",
+    "Asura",
+    "Asuras",
+    "Danava",
+    "Dasyus",
+    "Maruts",
+    "Rudras",
+    "Ṛbhukṣans",
+    "Jātavedas",
+    "Aryaman",
+    "Fathers",
+    "Sons",
+    "Three-and-Thirty Deities",
+    "Deities",
+    "Brahman",
+    "Dawns",
+    "Celestials",    
+    "Ṛtus"
+  ]
+}

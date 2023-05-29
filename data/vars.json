@@ -1,0 +1,77 @@
+{
+  "name": "The Variables Data File",
+  "describe": "The Variables Data file for Veda Deva",
+  "copyright": "Copyright (c)2023 Quinn Michaels. All rights reserved.",
+  "DATA": {
+    "messages": {
+      "init": "🟠 INIT",
+      "start": "🔵 START",
+      "enter": "🟢 ENTER",
+      "stop": "🔴 STOP",
+      "exit": "🟡 EXIT",
+      "done": "🟣 DONE",
+      "error": "💣 ERROR!",
+      "crawl": "🕷 AGENT IS CRAWLING FOR RESOURCES.",
+      "cleaner": "🧹 The Cleaner is done.",
+      "build": "📚 Build books",
+      "building": "📘 Bulding books",
+      "writing": "🖋 Writing hymn",
+      "built": "👷‍♂️ Book is built",
+      "nobook": "📕 You did not provide a book number.",
+      "notfound": "📜 Hymn not found."
+    },
+    "trigger": "@VEDA",
+    "route": "api",
+    "learn": {
+      "books": false,
+      "book": false,
+      "hymns": [],
+      "hymn1": false,
+      "hymn2": false,
+      "hymn3": false,
+      "history": [],
+      "training": []
+    },
+    "template": {
+      "header": {
+        "call": "#docs view devas/veda/main:header",
+        "begin": "::BEGIN:HEADER",
+        "end": "::END:HEADER"
+      },
+      "footer": {
+        "call": "#docs view devas/main:footer",
+        "begin": "::BEGIN:FOOTER",
+        "end": "::END:FOOTER"
+      },
+      "laws": {
+        "call": "#docs view devas/veda/main:laws",
+        "begin": "::BEGIN:LAWS",
+        "end": "::END:LAWS"
+      },
+      "template": {
+        "call": "#docs view devas/veda/main:template",
+        "begin": "::BEGIN:TEMPLATE",
+        "end": "::END:TEMPLATE"
+      },
+      "content": {
+        "greeting": "#docs view devas/veda/main:greeting",
+        "signature": "#docs view devas/veda/main:signature",
+        "begin": "::BEGIN:VEDA",
+        "end": "::END:VEDA"
+      }
+    },
+    "timer": {
+      "cleaner": 5000,
+      "crawl": 1000
+    },
+    "crawling": false,
+    "que": [],
+    "build": [],
+    "deities": [],
+    "paths": {
+      "source": "https://sacred-texts.com/hin/rigveda/",
+      "json": "./json",
+      "archive": "https://github.com/indraai/rigveda/main/"
+    }
+  }
+}

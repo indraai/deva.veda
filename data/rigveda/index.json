@@ -1,9 +1,10 @@
 {
+  "id": 6389811992509,
   "title": "RigVeda Books",
-  "describe": "The RigVeda is one of the most ancient texts known to man. Inside are stories, lessons, and knowledge to be found. Where Vamraka, Indu, Indra, Soma, Agni, Yama, and all the best ancient Devas live.",
+  "describe": "The RigVeda is one of the most ancient texts known to man. Inside are stories, lessons, and knowledge to be found.",
   "link": "index.html",
   "api": "json/index.json",
-  "data": [
+  "DATA": [
     {
       "key": "01",
       "title": "Book 1",

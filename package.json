@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/indraai/VedaDeva#readme",
   "devDependencies": {
-    "@indra.ai/deva": "^1.1.76"
+    "@indra.ai/deva": "^1.1.83"
   },
   "dependencies": {
     "he": "^1.2.0"

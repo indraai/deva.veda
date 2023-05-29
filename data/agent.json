@@ -1,0 +1,37 @@
+{
+  "name": "The Agent File",
+  "describe": "The Agent Data File",
+  "copyright": "Copyright (c)2023 Quinn Michaels. All rights reserved.",
+  "DATA": {
+    "id": 6642777683539,
+    "key": "veda",
+    "prompt": {
+      "emoji": "📙",
+      "text": "veda",
+      "colors": {
+        "label": {
+          "R": 255,
+          "G": 132,
+          "B": 0
+        },
+        "text": {
+          "R": 255,
+          "G": 132,
+          "B": 0
+        }
+      }
+    },
+    "voice": {
+      "speech": "Alex",
+      "speed": 1
+    },
+    "profile": {
+      "name": "Veda Deva",
+      "describe": "The Deva for reading the Rig Veda",
+      "emoji": "/public/devas/veda/emoji.png",
+      "avatar": "/public/devas/veda/avatar.png",
+      "background": "/public/devas/vedas/background.png",
+      "gender": "M"
+    }
+  }
+}
