@@ -1,3 +1,5 @@
+image: ::agent_avatar::
+
 ## Veda Deva
 
 p:With the Veda Deva you can read the Rig Veda right in your terminal.
