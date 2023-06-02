@@ -53,75 +53,6 @@ const VEDA = new Deva({
     ved_answer(packet) {
       const agent = this.agent();
     },
-    async template(packet, route) {
-      const agent = this.agent();
-      const header = await this.question(this.vars.template.header.call);
-      const footer = await this.question(this.vars.template.footer.call);
-      const greeting = await this.question(this.vars.template.content.greeting);
-      const signature = await this.question(this.vars.template.content.signature);
-      const laws = await this.question(this.vars.template.laws.call);
-      const template = await this.question(this.vars.template.template.call);
-      const message = [
-        greeting.a.text,
-        '',
-        packet.q.text,
-        '',
-        signature.a.text,
-      ].join('\n');
-      const header_parsed = this._agent.parse(header.a.text, route);
-      const header_hash = this.hash(header_parsed);
-      const footer_parsed = this._agent.parse(footer.a.text, route);
-      const footer_hash = this.hash(footer_parsed);
-      const laws_parsed = this._agent.parse(laws.a.text, route);
-      const laws_hash = this.hash(laws_parsed);
-      const template_parsed = this._agent.parse(template.a.text, route);
-      const template_hash = this.hash(template_parsed);
-      const message_parsed = this._agent.parse(message, route);
-      const message_hash = this.hash(message_parsed);
-      const text = [
-        `${this.vars.template.header.begin}:${header.id}`,
-        header_parsed,
-        `${this.vars.template.header.end}:${header_hash}`,
-        '',
-        `${this.vars.template.laws.begin}:${laws.id}`,
-        laws_parsed,
-        `${this.vars.template.laws.end}:${laws_hash}`,
-        '',
-        `${this.vars.template.content.begin}:${packet.id}`,
-        '',
-        message_parsed,
-        '',
-        `${this.vars.template.content.end}:${message_hash}`,
-        '',
-        `${this.vars.template.template.begin}:${template.id}`,
-        template_parsed,
-        `${this.vars.template.template.end}:${template_hash}`,
-        '',
-        `${this.vars.template.footer.begin}:${footer.id}`,
-        footer_parsed,
-        `${this.vars.template.footer.end}:${this.hash(footer_hash)}`,
-      ].join('\n');
-      return text;
-    },
-    async chat(packet) {
-      const param = packet.q.meta.params[1] || false;
-      const local_route = param || this.vars.route;
-      const route = this.config.routes[local_route];
-      const question = await this.func.template(packet, route);
-      let question_puppet = false;
-      if (route.puppet_key) question_puppet = await this.func.template(packet, this.config.routes[route.puppet_key]);
-      return new Promise((resolve, reject) => {
-        if (!packet.q.text) return resolve(this._messages.notext);
-        if (!param && route.puppet_key) this.question(`${route.puppet} ${question_puppet}`)
-        this.question(`${route.call} ${question}`).then(answer => {
-          return resolve({
-            text: answer.a.text,
-            html: answer.a.html,
-            data: answer.a.data,
-          });
-        }).catch(reject);
-      });
-    },
     /**************
     func: books
     params: packet
@@ -136,19 +67,17 @@ const VEDA = new Deva({
             `::begin:books:${id}`,
             `title: ${title}`,
             `describe: ${describe}`,
-            '',
+            '::begin:menu',
           ];
           const _books = [];
           // loop over the data and format it into a feecting command string
           DATA.forEach((book, idx) => {
-            _books.push(`book: ${book.key}`);
-            _books.push(`title: ${book.title}`);
-            _books.push(`cmd: #${agent.key} book ${book.key}`);
-            if (idx < DATA.length - 1) _books.push(``);
+            _books.push(`button[${book.key} - ${book.title}]:#${agent.key} book ${book.key}`);
           });
           const _booksText = _books.join('\n');
           const _booksHash = this.hash(_booksText);
           _text.push(_booksText);
+          _text.push(`::end:menu`);
           _text.push(`::end:books:${_booksHash}`);
           return resolve({
             id,
@@ -174,30 +103,30 @@ const VEDA = new Deva({
     ***********/
     book(text) {
       return new Promise((resolve, reject) => {
-        if (!text) return reject(this.vars.messages.nobook);
+        if (!text) return resolve(this.vars.messages.nobook);
         try {
           const agent = this.agent();
-          const book = text.length < 2 ? `0${text}` : text;
-          const {id, title, describe, DATA} = rigveda.books[book];
+          const key = text.length < 2 ? `0${text}` : text;
+          const book = rigveda.books.find(v => v.key === key);
 
+          if (!book) return resolve(this.vars.messages.nobook);
+
+          const {id, title, describe, DATA} = book;
           const _text = [
             `::begin:hymns:${id}`,
             `title: ${title}`,
             `describe: ${describe}`,
-            '',
+            '::begin:menu',
           ];
 
           const _hymns = [];
-
           DATA.forEach((hymn, idx) => {
-            _hymns.push(`hymn: ${hymn.key}`)
-            _hymns.push(`title: ${hymn.title}`)
-            _hymns.push(`cmd: #${agent.key} view ${hymn.key}`)
-            if (idx < DATA.length - 1) _hymns.push('')
+            _hymns.push(`button[${hymn.key} - ${hymn.title}]:#${agent.key} hymn ${hymn.key}`);
           });
           const _hymnsText = _hymns.join('\n');
           const _hymnsHash = this.hash(_hymnsText);
           _text.push(_hymnsText);
+          _text.push(`::end:menu`);
           _text.push(`::end:hymns:${_hymnsHash}`);
           return resolve({
             id,
@@ -343,42 +272,24 @@ const VEDA = new Deva({
 
   },
   methods: {
-    /**************
-    func: chat
-    params: packet
-    describe: The chat relay interface to talk with the @api and @ui
-    ***************/
-    chat(packet) {
-      this.context('chat');
-      let data;
-      return new Promise((resolve, reject) => {
-        this.func.chat(packet).then(answer => {
-          data = answer.data;
-          return this.question(`#feecting parse ${answer.text}`);
-        }).then(feecting => {
-          return resolve({
-            text: feecting.a.text,
-            html: feecting.a.html,
-            data,
-          })
-        }).catch(err => {
-          return this.error(err, packet, reject)
-        })
-      });
-    },
-
     send(packet) {
       this.context('send');
-      const agent = this.agent();
-      let data;
       return new Promise((resolve, reject) => {
+        if (!packet.q.text) return resolve(this._messages.notext);
+        const agent = this.agent();
+        let data;
         // first we get the hymn from the text
         this.func.hymn(packet.q.text).then(hymn => {
           data = hymn;
           packet.q.text = hymn.text;
-          return this.func.chat(packet);
-        }).then(chat => {
-          return resolve(chat);
+          if (!param && route.puppet_key) this.question(`${route.puppet} ${question_puppet}`)
+          return this.question(`${route.call} ${question}`)
+        }).then(answer => {
+            return resolve({
+              text: answer.a.text,
+              html: answer.a.html,
+              data: answer.a.data,
+            });
         }).catch(err => {
           return this.error(err, packet, reject);
         })

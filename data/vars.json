@@ -32,7 +32,6 @@
       "send": "Veda Deva is sending a hymn",
       "chat": "Veda Deva is chatting"
     },
-    "route": "api",
     "learn": {
       "books": false,
       "book": false,
