@@ -122,7 +122,6 @@ const VEDA = new Deva({
         }).catch(reject);
       });
     },
-
     /**************
     func: books
     params: packet
@@ -168,7 +167,6 @@ const VEDA = new Deva({
         }
       });
     },
-
     /***********
     func: book
     params: packet
