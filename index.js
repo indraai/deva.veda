@@ -24,10 +24,7 @@ const VEDA = new Deva({
   agent: {
     uid: agent.id,
     key: agent.key,
-    name: agent.name,
-    describe: agent.describe,
     prompt: agent.prompt,
-    voice: agent.voice,
     profile: agent.profile,
     translate(input) {
       return input.trim();
@@ -354,6 +351,7 @@ const VEDA = new Deva({
     describe: The chat relay interface to talk with the @api and @ui
     ***************/
     chat(packet) {
+      this.context('chat');
       let data;
       return new Promise((resolve, reject) => {
         this.func.chat(packet).then(answer => {
@@ -372,6 +370,7 @@ const VEDA = new Deva({
     },
 
     send(packet) {
+      this.context('send');
       const agent = this.agent();
       let data;
       return new Promise((resolve, reject) => {
@@ -394,6 +393,7 @@ const VEDA = new Deva({
     describe: Call the books function to get a listing of books.
     ***************/
     books(packet) {
+      this.context('books');
       return new Promise((resolve, reject) => {
         if (!packet) return reject(this._messages.nopacket);
         let data;
@@ -418,6 +418,7 @@ const VEDA = new Deva({
     describe: call the book function to get the contents of a book
     ***************/
     book(packet) {
+      this.context('book');
       return new Promise((resolve, reject) => {
         if (!packet) return reject(this._messages.nopacket);
         const agent = this.agent();
@@ -443,6 +444,7 @@ const VEDA = new Deva({
     describe: Call the hymn function to read a specific book
     ***************/
     hymn(packet) {
+      this.context('hymn');
       return new Promise((resolve, reject) => {
         if (!packet) return reject(this._messages.nopacket);
         const agent = this.agent();
@@ -467,6 +469,7 @@ const VEDA = new Deva({
     describe: Call the learn function to read a specific book
     ***************/
     learn(packet) {
+      this.context('learn');
       let data, text;
       return new Promise((resolve, reject) => {
         this.func.learn().then(learn => {
@@ -489,29 +492,6 @@ const VEDA = new Deva({
         })
       });
     },
-    /**************
-    method: view
-    params: packet
-    describe: Call the view function to read a specific book
-    ***************/
-    view(packet) {
-      return new Promise((resolve, reject) => {
-        let data;
-        this.func.hymn(packet.q.text).then(hymn => {
-          data = hymn;
-          return this.question(`#feecting parse ${hymn.text}`);
-        }).then(feecting => {
-          return resolve({
-            text: feecting.a.text,
-            html: feecting.a.html,
-            data,
-          })
-        }).catch(err => {
-          return this.error(err, packet, reject);
-        })
-      });
-      return this.func.hymn(packet.q.text);
-    },
 
     /**************
     method: uid
@@ -519,6 +499,7 @@ const VEDA = new Deva({
     describe: Call core unique id generator.
     ***************/
     uid(packet) {
+      this.context('uid');
       return Promise.resolve(this.uid());
     },
 
@@ -528,6 +509,7 @@ const VEDA = new Deva({
     describe: Return the current status for the Veda Deva.
     ***************/
     status(packet) {
+      this.context('status');
       return this.status();
     },
 
@@ -537,8 +519,9 @@ const VEDA = new Deva({
     describe: View the help for the Veda Deva.
     ***************/
     help(packet) {
+      this.context('help');
       return new Promise((resolve, reject) => {
-        this.lib.help(packet.q.text, __dirname).then(help => {
+        this.help(packet.q.text, __dirname).then(help => {
           return this.question(`#feecting parse ${help}`);
         }).then(parsed => {
           return resolve({

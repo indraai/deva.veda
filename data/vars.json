@@ -21,6 +21,17 @@
       "notfound": "📜 Hymn not found."
     },
     "trigger": "@VEDA",
+    "context": {
+      "uid": "Veda Deva is making a uid",
+      "status": "Veda Deva is returning a status",
+      "help": "Veda Deva is asking for help",
+      "hymn": "Veda Deva is calling a hymn",
+      "learn": "Veda Deva is helping others learn",
+      "book": "Veda Deva is getting a book",
+      "books": "Veda Deva is listing the books",
+      "send": "Veda Deva is sending a hymn",
+      "chat": "Veda Deva is chatting"
+    },
     "route": "api",
     "learn": {
       "books": false,

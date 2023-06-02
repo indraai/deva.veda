@@ -2,10 +2,11 @@
 
 p:With the Veda Deva you can read the Rig Veda right in your terminal.
 
-id: 6642777683539
-key: development
-name: Development Deva
-describe: Providing support to deva.world.
+id: ::agent_id::
+key: #::agent_key::
+name: ::agent_name::
+emoji: ::agent_emoji::
+describe: ::agent_describe::
 
 ### Methods
 
@@ -18,5 +19,10 @@ p:This command will return book 1 for the Rig Veda
 cmd:#veda view 01001
 p:This command will view hymn 1 in book 1.
 
-#color = var(--color-black)
-#bgcolor = var(--color-white)
+---
+
+#color = ::agent_color::
+#bgcolor = ::agent_bgcolor::
+#bg = ::agent_background::
+
+copyright: (c)2023 Quinn Michaels
