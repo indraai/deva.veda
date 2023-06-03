@@ -166,33 +166,30 @@ const VEDA = new Deva({
           const processed = this._agent.process(_hymn.orig);
 
           const hymn = [
-            `::begin:hymn:${processed.key}`,
+            `## ${processed.title}`,
+            '',
             processed.text,
-            `::end:hymn:${this.hash(processed.text)}`,
+            '',
           ];
-          const info = [];
           if (processed.people.length) {
-            info.push(`people: ${processed.people.join(', ')}`);
+            hymn.push(`people: ${processed.people.join(', ')}`);
           }
           if (processed.places.length) {
-            info.push(`places: ${processed.places.join(', ')}`);
+            hymn.push(`places: ${processed.places.join(', ')}`);
           }
           if (processed.things.length) {
-            info.push(`things: ${processed.things.join(', ')}`);
+            hymn.push(`things: ${processed.things.join(', ')}`);
           }
           if (processed.groups.length) {
-            info.push(`groups: ${processed.groups.join(', ')}`);
+            hymn.push(`groups: ${processed.groups.join(', ')}`);
           }
           if (processed.concepts.length) {
-            info.push(`concepts: ${processed.concepts.join(', ')}`);
+            hymn.push(`concepts: ${processed.concepts.join(', ')}`);
           }
-
-          info.unshift(`::begin:info:${processed.key}`),
-          info.push(`::end:info:${this.hash(info.join('\n'))}`);
 
           return resolve({
             id: this.uid(),
-            text: hymn.concat(info).join('\n'),
+            text: hymn.join('\n'),
             html:false,
             data: processed,
             created: Date.now(),
@@ -272,30 +269,6 @@ const VEDA = new Deva({
 
   },
   methods: {
-    send(packet) {
-      this.context('send');
-      return new Promise((resolve, reject) => {
-        if (!packet.q.text) return resolve(this._messages.notext);
-        const agent = this.agent();
-        let data;
-        // first we get the hymn from the text
-        this.func.hymn(packet.q.text).then(hymn => {
-          data = hymn;
-          packet.q.text = hymn.text;
-          if (!param && route.puppet_key) this.question(`${route.puppet} ${question_puppet}`)
-          return this.question(`${route.call} ${question}`)
-        }).then(answer => {
-            return resolve({
-              text: answer.a.text,
-              html: answer.a.html,
-              data: answer.a.data,
-            });
-        }).catch(err => {
-          return this.error(err, packet, reject);
-        })
-      });
-    },
-
     /**************
     method: books
     params: packet
@@ -444,13 +417,6 @@ const VEDA = new Deva({
   },
   onDone(data) {
     this.func.learnSetup();
-    this.listen('devacore:question', packet => {
-      if (packet.q.text.includes(this.vars.trigger)) return this.func.ved_question(packet);
-    });
-    this.listen('devacore:answer', packet => {
-      if (packet.a.text.includes(this.vars.trigger)) return this.func.ved_answer(packet);
-    });
-
     return Promise.resolve(data);
   },
 });

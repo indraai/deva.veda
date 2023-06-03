@@ -5,7 +5,7 @@
   "DATA": {
     "(\\b)son(\\b)": "$1Son$2",
     "(\\b)father(\\b)": "$1Father$2",
-    "(\\b)indra": "$1Indra",
+    "(\\b)indra(\\b)": "$1Indra",
     "(\\b)indu(\\b)": "$1Indu$2",
     "(\\b)soma(\\b)": "$1Soma$2",
     "(\\b)Indra-dev": "$1Indra and Deva",
@@ -907,6 +907,9 @@
     "Soul of offering": "Soul of Offerings",
     "this offering's": "the offerings",
     "protectio\\.": "protection.",
+    "blest, Stil\\. May": "blest. Still, may",
+    "songhim": "song, him",
+    "powerful, indra": "powerful, Indra",
     "\\,\\—": ".",
     "\\,\\,": ",",
     "\\, \\, ": ", ",
