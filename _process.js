@@ -97,7 +97,7 @@ module.exports = (input) => {
     const _reg = new RegExp(`(\\b)(${group})(\\b)`, 'gi');
     const hasGroup = _reg.exec(ret.text);
     if (hasGroup) {
-      if (!ret.groups.includes(group)) ret.groups.push(`@${group}`);
+      if (!ret.groups.includes(group)) ret.groups.push(`!${group}`);
       ret.text = ret.text.replace(_reg, `$1!${group}$3`);
     }
   });
