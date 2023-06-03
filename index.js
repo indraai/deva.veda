@@ -167,8 +167,9 @@ const VEDA = new Deva({
 
           const hymn = [
             `## ${processed.title}`,
-            '',
+            `::begin:hymn:${processed.key}`,
             processed.text,
+            `::end::hymn:${this.hash(processed.text)}`,
             '',
           ];
           if (processed.people.length) {
