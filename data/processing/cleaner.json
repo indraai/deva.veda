@@ -15,6 +15,8 @@
     "Vāyu": "Vayu",
     "(\\b)Indra-Varuṇa|Indra-Soma|Maghavan|Savitar|Viṣṇu": "$1Indra, Varuṇa, Soma, Maghavan, Savitar, Viṣṇu",
     "Indra, Etc|Varuṇa|Mitra-Indra": "Indra, Varuna, and Mitra",
+    "Mitra-Varuṇa": "Mitra and Varuṇa",
+    "Mitra-Varuna": "Mitra and Varuṇa",
     "Viśvedevas": "Devas",
     "Bṛhaspati": "Narāśaṁsa",
     "Brahmaṇaspati": "Narāśaṁsa",

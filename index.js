@@ -24,23 +24,7 @@ const VEDA = new Deva({
   info,
   agent,
   vars,
-  utils: {
-    translate(input) {
-      return input.trim();
-    },
-    parse(input, route=false) {
-      // with the parse method we are going to take the input with a
-      // values object to provide the personalization
-      let output = input;
-      if (route) for (let x in route) {
-        const key = new RegExp(`::${x}::`, 'g');
-        const value = route[x];
-        output = output.replace(key, value);
-      }
-      return output.trim();
-    },
-    process: require('./_process'),
-  },
+  utils: require('./utils.js'),
   listeners: {},
   modules: {},
   deva: {},
@@ -164,10 +148,10 @@ const VEDA = new Deva({
           const processed = this.utils.process(_hymn.orig);
 
           const hymn = [
-            `## ${processed.title}`,
             `::begin:hymn:${processed.key}`,
+            `## ${processed.title}`,
+            '',
             processed.text,
-            `::end::hymn:${this.hash(processed.text)}`,
             '',
           ];
           if (processed.people.length) {
@@ -185,6 +169,7 @@ const VEDA = new Deva({
           if (processed.concepts.length) {
             hymn.push(`concepts: ${processed.concepts.join(', ')}`);
           }
+          hymn.push(`::end:hymn:${processed.hash}}`);
 
           return resolve({
             id: this.uid(),
