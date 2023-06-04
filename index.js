@@ -22,11 +22,9 @@ const {agent,vars,rigveda} = require('./data');
 const Deva = require('@indra.ai/deva');
 const VEDA = new Deva({
   info,
-  agent: {
-    uid: agent.id,
-    key: agent.key,
-    prompt: agent.prompt,
-    profile: agent.profile,
+  agent,
+  vars,
+  utils: {
     translate(input) {
       return input.trim();
     },
@@ -43,7 +41,6 @@ const VEDA = new Deva({
     },
     process: require('./_process'),
   },
-  vars,
   listeners: {},
   modules: {},
   deva: {},
@@ -164,7 +161,7 @@ const VEDA = new Deva({
           // parse hymns
           const theFile = fs.readFileSync(hymnPath);
           const _hymn = JSON.parse(theFile);
-          const processed = this._agent.process(_hymn.orig);
+          const processed = this.utils.process(_hymn.orig);
 
           const hymn = [
             `## ${processed.title}`,
