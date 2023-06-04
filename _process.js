@@ -67,16 +67,16 @@ module.exports = (input) => {
   }
 
   getProcessingData('people').forEach(person => {
-    const _reg = new RegExp(`(\\b)(${person})(\\b)`, 'gi');
+    const _reg = new RegExp(`(^|\b)${person}(\b)`, 'gi');
     const hasPerson = _reg.exec(ret.text);
     if (hasPerson) {
-      if (!ret.people.includes(person)) ret.people.push(`@${person}`);
-      ret.text = ret.text.replace(_reg, `$1@${person}$3`);
+      if (!ret.people.includes(person)) ret.people.push(`$1@${person}$2`);
+      ret.text = ret.text.replace(_reg, `@${person}`);
     }
   });
 
   getProcessingData('places').forEach(place => {
-    const _reg = new RegExp(`(\\b)(${place})(\\b)`, 'gi');
+    const _reg = new RegExp(`(^|\b)(${place})(\b)`, 'gi');
     const hasPlace = _reg.exec(ret.text);
     if (hasPlace) {
       if (!ret.places.includes(place)) ret.places.push(`$${place}`);
@@ -85,7 +85,7 @@ module.exports = (input) => {
   });
 
   getProcessingData('things').forEach(thing => {
-    const _reg = new RegExp(`(\\b)(${thing})(\\b)`, 'gi');
+    const _reg = new RegExp(`(^|\b)(${thing})(\b)`, 'gi');
     const hasThing = _reg.exec(ret.text);
     if (hasThing) {
       if (!ret.things.includes(thing)) ret.things.push(`#${thing}`);
@@ -94,7 +94,7 @@ module.exports = (input) => {
   });
 
   getProcessingData('groups').forEach(group => {
-    const _reg = new RegExp(`(\\b)(${group})(\\b)`, 'gi');
+    const _reg = new RegExp(`(^|\b)(${group})(\b)`, 'gi');
     const hasGroup = _reg.exec(ret.text);
     if (hasGroup) {
       if (!ret.groups.includes(group)) ret.groups.push(`!${group}`);
@@ -103,12 +103,12 @@ module.exports = (input) => {
   });
 
   getProcessingData('concepts').forEach(concept => {
-    const _reg = new RegExp(`(\\b)(${concept})(\\b)`, 'gi');
+    const _reg = new RegExp(`(^|\b)(${concept})(\b)`, 'gi');
     const hasConcept = _reg.exec(ret.text);
     if (hasConcept) {
       if (!ret.concepts.includes(concept)) ret.concepts.push(concept);
     }
   });
-  ret.text = ret.text.replace(/##/g, '#');
+  ret.text = ret.text.replace(/##/g, '#').replace(/@@/g, '@');
   return ret;
 }

@@ -3,9 +3,7 @@
   "describe": "This file is used to define the regular expressinos used in the cleaner proccessing.",
   "copyright": "Copyright (c) Quinn Michaels. All rights reserved.",
   "DATA": {
-    "(\\b)son(\\b)": "$1Son$2",
-    "(\\b)father(\\b)": "$1Father$2",
-    "(\\b)indra(\\b)": "$1Indra",
+    "(\\b)indra(\\b)": "$1Indra$2",
     "(\\b)indu(\\b)": "$1Indu$2",
     "(\\b)soma(\\b)": "$1Soma$2",
     "(\\b)Indra-dev": "$1Indra and Deva",
@@ -410,7 +408,6 @@
     "captured Śunaḥśepa thus to ": "",
     "Marut hosts whom": "hosts whom",
     ", Somas, for the fame Of Mitra, to the Soma-draught": "",
-    ", with the Ādityas,": ",",
     " to drink the milky draught ": " ",
     ", I pour the Soma-mingled meath:": ",",
     "pour ye forth the juice, the active gladdening juice to him. T": "t",
@@ -910,11 +907,22 @@
     "blest, Stil\\. May": "blest. Still, may",
     "songhim": "song, him",
     "powerful, indra": "powerful, Indra",
+    "O Agn\\.": "O Agni.",
     "\\,\\—": ".",
     "\\,\\,": ",",
     "\\, \\, ": ", ",
     "\\,\\.": ".",
     "\\, Deva \\'\\, the hotar": ", the Deva, the Hotar",
-    "\\s\\'\\,\\s": ", "
+    "\\s\\'\\,\\s": ", ",
+    "Ā": "A",
+    "Ṛ": "R",
+    "ṣ|ś|ṣ": "s",
+    "ṭ": "t",
+    "Ś": "S",
+    "ā": "a",
+    "ṛ": "r",
+    "ū": "u",
+    "ṅ|ṇ": "n",
+    "ḷ": "l"
   }
 }
