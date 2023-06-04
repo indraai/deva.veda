@@ -9,7 +9,10 @@
     "(\\b)Indra-dev": "$1Indra and Deva",
     "(\\b)Indra-Agni": "$1Indra and Agni",
     "(\\b)Indra-Vāyu": "$1Indra and Vāyu",
-    "indra-Vāyu": "Vāyu",
+    "(\\b)Viṣṇu": "$1Visnu",
+    "(\\b)Varuṇa": "$1Varuna",
+    "indra-Vāyu": "Indra-Vayu",
+    "Vāyu": "Vayu",
     "(\\b)Indra-Varuṇa|Indra-Soma|Maghavan|Savitar|Viṣṇu": "$1Indra, Varuṇa, Soma, Maghavan, Savitar, Viṣṇu",
     "Indra, Etc|Varuṇa|Mitra-Indra": "Indra, Varuna, and Mitra",
     "Viśvedevas": "Devas",
@@ -915,14 +918,17 @@
     "\\, Deva \\'\\, the hotar": ", the Deva, the Hotar",
     "\\s\\'\\,\\s": ", ",
     "Ā": "A",
+    "ā": "a",
     "Ṛ": "R",
-    "ṣ|ś|ṣ": "s",
+    "ś": "s",
+    "ṣ": "s",
     "ṭ": "t",
     "Ś": "S",
-    "ā": "a",
     "ṛ": "r",
     "ū": "u",
-    "ṅ|ṇ": "n",
-    "ḷ": "l"
+    "ṅ": "n",
+    "ṇ": "n",
+    "ḷ": "l",
+    "ī": "i"
   }
 }
