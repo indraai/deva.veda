@@ -3,6 +3,7 @@
   "describe": "the People Data File is a listing of all the persons, animals, or creatures in the Rig Veda",
   "copyright": "Copyright (c) Quinn Michaels. All rights reserved.",
   "DATA": [
+    "Dhatar",
     "Indu",
     "Pavamana",
     "Indra",
@@ -110,6 +111,12 @@
     "Vimada",
     "Reblia",
     "Sayu",
-    "Aditi"
+    "Vata",
+    "Aditi",
+    "Urjavya",
+    "Trta",
+    "Trta",
+    "Aptya",
+    "Rasa"
   ]
 }
