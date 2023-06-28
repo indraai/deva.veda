@@ -31,7 +31,14 @@
       "hymn": "Veda Deva is calling a hymn",
       "learn": "Veda Deva is helping others learn",
       "book": "Veda Deva is getting a book",
-      "books": "Veda Deva is listing the books"
+      "books": "Veda Deva is listing the books",
+      "send": "Send a hymn",
+      "send_get": "Get the hymn to send",
+      "send_relay": "Send hymn to route",
+      "send_done": "Done sending the hymn"
+    },
+    "send": {
+      "route": "open"
     },
     "learn": {
       "books": false,

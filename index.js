@@ -46,7 +46,7 @@ const VEDA = new Deva({
           const agent = this.agent();
           const {id, title, describe, DATA} = rigveda.index;
           const _text = [
-            `::begin:books:${id}`,
+            `::begin:${agent.key}:${id}`,
             `title: ${title}`,
             `describe: ${describe}`,
             '::begin:menu',
@@ -60,7 +60,7 @@ const VEDA = new Deva({
           const _booksHash = this.hash(_booksText);
           _text.push(_booksText);
           _text.push(`::end:menu`);
-          _text.push(`::end:books:${_booksHash}`);
+          _text.push(`::end:${agent.key}:${_booksHash}`);
           return resolve({
             id,
             text: _text.join('\n'),
@@ -95,7 +95,7 @@ const VEDA = new Deva({
 
           const {id, title, describe, DATA} = book;
           const _text = [
-            `::begin:hymns:${id}`,
+            `::begin:${agent.key}:${id}`,
             `title: ${title}`,
             `describe: ${describe}`,
             '::begin:menu',
@@ -109,7 +109,7 @@ const VEDA = new Deva({
           const _hymnsHash = this.hash(_hymnsText);
           _text.push(_hymnsText);
           _text.push(`::end:menu`);
-          _text.push(`::end:hymns:${_hymnsHash}`);
+          _text.push(`::end:${agent.key}:${_hymnsHash}`);
           return resolve({
             id,
             text: _text.join('\n'),
@@ -137,6 +137,7 @@ const VEDA = new Deva({
       return new Promise((resolve, reject) => {
         if (!h) return resolve(this._messages.notext);
         const id = this.uid();
+        const agent = this.agent();
 
         try {
           const hymnPath = path.join(__dirname, 'data', 'rigveda', 'hymns', `${h}.json`);
@@ -148,7 +149,7 @@ const VEDA = new Deva({
           const processed = this.utils.process(_hymn.orig);
 
           const hymn = [
-            `::begin:hymn:${processed.key}`,
+            `::begin:${agent.key}:${processed.key}`,
             `## ${processed.title}`,
             '',
             processed.text,
@@ -169,7 +170,7 @@ const VEDA = new Deva({
           if (processed.concepts.length) {
             hymn.push(`concepts: ${processed.concepts.join(', ')}`);
           }
-          hymn.push(`::end:hymn:${processed.hash}}`);
+          hymn.push(`::end:${agent.key}:${processed.hash}}`);
 
           return resolve({
             id: this.uid(),
@@ -358,66 +359,43 @@ const VEDA = new Deva({
         })
       });
     },
-
     /**************
-    method: issue
+    method: hymn
     params: packet
-    describe: create a new issue for the main deva.world through github agent.
+    describe: send a doc to another deva.
     ***************/
-    issue(packet) {
-      const agent = this.agent();
+    send(packet) {
+      this.context('send');
       return new Promise((resolve, reject) => {
-        this.question(`#github issue:${agent.key} ${packet.q.text}`).then(issue => {
+        const route = packet.q.meta.params[1];
+        if (!route) return resolve(this.vars.messages.noroute);
+
+        const getHymn = packet.q.meta.params[2] || '01001';
+        const route = packet.q.meta.params[1] || this.vars.send.route;
+
+        const agent = this.agent();
+        const data = {};
+
+        this.context('send_get');
+        this.func.hymn(getHymn).then(hymn => {
+          this.talk(`socket:global`, hymn); // talk the hymn to give it to the viewers
+          data.hymn = hymn.data;
+          this.context('send_relay');
+          return this.question(`#${route} relay ${hymn.text}`);
+        }).then(chat => {
+          data.chat = chat.a.data
+          this.context('send_done');
           return resolve({
-            text: issue.a.text,
-            html: issue.a.html,
-            data: issue.a.data,
-          })
+            text: chat.a.text,
+            html: chat.a.html,
+            data,
+          });
+
         }).catch(err => {
           return this.error(err, packet, reject);
         });
       });
     },
-
-    /**************
-    method: uid
-    params: packet
-    describe: Call core unique id generator.
-    ***************/
-    uid(packet) {
-      this.context('uid');
-      return Promise.resolve(this.uid());
-    },
-
-    /**************
-    method: status
-    params: packet
-    describe: Return the current status for the Veda Deva.
-    ***************/
-    status(packet) {
-      this.context('status');
-      return this.status();
-    },
-
-    /**************
-    method: help
-    params: packet
-    describe: View the help for the Veda Deva.
-    ***************/
-    help(packet) {
-      this.context('help');
-      return new Promise((resolve, reject) => {
-        this.help(packet.q.text, __dirname).then(help => {
-          return this.question(`#feecting parse ${help}`);
-        }).then(parsed => {
-          return resolve({
-            text: parsed.a.text,
-            html: parsed.a.html,
-            data: parsed.a.data,
-          });
-        }).catch(reject);
-      });
-    }
   },
   onDone(data) {
     this.func.learnSetup();
