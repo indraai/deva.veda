@@ -35,7 +35,8 @@
       "send": "Send a hymn",
       "send_get": "Get the hymn to send",
       "send_relay": "Send hymn to route",
-      "send_done": "Done sending the hymn"
+      "send_done": "Done sending the hymn",
+      "feecting": "Parsing feecting"
     },
     "send": {
       "route": "open"

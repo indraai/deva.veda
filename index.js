@@ -54,7 +54,7 @@ const VEDA = new Deva({
           const _books = [];
           // loop over the data and format it into a feecting command string
           DATA.forEach((book, idx) => {
-            _books.push(`button[${book.key} - ${book.title}]:#${agent.key} book ${book.key}`);
+            _books.push(`button[${book.key} - ${book.title}]:#${agent.key} book:${book.key}`);
           });
           const _booksText = _books.join('\n');
           const _booksHash = this.hash(_booksText);
@@ -103,7 +103,7 @@ const VEDA = new Deva({
 
           const _hymns = [];
           DATA.forEach((hymn, idx) => {
-            _hymns.push(`button[${hymn.key} - ${hymn.title}]:#${agent.key} hymn ${hymn.key}`);
+            _hymns.push(`button[${hymn.key} - ${hymn.title}]:#${agent.key} hymn:${hymn.key}`);
           });
           const _hymnsText = _hymns.join('\n');
           const _hymnsHash = this.hash(_hymnsText);
@@ -149,10 +149,12 @@ const VEDA = new Deva({
           const processed = this.utils.process(_hymn.orig);
 
           const hymn = [
-            `::begin:${agent.key}:${processed.key}`,
+            `::begin:hymn:${processed.key}`,
             `## ${processed.title}`,
             '',
             processed.text,
+            '',
+            '---',
             '',
           ];
           if (processed.people.length) {
@@ -170,7 +172,7 @@ const VEDA = new Deva({
           if (processed.concepts.length) {
             hymn.push(`concepts: ${processed.concepts.join(', ')}`);
           }
-          hymn.push(`::end:${agent.key}:${processed.hash}}`);
+          hymn.push(`::end:hymn:${processed.hash}}`);
 
           return resolve({
             id: this.uid(),
@@ -290,7 +292,7 @@ const VEDA = new Deva({
         if (!packet) return reject(this._messages.nopacket);
         const agent = this.agent();
         let data;
-        this.func.book(packet.q.text).then(book => {
+        this.func.book(packet.q.meta.aprams[1]).then(book => {
           data = book;
           return this.question(`#feecting parse:${agent.key} ${book.text}`);
         }).then(feecting => {
@@ -316,7 +318,7 @@ const VEDA = new Deva({
         if (!packet) return reject(this._messages.nopacket);
         const agent = this.agent();
         let data;
-        this.func.hymn(packet.q.text).then(hymn => {
+        this.func.hymn(packet.q.meta.params[1]).then(hymn => {
           data = hymn;
           return this.question(`#feecting parse:${agent.key} ${hymn.text}`);
         }).then(feecting => {
@@ -367,27 +369,32 @@ const VEDA = new Deva({
     send(packet) {
       this.context('send');
       return new Promise((resolve, reject) => {
-        const route = packet.q.meta.params[1];
+        const route = packet.q.meta.params[1] || this.vars.send.route;
         if (!route) return resolve(this.vars.messages.noroute);
 
         const getHymn = packet.q.meta.params[2] || '01001';
-        const route = packet.q.meta.params[1] || this.vars.send.route;
 
         const agent = this.agent();
         const data = {};
-
+        const text = [];
         this.context('send_get');
         this.func.hymn(getHymn).then(hymn => {
           this.talk(`socket:global`, hymn); // talk the hymn to give it to the viewers
           data.hymn = hymn.data;
           this.context('send_relay');
+          text.push(hymn.text);
           return this.question(`#${route} relay ${hymn.text}`);
         }).then(chat => {
-          data.chat = chat.a.data
           this.context('send_done');
+          text.push(chat.a.text);
+          data.chat = chat.a.data;
+          this.context('feecting');
+          return this.question(`#feecting parse:${agent.key} ${text.join('\n')}`);
+        }).then(feecting => {
+          data.feecting = feecting.a.data;
           return resolve({
-            text: chat.a.text,
-            html: chat.a.html,
+            text: feecting.a.text,
+            html: feecting.a.html,
             data,
           });
 
