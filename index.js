@@ -29,12 +29,6 @@ const VEDA = new Deva({
   modules: {},
   deva: {},
   func: {
-    ved_question(packet) {
-      const agent = this.agent();
-    },
-    ved_answer(packet) {
-      const agent = this.agent();
-    },
     /**************
     func: books
     params: packet
@@ -320,7 +314,7 @@ const VEDA = new Deva({
         let data;
         this.func.hymn(packet.q.meta.params[1]).then(hymn => {
           data = hymn;
-          return this.question(`#feecting parse:${agent.key} ${hymn.text}`);
+          return this.question(`${this.askChr}feecting parse:${agent.key} ${hymn.text}`);
         }).then(feecting => {
           return resolve({
             text:feecting.a.text,
@@ -359,48 +353,6 @@ const VEDA = new Deva({
         }).catch(err => {
           return this.error(err, packet, reject);
         })
-      });
-    },
-    /**************
-    method: hymn
-    params: packet
-    describe: send a doc to another deva.
-    ***************/
-    send(packet) {
-      this.context('send');
-      return new Promise((resolve, reject) => {
-        const route = packet.q.meta.params[1] || this.vars.send.route;
-        if (!route) return resolve(this.vars.messages.noroute);
-
-        const getHymn = packet.q.meta.params[2] || '01001';
-
-        const agent = this.agent();
-        const data = {};
-        const text = [];
-        this.context('send_get');
-        this.func.hymn(getHymn).then(hymn => {
-          this.talk(`socket:global`, hymn); // talk the hymn to give it to the viewers
-          data.hymn = hymn.data;
-          this.context('send_relay');
-          text.push(hymn.text);
-          return this.question(`#${route} relay ${hymn.text}`);
-        }).then(chat => {
-          this.context('send_done');
-          text.push(chat.a.text);
-          data.chat = chat.a.data;
-          this.context('feecting');
-          return this.question(`#feecting parse:${agent.key} ${text.join('\n')}`);
-        }).then(feecting => {
-          data.feecting = feecting.a.data;
-          return resolve({
-            text: feecting.a.text,
-            html: feecting.a.html,
-            data,
-          });
-
-        }).catch(err => {
-          return this.error(err, packet, reject);
-        });
       });
     },
   },

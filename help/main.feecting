@@ -10,7 +10,28 @@ name: ::agent_name::
 emoji: ::agent_emoji::
 describe: ::agent_describe::
 
+## Methods
+p: The methods are available to access from the prompt.
+
+### Books
+p: Retrieve the list of #Veda hymns.
+
+example: #::agent_key:: books
+
+### Book
+p: Get a list of hymns for a specific book.
+
+example: #::agent_key:: book [book number]
+
+### Hymn
+p: View a specific hymn by number.
+
+example: #::agent_key:: hymn [hymn number]
+
+
 ## Features
+
+p: The basic features avaiable.
 
 ### security
 p: The local #security feature available to ::agent_name::.
