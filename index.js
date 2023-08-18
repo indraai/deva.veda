@@ -48,7 +48,7 @@ const VEDA = new Deva({
           const _books = [];
           // loop over the data and format it into a feecting command string
           DATA.forEach((book, idx) => {
-            _books.push(`button[${book.key} - ${book.title}]:#${agent.key} book:${book.key}`);
+            _books.push(`button[${book.title}]:#${agent.key} book ${book.key}`);
           });
           const _booksText = _books.join('\n');
           const _booksHash = this.hash(_booksText);
@@ -83,21 +83,17 @@ const VEDA = new Deva({
         try {
           const agent = this.agent();
           const key = text.length < 2 ? `0${text}` : text;
-          const book = rigveda.books.find(v => v.key === key);
+          const {id, title, describe, DATA} = require(`./data/rigveda/${key}.json`);
 
-          if (!book) return resolve(this.vars.messages.nobook);
-
-          const {id, title, describe, DATA} = book;
           const _text = [
             `::begin:${agent.key}:${id}`,
             `title: ${title}`,
             `describe: ${describe}`,
             '::begin:menu',
           ];
-
           const _hymns = [];
           DATA.forEach((hymn, idx) => {
-            _hymns.push(`button[${hymn.key} - ${hymn.title}]:#${agent.key} hymn:${hymn.key}`);
+            _hymns.push(`button[${hymn.key} - ${hymn.title}]:#${agent.key} hymn ${hymn.key}`);
           });
           const _hymnsText = _hymns.join('\n');
           const _hymnsHash = this.hash(_hymnsText);
@@ -286,7 +282,7 @@ const VEDA = new Deva({
         if (!packet) return reject(this._messages.nopacket);
         const agent = this.agent();
         let data;
-        this.func.book(packet.q.meta.aprams[1]).then(book => {
+        this.func.book(packet.q.text).then(book => {
           data = book;
           return this.question(`#feecting parse:${agent.key} ${book.text}`);
         }).then(feecting => {
@@ -312,7 +308,7 @@ const VEDA = new Deva({
         if (!packet) return reject(this._messages.nopacket);
         const agent = this.agent();
         let data;
-        this.func.hymn(packet.q.meta.params[1]).then(hymn => {
+        this.func.hymn(packet.q.text).then(hymn => {
           data = hymn;
           return this.question(`${this.askChr}feecting parse:${agent.key} ${hymn.text}`);
         }).then(feecting => {

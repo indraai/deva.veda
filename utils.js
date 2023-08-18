@@ -105,7 +105,7 @@ module.exports = {
       const hasThing = _reg.exec(ret.text);
       if (hasThing) {
         if (!ret.things.includes(thing)) ret.things.push(`#${thing}`);
-        ret.text = ret.text.replace(_reg, `$1#$2$3`);
+        ret.text = ret.text.replace(_reg, `$1#${thing}$3`);
       }
     });
 
@@ -113,8 +113,8 @@ module.exports = {
       const _reg = new RegExp(`(^|\\b)(${group})(\\b)`, 'gi');
       const hasGroup = _reg.exec(ret.text);
       if (hasGroup) {
-        if (!ret.groups.includes(group)) ret.groups.push(`!${group}`);
-        ret.text = ret.text.replace(_reg, `$1!${group}$3`);
+        if (!ret.groups.includes(group)) ret.groups.push(`#${group}`);
+        ret.text = ret.text.replace(_reg, `$1#${group}$3`);
       }
     });
 
