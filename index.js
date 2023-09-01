@@ -141,12 +141,11 @@ const VEDA = new Deva({
           const hymn = [
             `::begin:hymn:${processed.key}`,
             `## ${processed.title}`,
-            '',
+            '::begin:content',
             processed.text,
-            '',
-            '---',
-            '',
+            '::end:content',
           ];
+          hymn.push(`::begin:info`);
           if (processed.people.length) {
             hymn.push(`people: ${processed.people.join(', ')}`);
           }
@@ -162,6 +161,7 @@ const VEDA = new Deva({
           if (processed.concepts.length) {
             hymn.push(`concepts: ${processed.concepts.join(', ')}`);
           }
+          hymn.push(`::end:info`);
           hymn.push(`::end:hymn:${processed.hash}}`);
 
           return resolve({
