@@ -53,6 +53,7 @@
     "Mana",
     "Bharata",
     "Vasisthas",
+    "Vasistha",
     "Aduras",
     "Rodasl",
     "Atri",
@@ -113,7 +114,6 @@
     "Rjisvan",
     "Karanja",
     "Vangrida",
-    "Vasistha",
     "Yama",
     "Subandhu",
     "Vayata",
@@ -127,6 +127,8 @@
     "Father",
     "Mother",
     "Son",
-    "Child"
+    "Child",
+    "Turga",
+    "Mandarya"
   ]
 }
