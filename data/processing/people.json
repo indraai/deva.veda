@@ -26,13 +26,12 @@
     "Kusika",
     "Susna",
     "Susna",
-    "Narasaṁsa",
+    "Narasamsa",
     "Tvastar",
     "Svaha",
     "Rtu",
     "Nestar",
     "Daksina",
-    "Narasaṁsa",
     "Rbhus",
     "Adityas",
     "Adityas",
@@ -71,6 +70,7 @@
     "Etasa",
     "Trita",
     "Hotar",
+    "Potar",
     "Deva",
     "Vaisvanara",
     "Kunaru",
@@ -129,6 +129,8 @@
     "Son",
     "Child",
     "Turga",
-    "Mandarya"
+    "Mandarya",
+    "Sindhu",
+    "Vasus"
   ]
 }
