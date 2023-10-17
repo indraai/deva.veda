@@ -41,7 +41,7 @@ module.exports = {
     const decoded = he.decode(input)
 
     const titleStr = /<h3.+>(.+)<\/h3>/g;
-    const textStr = /<p>(\d+)?\s?(.+)?<\/p>/g;
+    const textStr = /<p>(\d+)?\.?\s?(.+)?<\/p>/g;
     const nextStr = /<a href="rv(.+)\.htm">Next<\/a>/i;
     const prevStr = /<a href="rv(.+)\.htm">Previous<\/a>/i;
     const bookStr = /<a href="rvi(.+)\.htm">(.+)<\/a>/i;
@@ -105,7 +105,7 @@ module.exports = {
       const hasThing = _reg.exec(ret.text);
       if (hasThing) {
         if (!ret.things.includes(thing)) ret.things.push(`#${thing}`);
-        ret.text = ret.text.replace(_reg, `$1#${thing}$3`);
+        ret.text = ret.text.replace(_reg, `$1#$2$3`);
       }
     });
 
@@ -114,7 +114,7 @@ module.exports = {
       const hasGroup = _reg.exec(ret.text);
       if (hasGroup) {
         if (!ret.groups.includes(group)) ret.groups.push(`#${group}`);
-        ret.text = ret.text.replace(_reg, `$1#${group}$3`);
+        ret.text = ret.text.replace(_reg, `$1#$2$3`);
       }
     });
 

@@ -145,7 +145,7 @@ const VEDA = new Deva({
             processed.text,
             '::end:content',
           ];
-          hymn.push(`::begin:info`);
+          hymn.push(`::begin:meta`);
           if (processed.people.length) {
             hymn.push(`people: ${processed.people.join(', ')}`);
           }
@@ -161,8 +161,13 @@ const VEDA = new Deva({
           if (processed.concepts.length) {
             hymn.push(`concepts: ${processed.concepts.join(', ')}`);
           }
-          hymn.push(`::end:info`);
+          hymn.push(`::end:meta`);
           hymn.push(`::end:hymn:${processed.hash}}`);
+          hymn.push(`::begin:hidden`);
+          hymn.push(`#color = ::agent_color::`);
+          hymn.push(`#bgcolor = ::agent_bgcolor::`);
+          hymn.push(`#bg = ::agent_background::`);
+          hymn.push(`::end:hidden`);
 
           return resolve({
             id: this.uid(),
@@ -321,6 +326,15 @@ const VEDA = new Deva({
           return this.error(err, packet, reject);
         });
       });
+    },
+    /**************
+    method: view
+    params: packet
+    describe: view helper that calls hym to allow view interactions.
+    ***************/
+    view(packet) {
+      this.context('view');
+      return this.methods.hymn(packet);
     },
     /**************
     method: learn

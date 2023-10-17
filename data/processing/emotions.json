@@ -1,0 +1,9 @@
+{
+  "name": "The Emotions Data File",
+  "describe": "The various emotions that are described in the Rig Veda",
+  "copyright": "Copyright (c) Quinn Michaels. All rights reserved.",
+  "DATA": [
+    "Anger",
+    "Malignity"
+  ]
+}
