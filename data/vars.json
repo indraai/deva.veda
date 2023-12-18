@@ -37,7 +37,40 @@
       "send_get": "Get the hymn to send",
       "send_relay": "Send hymn to route",
       "send_done": "Done sending the hymn",
-      "feecting": "Parsing feecting"
+      "feecting": "Parsing feecting",
+      "json": "Make JSON books",
+      "live": "Chatting live",
+      "ask": "Asking important things",
+      "reply": "Reply to a message",
+      "comment": "Make a comment",
+      "art": "Creating wonder",
+      "speak": "Speak hymn"
+    },
+    "live": {
+      "profile": "deva",
+      "max_tokens": 50,
+      "words": 25,
+      "history": []
+    },
+    "ask": {
+      "max_tokens": 500,
+      "words": 200,
+      "history": []
+    },
+    "reply": {
+      "profile": "deva",
+      "max_tokens": 300,
+      "words": 100,
+      "history": []
+    },
+    "comment": {
+      "profile": "deva",
+      "max_tokens": 300,
+      "words": 100,
+      "history": []
+    },
+    "art": {
+      "history": []
     },
     "send": {
       "route": "open"
@@ -51,34 +84,6 @@
       "hymn3": false,
       "history": [],
       "training": []
-    },
-    "template": {
-      "header": {
-        "call": "#docs view devas/veda/main:header",
-        "begin": "::BEGIN:HEADER",
-        "end": "::END:HEADER"
-      },
-      "footer": {
-        "call": "#docs view devas/main:footer",
-        "begin": "::BEGIN:FOOTER",
-        "end": "::END:FOOTER"
-      },
-      "laws": {
-        "call": "#docs view devas/veda/main:laws",
-        "begin": "::BEGIN:LAWS",
-        "end": "::END:LAWS"
-      },
-      "template": {
-        "call": "#docs view devas/veda/main:template",
-        "begin": "::BEGIN:TEMPLATE",
-        "end": "::END:TEMPLATE"
-      },
-      "content": {
-        "greeting": "#docs view devas/veda/main:greeting",
-        "signature": "#docs view devas/veda/main:signature",
-        "begin": "::BEGIN:VEDA",
-        "end": "::END:VEDA"
-      }
     },
     "timer": {
       "cleaner": 5000,

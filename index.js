@@ -41,8 +41,8 @@ const VEDA = new Deva({
           const {id, title, describe, DATA} = rigveda.index;
           const _text = [
             `::begin:${agent.key}:${id}`,
-            `title: ${title}`,
-            `describe: ${describe}`,
+            `## ${title}`,
+            `p: ${describe}`,
             '::begin:menu',
           ];
           const _books = [];
@@ -55,7 +55,12 @@ const VEDA = new Deva({
           _text.push(_booksText);
           _text.push(`::end:menu`);
           _text.push(`::end:${agent.key}:${_booksHash}`);
-          return resolve({
+          _text.push(`::begin:hidden`);
+          _text.push(`#color = ::agent_color::`);
+          _text.push(`#bgcolor = ::agent_bgcolor::`);
+          _text.push(`#bg = ::agent_background::`);
+          _text.push(`::end:hidden`);
+          return this.finish({
             id,
             text: _text.join('\n'),
             html: false,
@@ -66,7 +71,7 @@ const VEDA = new Deva({
               hash: this.hash(JSON.stringify(DATA)),
             },
             created: Date.now(),
-          })
+          }, resolve);
         } catch (e) {
           return reject(e);
         }
@@ -87,8 +92,8 @@ const VEDA = new Deva({
 
           const _text = [
             `::begin:${agent.key}:${id}`,
-            `title: ${title}`,
-            `describe: ${describe}`,
+            `## ${title}`,
+            `p: ${describe}`,
             '::begin:menu',
           ];
           const _hymns = [];
@@ -100,7 +105,13 @@ const VEDA = new Deva({
           _text.push(_hymnsText);
           _text.push(`::end:menu`);
           _text.push(`::end:${agent.key}:${_hymnsHash}`);
-          return resolve({
+          _text.push(`::begin:hidden`);
+          _text.push(`#color = ::agent_color::`);
+          _text.push(`#bgcolor = ::agent_bgcolor::`);
+          _text.push(`#bg = ::agent_background::`);
+          _text.push(`::end:hidden`);
+
+          return this.finish({
             id,
             text: _text.join('\n'),
             html: false,
@@ -111,7 +122,7 @@ const VEDA = new Deva({
               hash: this.hash(JSON.stringify(DATA)),
             },
             created: Date.now(),
-          });
+          }, resolve);
         } catch (e) {
           return reject(e);
         }
@@ -119,7 +130,7 @@ const VEDA = new Deva({
     },
 
     /**************
-    func: view
+    func: hymn
     params: packet
     describe: The View function returns a specific hymn from one of the Books.
     ***************/
@@ -147,22 +158,26 @@ const VEDA = new Deva({
           ];
           hymn.push(`::begin:meta`);
           if (processed.people.length) {
-            hymn.push(`people: ${processed.people.join(', ')}`);
+            hymn.push(`people: ${processed.people.join(' ')}`);
           }
           if (processed.places.length) {
-            hymn.push(`places: ${processed.places.join(', ')}`);
+            hymn.push(`places: ${processed.places.join(' ')}`);
           }
           if (processed.things.length) {
-            hymn.push(`things: ${processed.things.join(', ')}`);
+            hymn.push(`things: ${processed.things.join(' ')}`);
           }
           if (processed.groups.length) {
-            hymn.push(`groups: ${processed.groups.join(', ')}`);
+            hymn.push(`groups: ${processed.groups.join(' ')}`);
           }
           if (processed.concepts.length) {
-            hymn.push(`concepts: ${processed.concepts.join(', ')}`);
+            hymn.push(`concepts: ${processed.concepts.join(' ')}`);
           }
-          hymn.push(`::end:meta`);
-          hymn.push(`::end:hymn:${processed.hash}}`);
+          hymn.push('::begin:buttons');
+          hymn.push(`button[Speak Hymn]:${this.askChr}veda speak ${processed.key}`);
+          hymn.push(`button[Arjika Enclosure]:${this.askChr}docs view arjika/${processed.book}`);
+          hymn.push('::end:buttons');
+          hymn.push('::end:meta');
+          hymn.push(`::end:hymn:${processed.hash}`);
           hymn.push(`::begin:hidden`);
           hymn.push(`#color = ::agent_color::`);
           hymn.push(`#bgcolor = ::agent_bgcolor::`);
@@ -170,7 +185,9 @@ const VEDA = new Deva({
           hymn.push(`::end:hidden`);
 
           return resolve({
-            id: this.uid(),
+            id,
+            key: processed.key,
+            book: processed.book,
             text: hymn.join('\n'),
             html:false,
             data: processed,
@@ -282,9 +299,9 @@ const VEDA = new Deva({
     describe: call the book function to get the contents of a book
     ***************/
     book(packet) {
-      this.context('book');
       return new Promise((resolve, reject) => {
         if (!packet) return reject(this._messages.nopacket);
+        this.context('book', packet.q.text);
         const agent = this.agent();
         let data;
         this.func.book(packet.q.text).then(book => {
@@ -308,14 +325,28 @@ const VEDA = new Deva({
     describe: Call the hymn function to read a specific book
     ***************/
     hymn(packet) {
-      this.context('hymn');
       return new Promise((resolve, reject) => {
         if (!packet) return reject(this._messages.nopacket);
+        this.context('hymn', packet.q.text);
         const agent = this.agent();
         let data;
         this.func.hymn(packet.q.text).then(hymn => {
-          data = hymn;
-          return this.question(`${this.askChr}feecting parse:${agent.key} ${hymn.text}`);
+          data = hymn.data
+          const {text} = hymn;
+
+          this.talk(`open:location`, {
+            id: this.uid(),
+            data: `We are studying ${hymn.title} of the Rig Veda`,
+            created: Date.now()
+          });
+
+          this.talk(`open:topic`, {
+            id: this.uid(),
+            data: `Current topic is Rig Veda hymn ${text}`,
+            created: Date.now(),
+          });
+
+          return this.question(`${this.askChr}feecting parse:${agent.key} ${text}`);
         }).then(feecting => {
           return resolve({
             text:feecting.a.text,
@@ -327,6 +358,32 @@ const VEDA = new Deva({
         });
       });
     },
+    /**************
+    method: speak
+    params: packet
+    describe: Speak a hymn using the speech services
+    ***************/
+    speak(packet) {
+      return new Promise((resolve, reject) => {
+        const {profile} = this.agent();
+        if (!packet) return resolve(this._messages.nopacket);
+
+        this.context('speak', packet.q.text);
+        this.func.hymn(packet.q.text).then(hymn => {
+          // now that we have the hymn let's send it to the speech service
+          return this.question(`${this.askChr}open speech:${profile.voice} ${hymn.data.text}`);
+        }).then(speech => {
+          return resolve({
+            text: speech.a.text,
+            html: speech.a.html,
+            data: speech.a.data
+          })
+        }).catch(err => {
+          return this.error(err, packet, reject)
+        })
+      });
+    },
+
     /**************
     method: view
     params: packet
@@ -365,6 +422,64 @@ const VEDA = new Deva({
         })
       });
     },
+    async json(packet) {
+      this.context('json');
+      // here we want to build text files for all the books that we can use in a custom agent.
+      // first we need to get all the books
+      try {
+        this.action('get', 'get books');
+        const books = await this.func.books();
+        books.data.books.forEach(async book => {
+          this.action('get', `Get book ${book.key}`);
+          const hymns = await this.func.book(book.key);
+          const jsonbook = {
+            id: this.uid(true),
+            key: book.key,
+            describe: book.describe,
+            link: `https://indra.ai/rigveda/books/${book.key}.html`,
+            hymns: [],
+            copyright: '©2023 Quinn Michaels (indra.ai). All rights reserved.',
+            created: this.formatDate(Date.now(), 'long', true),
+          };
+
+          const loopTo = hymns.data.hymns.length;
+          for (var i = 0; i < loopTo; i++) {
+            const {data} = await this.func.hymn(hymns.data.hymns[i].key);
+            const hymn = {
+              id: this.uid(true),
+              key: data.key,
+              book: data.book,
+              title: data.title,
+              link: `https://indra.ai/rigveda/hymns/${data.key}.html`,
+              text:data.text,
+              people: data.people,
+              places: data.places,
+              things: data.things,
+              groups: data.groups,
+              concepts: data.concepts,
+              hash: data.hash,
+              created: this.formatDate(Date.now(), 'long', true),
+            };
+            jsonbook.hymns.push(hymn);
+          }
+
+          const jsonfile = this.path.join(__dirname, 'data', 'json', `rigveda-book-${book.key}.json`);
+          this.prompt(`writing json ${jsonfile}`)
+          this.state('data', `Writing json ${jsonfile}`);
+          this.fs.writeFileSync(jsonfile, JSON.stringify(jsonbook));
+        });
+      }
+      catch (e) {
+        return this.error(packet, e, Promise.reject());
+      }
+      finally {
+        return await Promise.resolve({
+          text: 'building json files',
+          html: '<p>building json files</p>',
+          data: false
+        })
+      }
+    }
   },
   onDone(data) {
     this.func.learnSetup();

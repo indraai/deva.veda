@@ -2,7 +2,8 @@
   "id": 5142286705838,
   "key": "03",
   "title": "RigVeda Book 3",
-  "describe": "Review book 3 for describe.",
+  "line": "@Agni role as a divine intermediary and purifier in #Vedic traditions.",
+  "describe": "RigVeda Book 3 is a collection of hymns dedicated to Agni, the #Deva of fire. It emphasizes @Agni role as the mediator between gods and humans, highlighting his significance. The hymns praise Agni's attributes as the bearer of light and wisdom, celebrating his power to purify and illuminate both the physical and spiritual realms. This book underscores the centrality of @Agni in #Vedic worship and the importance of maintaining a harmonious relationship with the Devas. #Invoke @Agni @Indu @Indra @Rbhus @Mitra @Usas",
   "link": "03.html",
   "api": "json/03.json",
   "DATA": [
@@ -65,7 +66,7 @@
     },
     {
       "key": "03008",
-      "title": "HYMN VIII Sacrificial Post.",
+      "title": "HYMN VIII.",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rv03008.htm",
       "link": "hymns/03008.html",
       "api": "json/hymns/03008.json",

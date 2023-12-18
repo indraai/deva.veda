@@ -1,73 +1,44 @@
-image: ::agent_avatar::
+::begin:center
+image: /public/devas/::agent_key::/main.png
+::end:center
 
 # ::agent_name::
 
-p:This is the main help file for ::agent_name::.
+::profile::
 
-id: ::agent_id::
-key: ::agent_key::
-name: ::agent_name::
-emoji: ::agent_emoji::
-describe: ::agent_describe::
+---
 
-## Methods
-p: The methods are available to access from the prompt.
+## ::agent_name:: Methods
+p: These methods are built into ::agent_name:: to provide functionality into the Veda Library.
 
+::begin:deva-methods
 ### Books
-p: Retrieve the list of #Veda hymns.
+p: This command will return a listing of books for the Rig Veda from our custom Veda Library.
 
 example: #::agent_key:: books
 
 ### Book
-p: Get a list of hymns for a specific book.
+p: This command will return the details and list of hymns in a specific book.
 
-example: #::agent_key:: book [book number]
+example: #::agent_key:: book [book number 1-10]
 
 ### Hymn
-p: View a specific hymn by number.
+p: Here we can view a specific hymn number fro the deva.world Vedic Library. The [hymn number] format is XX is the book number and XXX is the hymn number. The example below will view Book 01 Hymn 001.
 
 example: #::agent_key:: hymn [hymn number]
-
-
-## Features
-
-p: The basic features avaiable.
-
-### security
-p: The local #security feature available to ::agent_name::.
-cmd:#::agent_key:: security
-
-### support
-p: The local #support feature available to ::agent_name::.
-cmd:#::agent_key:: support
-
-### services
-p: The local #services feature available to ::agent_name::.
-cmd:#::agent_key:: services
-
-
-## Methods
-
-### uid
-p:Generate a unique id from the ::agent_name::.
-cmd:#::agent_key:: uid
-
-### status
-p:Return the status for the ::agent_name::.
-cmd:#::agent_key:: status
-
-### issue
-p: Create an issue associated with ::agent_name:: source code repository.
-tty:#::agent_key:: issue [title of issue]
-
-### help
-p:Get help using the ::agent_name::
-cmd:#::agent_key:: help
+example: #::agent_key:: hymn 01001
+::end:deva-methods
 
 ---
 
+talk:#docs view devas/main:security
+
+---
+
+copyright: (c)2023 Quinn Michaels
+
+::begin:hidden
 #color = ::agent_color::
 #bgcolor = ::agent_bgcolor::
 #bg = ::agent_background::
-
-copyright: (c)2023 Quinn Michaels
+::end:hidden
