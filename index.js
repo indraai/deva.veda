@@ -147,7 +147,7 @@ const VEDA = new Deva({
           // parse hymns
           const theFile = fs.readFileSync(hymnPath);
           const _hymn = JSON.parse(theFile);
-          const processed = this.utils.process(_hymn.orig);
+          const processed = this.utils.process({key:_hymn.key,title:_hymn.title,content:_hymn.orig});
 
           const hymn = [
             `::begin:hymn:${processed.key}`,
@@ -155,34 +155,22 @@ const VEDA = new Deva({
             '::begin:content',
             processed.text,
             '::end:content',
+            '::begin:meta',
+            `key: ${processed.key}`,
+            `title: ${processed.title}`,
+            processed.people.length ? `people: ${processed.people.join(', ')}` : '',
+            processed.places.length ? `places: ${processed.places.join(', ')}` : '',
+            processed.things.length ? `things: ${processed.things.join(', ')}` : '',
+            processed.groups.length ? `groups: ${processed.groups.join(', ')}` : '',
+            processed.concepts.length ? `concepts: ${processed.concepts.join(', ')}` : '',
+            '::end:meta',
+            `::end:hymn:${processed.hash}`,
+            `::begin:hidden`,
+            `#color = ::agent_color::`,
+            `#bgcolor = ::agent_bgcolor::`,
+            `#bg = ::agent_background::`,
+            `::end:hidden`,
           ];
-          hymn.push(`::begin:meta`);
-          if (processed.people.length) {
-            hymn.push(`people: ${processed.people.join(' ')}`);
-          }
-          if (processed.places.length) {
-            hymn.push(`places: ${processed.places.join(' ')}`);
-          }
-          if (processed.things.length) {
-            hymn.push(`things: ${processed.things.join(' ')}`);
-          }
-          if (processed.groups.length) {
-            hymn.push(`groups: ${processed.groups.join(' ')}`);
-          }
-          if (processed.concepts.length) {
-            hymn.push(`concepts: ${processed.concepts.join(' ')}`);
-          }
-          hymn.push('::begin:buttons');
-          hymn.push(`button[Speak Hymn]:${this.askChr}veda speak ${processed.key}`);
-          hymn.push(`button[Arjika Enclosure]:${this.askChr}docs view arjika/${processed.book}`);
-          hymn.push('::end:buttons');
-          hymn.push('::end:meta');
-          hymn.push(`::end:hymn:${processed.hash}`);
-          hymn.push(`::begin:hidden`);
-          hymn.push(`#color = ::agent_color::`);
-          hymn.push(`#bgcolor = ::agent_bgcolor::`);
-          hymn.push(`#bg = ::agent_background::`);
-          hymn.push(`::end:hidden`);
 
           return resolve({
             id,
@@ -358,31 +346,6 @@ const VEDA = new Deva({
         });
       });
     },
-    /**************
-    method: speak
-    params: packet
-    describe: Speak a hymn using the speech services
-    ***************/
-    speak(packet) {
-      return new Promise((resolve, reject) => {
-        const {profile} = this.agent();
-        if (!packet) return resolve(this._messages.nopacket);
-
-        this.context('speak', packet.q.text);
-        this.func.hymn(packet.q.text).then(hymn => {
-          // now that we have the hymn let's send it to the speech service
-          return this.question(`${this.askChr}open speech:${profile.voice} ${hymn.data.text}`);
-        }).then(speech => {
-          return resolve({
-            text: speech.a.text,
-            html: speech.a.html,
-            data: speech.a.data
-          })
-        }).catch(err => {
-          return this.error(err, packet, reject)
-        })
-      });
-    },
 
     /**************
     method: view
@@ -393,6 +356,7 @@ const VEDA = new Deva({
       this.context('view');
       return this.methods.hymn(packet);
     },
+
     /**************
     method: learn
     params: packet
@@ -422,6 +386,7 @@ const VEDA = new Deva({
         })
       });
     },
+
     async json(packet) {
       this.context('json');
       // here we want to build text files for all the books that we can use in a custom agent.

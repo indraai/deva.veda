@@ -38,7 +38,8 @@ module.exports = {
   },
 
   process(input) {
-    const decoded = he.decode(input)
+    const {key, content} = input;
+    const decoded = he.decode(content)
 
     const titleStr = /<h3.+>(.+)<\/h3>/g;
     const textStr = /<p>(\d+)?\.?\s?(.+)?<\/p>/g;
@@ -50,13 +51,12 @@ module.exports = {
     const previous = prevStr.test(decoded) ? prevStr.exec(decoded)[1].trim() : false; // previous page
     const next = nextStr.test(decoded) ? nextStr.exec(decoded)[1].trim() : false; // next page
     const book = bookStr.test(decoded) ? bookStr.exec(decoded)[1].trim() : false; // book index
-    const key = keyStr.test(decoded) ? keyStr.exec(decoded)[1].trim() : false;
     const original = `https://sacred-texts.com/hin/rigveda/rv${key}.htm`;
     const sanskrit = `https://sacred-texts.com/hin/rvsan/rv${key}.htm`;
 
     const textExec = textStr.exec(decoded);
 
-    let title = cleanText(titleStr.exec(decoded)[1].trim());
+    const title = cleanText(titleStr.exec(decoded)[1].trim());
     let text = 'p: ' + textExec[2].replace(/<br>\s(\d+)(\s)?(\.)?/g, '\n\np: ').replace(/<br>(\s)?/g, '$1');
     text = cleanText(text)
 
@@ -80,14 +80,14 @@ module.exports = {
       things: [],
       groups: [],
       concepts: [],
-    }
+    };
 
     getProcessingData('people').forEach(person => {
       const _reg = new RegExp(`(\\b)(${person})(\\b)`, 'gi');
       const hasPerson = _reg.exec(ret.text);
       if (hasPerson) {
-        if (!ret.people.includes(person)) ret.people.push(`@${person}`);
-        ret.text = ret.text.replace(_reg, `$1@${person}$3`);
+        if (!ret.people.includes(person)) ret.people.push(person);
+        // ret.text = ret.text.replace(_reg, `$1@${person}$3`);
       }
     });
 
@@ -95,8 +95,8 @@ module.exports = {
       const _reg = new RegExp(`(^|\\b)(${place})(\\b)`, 'gi');
       const hasPlace = _reg.exec(ret.text);
       if (hasPlace) {
-        if (!ret.places.includes(place)) ret.places.push(`$${place}`);
-        ret.text = ret.text.replace(_reg, `$1$${place}$3`);
+        if (!ret.places.includes(place)) ret.places.push(place);
+        // ret.text = ret.text.replace(_reg, `$1$${place}$3`);
       }
     });
 
@@ -104,8 +104,8 @@ module.exports = {
       const _reg = new RegExp(`(^|\\b)(${thing})(\\b)`, 'gi');
       const hasThing = _reg.exec(ret.text);
       if (hasThing) {
-        if (!ret.things.includes(thing)) ret.things.push(`#${thing}`);
-        ret.text = ret.text.replace(_reg, `$1#$2$3`);
+        if (!ret.things.includes(thing)) ret.things.push(thing);
+        // ret.text = ret.text.replace(_reg, `$1#$2$3`);
       }
     });
 
@@ -113,8 +113,8 @@ module.exports = {
       const _reg = new RegExp(`(^|\\b)(${group})(\\b)`, 'gi');
       const hasGroup = _reg.exec(ret.text);
       if (hasGroup) {
-        if (!ret.groups.includes(group)) ret.groups.push(`#${group}`);
-        ret.text = ret.text.replace(_reg, `$1#$2$3`);
+        if (!ret.groups.includes(group)) ret.groups.push(group);
+        // ret.text = ret.text.replace(_reg, `$1#$2$3`);
       }
     });
 
@@ -125,7 +125,7 @@ module.exports = {
         if (!ret.concepts.includes(concept)) ret.concepts.push(concept);
       }
     });
-    ret.text = ret.text.replace(/##/g, '#').replace(/@@/g, '@');
+    // ret.text = ret.text.replace(/##/g, '#').replace(/@@/g, '@');
     ret.hash = this.hash(ret);
     return ret;
   }

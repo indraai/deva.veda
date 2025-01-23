@@ -13,7 +13,6 @@
     "(\\b)Varuṇa": "$1Varuna",
     "indra-Vāyu": "Indra-Vayu",
     "Vāyu": "Vayu",
-    "(\\b)Indra-Varuṇa|Indra-Soma|Maghavan|Savitar|Viṣṇu": "$1Indra, Varuṇa, Soma, Maghavan, Savitar, Viṣṇu",
     "Indra, Etc|Varuṇa|Mitra-Indra": "Indra, Varuna, and Mitra",
     "Mitra-Varuṇa": "Mitra and Varuṇa",
     "Mitra-Varuna": "Mitra and Varuṇa",
@@ -189,9 +188,9 @@
     ", his saving succours, never fail": "",
     "Crusher of forts, the young, the wise, of strength unmeasured, was he born\\.": "The young, the wise, of strength unmeasured, was he born",
     "God(\b)": "Deva$1",
-    "Gods’ Spouses": "Devis",
-    "Goddesses": "Devis",
-    "Goddess": "Devi",
+    "Gods’ Spouses": "Deva Spouses",
+    "Goddesses": "Devas",
+    "Goddess": "Deva",
     ", burn up our enemies whom fiends protect": ", guard us form enemies whom fiends protect",
     ", Śatakratu, drankest this and wast the Vṛtras’ slayer; thou H": "h",
     ", Śatakratu, thee, yea": "",
@@ -825,6 +824,11 @@
     "ḷ": "l",
     "ī": "i",
     "ñ": "n",
-    "ṁ": "m"
+    "ṁ": "m",
+    "s.w": "s w",
+    "indu": "Indu",
+    "Flow, Indu,": "Flow Indu,",
+    "Ten sister maids": "Ten Sister Maids",
+    "Dabhīti": "Dabhiti"
   }
 }

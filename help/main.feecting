@@ -31,7 +31,17 @@ example: #::agent_key:: hymn 01001
 
 ---
 
+::begin:Security
 talk:#docs view devas/main:security
+::end:Security
+
+::begin:IndraMind
+talk:#docs view algos/indramind:data
+::end:IndraMind
+
+::begin:VedicThreefoldAlgorithm
+talk:#docs view algos/vta:data
+::end:VedicThreefoldAlgorithm
 
 ---
 
