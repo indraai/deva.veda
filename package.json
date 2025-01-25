@@ -15,9 +15,12 @@
     "url": "git+ssh://git@github.com/indraai/deva.veda.git"
   },
   "keywords": [
-    "Rig",
+    "Rig Veda",
     "Veda",
-    "Deva"
+    "Deva",
+    "Deva.world",
+    "Deva.cloud",
+    "Deva.space"
   ],
   "bugs": {
     "url": "https://github.com/indraai/deva.veda/issues"
