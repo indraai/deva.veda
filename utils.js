@@ -1,7 +1,12 @@
 // Copyright (c)2021 Quinn Michaels. All Rights Reserved
-const fs = require('fs'); // include for file system manipulation.
-const path = require('path'); // include for path joining
-const he = require('he'); // used for html entity encoding and decoding.
+import fs from 'fs'; // include for file system manipulation.
+import path from 'path'; // include for path joining
+import he from 'he'; // used for html entity encoding and decoding.
+
+// set the __dirname
+import {dirname} from 'node:path';
+import {fileURLToPath} from 'node:url';    
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 function getProcessingData(file) {
   const data = fs.readFileSync(path.join(__dirname, 'data', 'processing', `${file}.json`));
@@ -20,7 +25,7 @@ function cleanText(text) {
   return text;
 }
 
-module.exports = {
+export default {
   translate(input) {
     return input.trim();
   },
@@ -125,8 +130,6 @@ module.exports = {
         if (!ret.concepts.includes(concept)) ret.concepts.push(concept);
       }
     });
-    // ret.text = ret.text.replace(/##/g, '#').replace(/@@/g, '@');
-    ret.hash = this.hash(ret);
     return ret;
   }
 };

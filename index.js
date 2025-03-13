@@ -1,30 +1,36 @@
 // Copyright (c)2021 Quinn Michaels
 // The Rig Veda Deva
-const fs = require('fs');
-const path = require('path');
-const package = require('./package.json');
+import Deva from '@indra.ai/deva';
+import pkg from './package.json' with {type:'json'};
+import utils from './utils.js';
+
+import data from './data/index.js';
+const {agent,vars,rigveda} = data;
+
+// set the __dirname
+import {dirname} from 'node:path';
+import {fileURLToPath} from 'node:url';    
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 const info = {
-  id: package.id,
-  name: package.name,
-  describe: package.description,
-  version: package.version,
+  id: pkg.id,
+  name: pkg.name,
+  describe: pkg.description,
+  version: pkg.version,
   dir: __dirname,
-  url: package.homepage,
-  git: package.repository.url,
-  bugs: package.bugs.url,
-  author: package.author,
-  license: package.license,
-  copyright: package.copyright,
+  url: pkg.homepage,
+  git: pkg.repository.url,
+  bugs: pkg.bugs.url,
+  author: pkg.author,
+  license: pkg.license,
+  copyright: pkg.copyright,
 };
 
-const {agent,vars,rigveda} = require('./data');
-
-const Deva = require('@indra.ai/deva');
 const VEDA = new Deva({
   info,
   agent,
   vars,
-  utils: require('./utils.js'),
+  utils,
   listeners: {},
   modules: {},
   deva: {},
@@ -51,7 +57,7 @@ const VEDA = new Deva({
             _books.push(`button[${book.title}]:#${agent.key} book ${book.key}`);
           });
           const _booksText = _books.join('\n');
-          const _booksHash = this.hash(_booksText);
+          const _booksHash = this.lib.hash(_booksText);
           _text.push(_booksText);
           _text.push(`::end:menu`);
           _text.push(`::end:${agent.key}:${_booksHash}`);
@@ -68,7 +74,7 @@ const VEDA = new Deva({
               title,
               describe,
               books: DATA,
-              hash: this.hash(JSON.stringify(DATA)),
+              hash: this.lib.hash(JSON.stringify(DATA)),
             },
             created: Date.now(),
           }, resolve);
@@ -88,7 +94,10 @@ const VEDA = new Deva({
         try {
           const agent = this.agent();
           const key = text.length < 2 ? `0${text}` : text;
-          const {id, title, describe, DATA} = require(`./data/rigveda/${key}.json`);
+          const theFile = this.lib.fs.readFileSync(`./data/rigveda/${key}.json`);
+          const theJSON = JSON.parse(theFile);
+
+          const {id, title, describe, DATA} = theJSON;
 
           const _text = [
             `::begin:${agent.key}:${id}`,
@@ -101,7 +110,7 @@ const VEDA = new Deva({
             _hymns.push(`button[${hymn.key} - ${hymn.title}]:#${agent.key} hymn ${hymn.key}`);
           });
           const _hymnsText = _hymns.join('\n');
-          const _hymnsHash = this.hash(_hymnsText);
+          const _hymnsHash = this.lib.hash(_hymnsText);
           _text.push(_hymnsText);
           _text.push(`::end:menu`);
           _text.push(`::end:${agent.key}:${_hymnsHash}`);
@@ -119,7 +128,7 @@ const VEDA = new Deva({
               title,
               describe,
               hymns: DATA,
-              hash: this.hash(JSON.stringify(DATA)),
+              hash: this.lib.hash(JSON.stringify(DATA)),
             },
             created: Date.now(),
           }, resolve);
@@ -137,21 +146,21 @@ const VEDA = new Deva({
     hymn(h) {
       return new Promise((resolve, reject) => {
         if (!h) return resolve(this._messages.notext);
-        const id = this.uid();
+        const id = this.lib.uid();
         const agent = this.agent();
 
         try {
-          const hymnPath = path.join(__dirname, 'data', 'rigveda', 'hymns', `${h}.json`);
-          const hymnExists = fs.existsSync(hymnPath);
+          const hymnPath = this.lib.path.join(__dirname, 'data', 'rigveda', 'hymns', `${h}.json`);
+          const hymnExists = this.lib.fs.existsSync(hymnPath);
           if (!hymnExists) return resolve(this.vars.messages.notfound);
           // parse hymns
-          const theFile = fs.readFileSync(hymnPath);
+          const theFile = this.lib.fs.readFileSync(hymnPath);
           const _hymn = JSON.parse(theFile);
           const processed = this.utils.process({key:_hymn.key,title:_hymn.title,content:_hymn.orig});
 
           const hymn = [
-            `::begin:hymn:${processed.key}`,
-            `## ${processed.title}`,
+            `::BEGIN:HYMN:${processed.key}`,
+            `# ${processed.title}`,
             '::begin:content',
             processed.text,
             '::end:content',
@@ -164,12 +173,12 @@ const VEDA = new Deva({
             processed.groups.length ? `groups: ${processed.groups.join(', ')}` : '',
             processed.concepts.length ? `concepts: ${processed.concepts.join(', ')}` : '',
             '::end:meta',
-            `::end:hymn:${processed.hash}`,
             `::begin:hidden`,
             `#color = ::agent_color::`,
             `#bgcolor = ::agent_bgcolor::`,
             `#bg = ::agent_background::`,
             `::end:hidden`,
+            `::END:HYMN:${this.lib.hash(processed)}`,
           ];
 
           return resolve({
@@ -189,7 +198,7 @@ const VEDA = new Deva({
     learnSetup(book=0) {
       this.vars.learn.books = rigveda.books.map(bk => bk.key);
       this.vars.learn.book = book;
-      this.vars.learn.hymns = rigveda.books[this.vars.learn.book].DATA.map(itm => itm.key);
+      this.vars.learn.hymns = rigveda.books[this.vars.learn.book].map(itm => itm.key);
       this.vars.learn.hymn1 = this.vars.learn.hymns.shift();
       this.vars.learn.hymn2 = this.vars.learn.hymns.shift();
       this.vars.learn.hymn3 = this.vars.learn.hymns.shift();
@@ -231,7 +240,7 @@ const VEDA = new Deva({
             const hymn = [
               `::begin:hymn:${item.key}`,
               this.trimWords(item.text, 150),
-              `::end:hymn:${this.hash(item.text)}`,
+              `::end:hymn:${this.lib.hash(item.text)}`,
             ]
             const info = [
               `people: ${item.people.join(', ')}`,
@@ -241,7 +250,7 @@ const VEDA = new Deva({
               `concepts: ${item.concepts.join(', ')}`,
             ]
             info.unshift(`::begin:info:${item.key}`);
-            info.push(`::end:info:${this.hash(info.join('\n'))}`);
+            info.push(`::end:info:${this.lib.hash(info.join('\n'))}`);
             text.push(hymn.join('\n'));
             text.push(info.join('\n'));
           });
@@ -322,14 +331,14 @@ const VEDA = new Deva({
           data = hymn.data
           const {text} = hymn;
 
-          this.talk(`open:location`, {
-            id: this.uid(),
+          this.talk(`chat:location`, {
+            id: this.lib.uid(),
             data: `We are studying ${hymn.title} of the Rig Veda`,
             created: Date.now()
           });
 
-          this.talk(`open:topic`, {
-            id: this.uid(),
+          this.talk(`chat:topic`, {
+            id: this.lib.uid(),
             data: `Current topic is Rig Veda hymn ${text}`,
             created: Date.now(),
           });
@@ -398,7 +407,7 @@ const VEDA = new Deva({
           this.action('get', `Get book ${book.key}`);
           const hymns = await this.func.book(book.key);
           const jsonbook = {
-            id: this.uid(true),
+            id: this.lib.uid(true),
             key: book.key,
             describe: book.describe,
             link: `https://indra.ai/rigveda/books/${book.key}.html`,
@@ -411,7 +420,7 @@ const VEDA = new Deva({
           for (var i = 0; i < loopTo; i++) {
             const {data} = await this.func.hymn(hymns.data.hymns[i].key);
             const hymn = {
-              id: this.uid(true),
+              id: this.lib.uid(true),
               key: data.key,
               book: data.book,
               title: data.title,
@@ -428,10 +437,10 @@ const VEDA = new Deva({
             jsonbook.hymns.push(hymn);
           }
 
-          const jsonfile = this.path.join(__dirname, 'data', 'json', `rigveda-book-${book.key}.json`);
+          const jsonfile = this.lib.path.join(__dirname, 'data', 'json', `rigveda-book-${book.key}.json`);
           this.prompt(`writing json ${jsonfile}`)
           this.state('data', `Writing json ${jsonfile}`);
-          this.fs.writeFileSync(jsonfile, JSON.stringify(jsonbook));
+          this.lib.fs.writeFileSync(jsonfile, JSON.stringify(jsonbook));
         });
       }
       catch (e) {
@@ -446,9 +455,15 @@ const VEDA = new Deva({
       }
     }
   },
-  onDone(data) {
+  onReady(data, resolve) {
     this.func.learnSetup();
-    return Promise.resolve(data);
+    this.prompt(this.vars.messages.ready);
+    return resolve(data);
+  },
+  onError(err, data, reject) {
+    this.prompt(this.vars.messages.error);
+    console.log(err);
+    return reject(err);
   },
 });
-module.exports = VEDA
+export default VEDA

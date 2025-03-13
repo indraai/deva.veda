@@ -7,6 +7,7 @@
   "copyright": "2025",
   "description": "The Veda Deva in deva.world",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -27,7 +28,7 @@
   },
   "homepage": "https://deva.space/devas/veda",
   "devDependencies": {
-    "@indra.ai/deva": "^1.2.22"
+    "@indra.ai/deva": "^1.4.10"
   },
   "dependencies": {
     "he": "^1.2.0"
