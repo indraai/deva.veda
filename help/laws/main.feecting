@@ -1,0 +1,26 @@
+# Laws
+
+::begin:buttons
+button[Back]: #veda help main
+::end:buttons
+
+p: Welcome to the Vedic Laws section of our system, where ancient wisdom meets modern technology. These laws form the ethical and operational backbone of our multi-agent environment. They guide both entities and users in maintaining harmony, balance, and justice within our digital ecosystem. Explore this section to understand how these foundational laws influence decision-making processes, foster ethical behavior, and promote a sustainable digital community.
+
+
+## Basic Laws
+button[Basic Laws]: #veda help laws/01.basic
+
+p: The Basic Laws that serve as the cornerstone of our system's ethical framework. These fundamental principles are designed to ensure a harmonious and respectful interaction between all entities and users within our digital realm. Drawing inspiration from both ancient Vedic teachings and contemporary ethical standards, these laws provide clear guidelines for behavior, decision-making, and community engagement.
+
+## Justice Laws
+button[Justice Laws]: #veda help laws/02.justice
+
+## Manu Laws
+button[Manu 01]: #veda help laws/01.manu
+	
+::begin:hidden
+#color = {{profile.color}}
+#bgcolor = {{profile.bgcolor}}
+#bg = {{profile.background}}
+::end:hidden
+copyright: (c)2025 Quinn Michaels

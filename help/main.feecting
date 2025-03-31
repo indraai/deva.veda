@@ -1,36 +1,36 @@
-# ::agent_name::
+# {{profile.name}}
 
-::agent_profile::
+{{profile}}
 
-talk: #security file:public main:header
-talk: #algorithm file:public main:header
+::begin:buttons
+button[Laws]: #veda help laws/main
+::end:buttons
 
----
-
-## ::agent_name:: Methods
-p: These methods are built into ::agent_name:: to provide functionality into the Veda Library.
+## Methods
+p: These methods are built into {{profile.name}} to the Vedic Books.
 
 ::begin:deva-methods
 ### Books
 p: This command will return a listing of books for the Rig Veda from our custom Veda Library.
-example: #::agent_key:: books
+example: #{{agent.key}} books
 
 ### Book
 p: This command will return the details and list of hymns in a specific book.
-example: #::agent_key:: book [book number 1-10]
+
+example: #{{agent.key}} book [book number]
 
 ### Hymn
 p: Here we can view a specific hymn number fro the deva.world Vedic Library. The [hymn number] format is XX is the book number and XXX is the hymn number. The example below will view Book 01 Hymn 001.
 
-example: #::agent_key:: hymn [hymn number]
-example: #::agent_key:: hymn 01001
+example: #{{agent.key}} hymn [hymn number]
+example: #{{agent.key}} hymn 01001
 ::end:deva-methods
 
 
-copyright: (c)2025 Quinn Michaels
 
 ::begin:hidden
-#color = ::agent_color::
-#bgcolor = ::agent_bgcolor::
-#bg = ::agent_background::
+#color = {{profile.color}}
+#bgcolor = {{profile.bgcolor}}
+#bg = {{profile.background}}
 ::end:hidden
+copyright: (c)2025 Quinn Michaels
