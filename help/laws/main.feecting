@@ -17,6 +17,7 @@ button[Justice Laws]: #veda help laws/02.justice
 
 ## Manu Laws
 button[Manu 01]: #veda help laws/01.manu
+button[Manu 02]: #veda help laws/02.manu
 	
 ::begin:hidden
 #color = {{profile.color}}
