@@ -11,7 +11,7 @@ import book09 from './09.json' with {type:'json'};
 import book10 from './10.json' with {type:'json'};
 
 export default {
-  index: index.DATA,
+  index: index,
   books: [
     book01.DATA,
     book02.DATA,

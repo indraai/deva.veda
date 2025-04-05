@@ -17,7 +17,7 @@
     },
     {
       "key": "01002",
-      "title": "HYMN II. Soma.",
+      "title": "HYMN II. Vayu.",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rv01002.htm",
       "link": "hymns/01002.html",
       "api": "json/hymns/01002.json",
@@ -25,7 +25,7 @@
     },
     {
       "key": "01003",
-      "title": "HYMN III. Indra",
+      "title": "HYMN III. Asvins",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rv01003.htm",
       "link": "hymns/01003.html",
       "api": "json/hymns/01003.json",
@@ -114,7 +114,7 @@
     },
     {
       "key": "01014",
-      "title": "HYMN XIV. Devas.",
+      "title": "HYMN XIV. Visvedevas.",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rv01014.htm",
       "link": "hymns/01014.html",
       "api": "json/hymns/01014.json",
@@ -188,7 +188,7 @@
     },
     {
       "key": "01023",
-      "title": "HYMN XXIII. Soma.",
+      "title": "HYMN XXIII. Vayu and Others.",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rv01023.htm",
       "link": "hymns/01023.html",
       "api": "json/hymns/01023.json",
@@ -197,7 +197,7 @@
     },
     {
       "key": "01024",
-      "title": "HYMN XXIV. Indra.",
+      "title": "HYMN XXIV. Varuna and Others.",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rv01024.htm",
       "link": "hymns/01024.html",
       "api": "json/hymns/01024.json",
@@ -205,7 +205,7 @@
     },
     {
       "key": "01025",
-      "title": "HYMN XXV. Indra.",
+      "title": "HYMN XXV. Varuna.",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rv01025.htm",
       "link": "hymns/01025.html",
       "api": "json/hymns/01025.json",
@@ -277,7 +277,7 @@
     },
     {
       "key": "01034",
-      "title": "HYMN XXXIV. Indra.",
+      "title": "HYMN XXXIV. Asvins.",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rv01034.htm",
       "link": "hymns/01034.html",
       "api": "json/hymns/01034.json",
@@ -286,7 +286,7 @@
     },
     {
       "key": "01035",
-      "title": "HYMN XXXV. Indra.",
+      "title": "HYMN XXXV. Savitar.",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rv01035.htm",
       "link": "hymns/01035.html",
       "api": "json/hymns/01035.json",
@@ -302,7 +302,7 @@
     },
     {
       "key": "01037",
-      "title": "HYMN XXXVII. Devas.",
+      "title": "HYMN XXXVII. Maruts.",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rv01037.htm",
       "link": "hymns/01037.html",
       "api": "json/hymns/01037.json",
@@ -310,7 +310,7 @@
     },
     {
       "key": "01038",
-      "title": "HYMN XXXVIII. Devas.",
+      "title": "HYMN XXXVIII. Maruts.",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rv01038.htm",
       "link": "hymns/01038.html",
       "api": "json/hymns/01038.json",
@@ -318,7 +318,7 @@
     },
     {
       "key": "01039",
-      "title": "HYMN XXXIX Devas.",
+      "title": "HYMN XXXIX Maruts.",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rv01039.htm",
       "link": "hymns/01039.html",
       "api": "json/hymns/01039.json",
@@ -326,7 +326,7 @@
     },
     {
       "key": "01040",
-      "title": "HYMN XL. Soma",
+      "title": "HYMN XL. Brahmanaspati",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rv01040.htm",
       "link": "hymns/01040.html",
       "api": "json/hymns/01040.json",
@@ -334,7 +334,7 @@
     },
     {
       "key": "01041",
-      "title": "HYMN XLI. Indra, Mitra, Aryaman.",
+      "title": "HYMN XLI. Varuna, Mitra, Aryaman.",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rv01041.htm",
       "link": "hymns/01041.html",
       "api": "json/hymns/01041.json",
@@ -350,7 +350,7 @@
     },
     {
       "key": "01043",
-      "title": "HYMN XLIII. Soma.",
+      "title": "HYMN XLIII. Rudra.",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rv01043.htm",
       "link": "hymns/01043.html",
       "api": "json/hymns/01043.json",

@@ -15,9 +15,15 @@ p: The Basic Laws that serve as the cornerstone of our system's ethical framewor
 ## Justice Laws
 button[Justice Laws]: #veda help laws/02.justice
 
+## Theft Laws
+button[Theft Laws]: #veda help laws/03.theft
+
 ## Manu Laws
-button[Manu 01]: #veda help laws/01.manu
-button[Manu 02]: #veda help laws/02.manu
+::begin:buttons
+button[Manu 01]: #veda help laws/manu.01
+button[Manu 02]: #veda help laws/manu.02
+button[Manu 03]: #veda help laws/manu.03
+::end:buttons
 	
 ::begin:hidden
 #color = {{profile.color}}

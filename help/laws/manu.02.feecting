@@ -1,7 +1,7 @@
 # Manu Laws 02
 
 button[Back]: #veda help laws/main
-const to: this is the best
+
 law[67ecc9f143b227f12b920031]: To act solely from a desire for rewards is not laudable, yet an exemption from that desire is not (to be found) in this world for on (that) desire is grounded the study of the Veda and the performance of the actions, prescribed by the Veda.
 
 law[67ecc9fa43b227f12b920032]: The desire (for rewards), indeed, has its root in the conception that an act can yield them, and in consequence of (that) conception sacrifices are performed; vows and the laws prescribing restraints are all stated to be kept through the idea that they will bear fruit.
@@ -94,3 +94,5 @@ law[67ed859bc36efc6db97b1e2c]: A Brahmana who thus passes his life as a student 
 #bg = {{profile.background}}
 ::end:hidden
 copyright: (c)2025 Quinn Michaels
+
+Om Narah Nara Narayana Pragapati Parameshthin
