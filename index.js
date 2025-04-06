@@ -104,7 +104,7 @@ const VEDA = new Deva({
 
           const {id, title, describe, DATA} = theJSON;
 
-          this.sate('set', `book data`);
+          this.state('set', `book data`);
           const _text = [
             `::BEGIN:BOOK:${id}`,
             `## ${title}`,
@@ -126,7 +126,7 @@ const VEDA = new Deva({
           _text.push(`::end:hidden`);
           _text.push(`::END:BOOK:${_hymnsHash}`);
 
-          this.sate('resolve', `book ${text}`)
+          this.state('resolve', `book ${text}`)
           return resolve({
             id,
             title,
@@ -137,7 +137,7 @@ const VEDA = new Deva({
             created: Date.now(),
           });
         } catch (e) {
-          this.sate('reject', `book ${text}`)
+          this.state('reject', `book ${text}`)
           return reject(e);
         }
       });
@@ -164,7 +164,7 @@ const VEDA = new Deva({
           const _hymn = JSON.parse(theFile);
           const processed = this.utils.process({key:_hymn.key,title:_hymn.title,content:_hymn.orig});
 
-          this.sate('set', `hymn ${h}`)
+          this.state('set', `hymn ${h}`)
           const hymn = [
             `::BEGIN:HYMN:${processed.key}`,
             `# ${processed.title}`,
@@ -190,7 +190,7 @@ const VEDA = new Deva({
             `::END:HYMN:${this.lib.hash(processed)}`,
           ];
 
-          this.sate('resolve', `hymn ${h}`)
+          this.state('resolve', `hymn ${h}`)
           return resolve({
             id,
             key: processed.key,
@@ -201,7 +201,7 @@ const VEDA = new Deva({
             created: Date.now(),
           });
         } catch (e) {
-          this.sate('reject', `hymn ${h}`)
+          this.state('reject', `hymn ${h}`)
           return reject(e);
         }
       });
