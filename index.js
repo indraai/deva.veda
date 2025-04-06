@@ -43,10 +43,13 @@ const VEDA = new Deva({
     describe: Return a listiig of the Rig Veda Books.
     ***************/
     books() {
+      this.action('func', 'books');
       return new Promise((resolve, reject) => {
         try {
           const agent = this.agent();
           const {id, title, describe, DATA} = rigveda.index;
+
+          this.state('set', 'books data');
           const _text = [
             `::BEGIN:BOOKS:${id}`,
             `## ${title}`,
@@ -68,6 +71,7 @@ const VEDA = new Deva({
           _text.push(`#bg = {{profile.background}}`);
           _text.push(`::end:hidden`);
           _text.push(`::END:BOOKS:${_booksHash}`);
+          this.state('resolve', 'books');
           return resolve({
             id,
             title,
@@ -78,6 +82,7 @@ const VEDA = new Deva({
             created: Date.now(),
           });
         } catch (e) {
+          this.state('reject', 'books');
           return reject(e);
         }
       });
@@ -88,6 +93,7 @@ const VEDA = new Deva({
     describe: The book function calls the public facing api to get a listing of books to list to the user. originally this file came from sacred-texts.com but was migrated to indra.church with a json api.
     ***********/
     book(text) {
+      this.action('func', `book ${text}`);
       return new Promise((resolve, reject) => {
         if (!text) return resolve(this.vars.messages.nobook);
         try {
@@ -98,6 +104,7 @@ const VEDA = new Deva({
 
           const {id, title, describe, DATA} = theJSON;
 
+          this.sate('set', `book data`);
           const _text = [
             `::BEGIN:BOOK:${id}`,
             `## ${title}`,
@@ -119,6 +126,7 @@ const VEDA = new Deva({
           _text.push(`::end:hidden`);
           _text.push(`::END:BOOK:${_hymnsHash}`);
 
+          this.sate('resolve', `book ${text}`)
           return resolve({
             id,
             title,
@@ -129,6 +137,7 @@ const VEDA = new Deva({
             created: Date.now(),
           });
         } catch (e) {
+          this.sate('reject', `book ${text}`)
           return reject(e);
         }
       });
@@ -140,6 +149,7 @@ const VEDA = new Deva({
     describe: The View function returns a specific hymn from one of the Books.
     ***************/
     hymn(h) {
+      this.action('func', `hymn ${h}`);
       return new Promise((resolve, reject) => {
         if (!h) return resolve(this._messages.notext);
         const id = this.lib.uid();
@@ -154,6 +164,7 @@ const VEDA = new Deva({
           const _hymn = JSON.parse(theFile);
           const processed = this.utils.process({key:_hymn.key,title:_hymn.title,content:_hymn.orig});
 
+          this.sate('set', `hymn ${h}`)
           const hymn = [
             `::BEGIN:HYMN:${processed.key}`,
             `# ${processed.title}`,
@@ -161,7 +172,7 @@ const VEDA = new Deva({
             processed.text,
             '::end:content',
             '::begin:meta',
-            `button[💬 Ask Veda]:#veda ask Om Please write a story about this Vedic Hymn > ${encodeURIComponent(processed.text)} Om`,
+            `button[💬 Ask Veda]:#veda ask Om Please write a story > ${encodeURIComponent(processed.text)} Om`,
             `button[🔈 Speak Hymn]:#chat speech:${agent.profile.voice} ${encodeURIComponent(processed.text)}`,
             `key: ${processed.key}`,
             `title: ${processed.title}`,
@@ -179,6 +190,7 @@ const VEDA = new Deva({
             `::END:HYMN:${this.lib.hash(processed)}`,
           ];
 
+          this.sate('resolve', `hymn ${h}`)
           return resolve({
             id,
             key: processed.key,
@@ -189,6 +201,7 @@ const VEDA = new Deva({
             created: Date.now(),
           });
         } catch (e) {
+          this.sate('reject', `hymn ${h}`)
           return reject(e);
         }
       });
@@ -203,6 +216,7 @@ const VEDA = new Deva({
     ***************/
     books(packet) {
       this.context('books');
+      this.action('method', 'books');
       return new Promise((resolve, reject) => {
         if (!packet) return reject(this._messages.nopacket);
         const data = {};
@@ -228,9 +242,9 @@ const VEDA = new Deva({
     describe: call the book function to get the contents of a book
     ***************/
     book(packet) {
+      this.context('book', packet.q.text);
       return new Promise((resolve, reject) => {
         if (!packet) return reject(this._messages.nopacket);
-        this.context('book', packet.q.text);
         const agent = this.agent();
         const data = {};
         this.func.book(packet.q.text).then(book => {

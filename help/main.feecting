@@ -3,7 +3,8 @@
 {{profile}}
 
 ::begin:buttons
-button[Laws]: #veda help laws/main
+button[Books]:#veda books
+button[Laws]:#veda help laws/main
 ::end:buttons
 
 ## Methods
@@ -26,6 +27,10 @@ example: #{{agent.key}} hymn [hymn number]
 example: #{{agent.key}} hymn 01001
 ::end:deva-methods
 
+
+The (various) classes of the manes are declared to be the sons of all those sages, 
+
+Mariki son of Manu the son of Hiranyagarbha.
 
 
 ::begin:hidden
