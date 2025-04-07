@@ -19,7 +19,8 @@
       "writing": "🖋 Writing hymn",
       "built": "👷‍♂️ Book is built",
       "nobook": "📕 You did not provide a book number.",
-      "notfound": "📜 Hymn not found."
+      "notfound": "📜 Hymn not found.",
+      "manu": "Importing Manu Laws"
     },
     "trigger": "@VEDA",
     "context": {
@@ -28,7 +29,8 @@
       "view": "📜 View Hymn",
       "book": "📖 Get Book",
       "books": "📚 Get Books",
-      "ask": "Asking important things"
+      "ask": "Asking important things",
+      "manu": "Build Manu Laws"
     },
     "live": {
       "profile": "deva",

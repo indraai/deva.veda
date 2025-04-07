@@ -317,7 +317,7 @@ const VEDA = new Deva({
           this.action('get', `Get book ${book.key}`);
           const hymns = await this.func.book(book.key);
           const jsonbook = {
-            id: this.lib.uid(true),
+            id: this.lib.uid(),
             key: book.key,
             describe: book.describe,
             link: `https://indra.ai/rigveda/books/${book.key}.html`,
@@ -330,7 +330,7 @@ const VEDA = new Deva({
           for (var i = 0; i < loopTo; i++) {
             const {data} = await this.func.hymn(hymns.data.hymns[i].key);
             const hymn = {
-              id: this.lib.uid(true),
+              id: this.lib.uid(),
               key: data.key,
               book: data.book,
               title: data.title,
@@ -362,6 +362,22 @@ const VEDA = new Deva({
           data: false
         })
       }
+    },
+    manu(packet) {
+      this.context('manu');
+      return new Promise((resolve, reject) => {
+        this.tate('try', `Manu Laws:${packet.id}`);
+        try {}
+        catch(e) {
+          return this.errir(e, packet, reject);
+        }
+        finally {
+          return resolve({
+            text: this.vars.mesages.manu,
+            html: this.vars.messages.manu
+          })
+        }
+      });
     }
   },
   onReady(data, resolve) {
