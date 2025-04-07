@@ -27,10 +27,8 @@
     "url": "https://github.com/indraai/deva.veda/issues"
   },
   "homepage": "https://deva.space/devas/veda",
-  "devDependencies": {
-    "@indra.ai/deva": "^1.5.5"
-  },
   "dependencies": {
+    "@indra.ai/deva": "^1.5.6",
     "he": "^1.2.0"
   }
 }
