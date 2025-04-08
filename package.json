@@ -28,7 +28,7 @@
   },
   "homepage": "https://deva.space/devas/veda",
   "dependencies": {
-    "@indra.ai/deva": "^1.5.22",
+    "@indra.ai/deva": "^1.5.23",
     "he": "^1.2.0"
   }
 }
