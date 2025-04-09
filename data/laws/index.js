@@ -74,16 +74,15 @@ export async function manuhash(packet) {
 		data: [],
 	}
 	for (let item of filejson.data) {
+		const dbstr = item.dbid ? `${this.askChr}legal add:${item.dbid}` : `${this.askChr}legal add`;
+		const dblaw = await this.question(`${dbstr} ${item.law}`);
 		const newitem = {
 			id: this.lib.uid(),
-			dbid: item.dbid || false,
+			dbid: dblaw.a.data,
 			law: item.law,
 			created: this.lib.formatDate(Date.now(), 'long', true),
 		};
-		const dbstr = newitem.dbid ? `${this.askChr}legal add:${newitem.dbid}` : `${this.askChr}legal add`;
-		const dblaw = await this.question(`${dbstr} ${newitem.law}`);
-		newitem.dbid = dblaw.a.data;
-		newitem.hash = this.lib.hash(newitem);
+		newitem.hash = this.lib.hash(`${newitem.id}${newitem.dbid}${newitem.created}${newitem.law}`);
 		newdata.data.push(newitem);
 	}
 	this.prompt(`filepath: ${filepath}`)
