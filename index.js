@@ -7,6 +7,8 @@ import utils from './utils.js';
 import data from './data/index.js';
 const {agent,vars,rigveda} = data;
 
+import {manu, manuhash} from './data/laws/index.js';
+
 // set the __dirname
 import {dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';    
@@ -361,41 +363,9 @@ const VEDA = new Deva({
         })
       }
     },
-    
     // Manu function for important laws
-    async manu(packet) {
-      this.context('manu', packet.id);
-      this.action('method', `manu:${packet.id}`);
-      const data = {};
-      const {personal} = this.legal();
-      this.state('try', `Manu Laws:${packet.id}`);
-      try {
-        data.manu = personal.manu;
-        data.files = [];
-        for (const file of data.manu) {
-          const html = this.lib.fs.readFilesync(file);
-          const result = {
-            id: this.lib.uid(),
-            file,
-            html,
-            created: Date.now(),
-          };
-          result.hash = this.lib.hash(result);
-          data.files.push(result);
-        }
-      }
-      catch(e) {
-        return this.error(e, packet, Promise.reject());
-      }
-      finally {
-        console.log('DATA', data);
-        return {
-          text: this.vars.messages.manu,
-          html: this.vars.messages.manu,
-          data
-        };
-      }
-    },
+    manu,
+    manuhash,
   },
   onReady(data, resolve) {
     this.prompt(this.vars.messages.ready);
