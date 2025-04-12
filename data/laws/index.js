@@ -85,6 +85,7 @@ export async function manuhash(packet) {
 		newitem.hash = this.lib.hash(`${newitem.id}${newitem.dbid}${newitem.created}${newitem.law}`);
 		newdata.data.push(newitem);
 	}
+	newdata.hash = this.lib.hash(newdata);
 	this.prompt(`filepath: ${filepath}`)
 	this.lib.fs.writeFileSync(filepath, JSON.stringify(newdata, null, 2), {encoding:'utf8',flag:'w'});
 	return Promise.resolve({
