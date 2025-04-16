@@ -7,7 +7,7 @@ import utils from './utils.js';
 import data from './data/index.js';
 const {agent,vars,rigveda} = data;
 
-import {manu, manuhash} from './data/laws/index.js';
+import {manu, manuhash, laws} from './data/laws/index.js';
 import {bookimport} from './data/rigveda/index.js';
 
 // set the __dirname
@@ -207,7 +207,7 @@ const VEDA = new Deva({
         }
       });
     },
-
+    laws,
   },
   methods: {
     /**************
@@ -310,6 +310,27 @@ const VEDA = new Deva({
     // Manu function for important laws
     manu,
     manuhash,
+    laws(packet) {
+      this.context('laws', packet.id);
+      this.action('method', `laws:${packet.id}`);
+      const data = {};
+      return new Promise((resolve, reject) => {
+        this.func.laws(packet).then(laws => {
+          data.laws = laws.data;
+          return this.question(`${this.askChr}feecting parse ${laws.text}`);
+        }).then(parsed => {
+          data.feecting = parsed.a.data;
+          this.state('return', `laws:${packet.id}`);
+          return resolve({
+            text: parsed.a.text,
+            html: parsed.a.html,
+            data,
+          });
+        }).catch(err => {
+          return this.error(err, packet. reject);
+        });
+      });
+    }
   },
   onReady(data, resolve) {
     this.prompt(this.vars.messages.ready);

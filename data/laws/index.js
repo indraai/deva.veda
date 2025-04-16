@@ -94,3 +94,48 @@ export async function manuhash(packet) {
 		data: false,
 	});
 } 
+
+// laws func to get json data
+export function laws(packet) {
+	this.action('func', `laws:${packet.id}`);
+	return new Promise((resolve, reject) => {
+		try {
+			// #veda laws:manu 01 
+			const {params} = packet.q.meta;
+			const lookup = params[1] || 'manu';
+
+			const filepath = this.lib.path.join(__dirname, lookup, `${packet.q.text}.json`);
+			const filedata = this.lib.fs.readFileSync(filepath);
+			const filejson = JSON.parse(filedata);
+			const _laws = filejson.data.map(item => {
+				return [
+					`::begin:law:${item.id}`,
+					`id: ${item.id}`,
+					`law: ${item.law}`,
+					`dbid: ${item.dbid}`,
+					`hash: ${item.hash}`,
+					`created: ${item.created}`,
+					`::end:law:${item.hash}`,
+				].join('\n');
+			}).join('\n');
+			const text = [
+				`::BEGIN:LAWS:${filejson.id}`,
+				`# ${filejson.title}`,
+				_laws,
+				`::begin:hidden`,
+				`#color = {{profile.color}}`,
+				`#bgcolor = {{profile.bgcolor}}`,
+				`#bg = {{profile.background}}`,
+				`::end:hidden`,
+				`::END:LAWS:${filejson.hash}`,
+			].join('\n');
+			return resolve({
+				text,
+				data: filejson
+			});
+		}
+		catch(e) {
+			return this.error(e, packet, reject);
+		}
+	});
+}
