@@ -31,7 +31,8 @@
       "books": "📚 Get Books",
       "ask": "Asking important things",
       "manu": "Build Manu Laws",
-      "laws": "⚖️ Vedic Laws"
+      "laws": "⚖️ Vedic Laws",
+      "import": "🚄 Import"
     },
     "live": {
       "profile": "deva",
@@ -43,18 +44,6 @@
     },
     "ask": {
       "max_tokens": 400,
-      "history": []
-    },
-    "reply": {
-      "profile": "deva",
-      "max_tokens": 300,
-      "words": 100,
-      "history": []
-    },
-    "comment": {
-      "profile": "deva",
-      "max_tokens": 300,
-      "words": 100,
       "history": []
     },
     "art": {

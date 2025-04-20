@@ -1,0 +1,169 @@
+{
+  "id": 6214075822720,
+  "title": "The Atharvaveda Books",
+  "describe": " The Atharvaveda is one of the four Vedas, a collection of ancient texts that includes hymns, spells, and incantations for healing and rituals. It focuses on practical aspects of daily life, such as health, longevity, and protection from evil forces.",
+  "data": [
+    {
+      "id": 7133350343475,
+      "key": "01",
+      "title": "Book I",
+      "json": "json/01.json",
+      "created": 1745090290785,
+      "hash": "md5-3PvmRiYJdM0alR5xw7g7kA=="
+    },
+    {
+      "id": 1784460371581,
+      "key": "02",
+      "title": "Book II",
+      "json": "json/02.json",
+      "created": 1745090290813,
+      "hash": "md5-cm6TQv2tQyvdbjORksnDxw=="
+    },
+    {
+      "id": 1819379812979,
+      "key": "03",
+      "title": "Book III",
+      "json": "json/03.json",
+      "created": 1745090290825,
+      "hash": "md5-ELBPUvcU8Jag7wejk5j7pw=="
+    },
+    {
+      "id": 5283014019917,
+      "key": "04",
+      "title": "Book IV",
+      "json": "json/04.json",
+      "created": 1745090290837,
+      "hash": "md5-b0s8/t0gp4UP8qrVhbtfWg=="
+    },
+    {
+      "id": 1931209731390,
+      "key": "05",
+      "title": "Book V",
+      "json": "json/05.json",
+      "created": 1745090290852,
+      "hash": "md5-dRNiKV+jX8gh+CiX6a2aFQ=="
+    },
+    {
+      "id": 4639700615346,
+      "key": "06",
+      "title": "Book VI",
+      "json": "json/06.json",
+      "created": 1745090290863,
+      "hash": "md5-a9tww0hdU+ep1mnnpLTPxw=="
+    },
+    {
+      "id": 4609699794562,
+      "key": "07",
+      "title": "Book VII",
+      "json": "json/07.json",
+      "created": 1745090290906,
+      "hash": "md5-2+iI6UAFQ7kf4Je/81r3zA=="
+    },
+    {
+      "id": 4648166592765,
+      "key": "08",
+      "title": "Book VIII",
+      "json": "json/08.json",
+      "created": 1745090290928,
+      "hash": "md5-K+YotYJwRFW4LqzcjddLgA=="
+    },
+    {
+      "id": 7095659251840,
+      "key": "09",
+      "title": "Book IX",
+      "json": "json/09.json",
+      "created": 1745090290933,
+      "hash": "md5-mIsksSlu8eD3oH8W1qGiVg=="
+    },
+    {
+      "id": 6140501926364,
+      "key": "10",
+      "title": "Book X",
+      "json": "json/10.json",
+      "created": 1745090290939,
+      "hash": "md5-Vg1BuWP1LvUO0xrWmT+4nQ=="
+    },
+    {
+      "id": 7138525193495,
+      "key": "11",
+      "title": "Book XI",
+      "json": "json/11.json",
+      "created": 1745090290945,
+      "hash": "md5-3wCRAMxOf7aRC5zl8LTEhw=="
+    },
+    {
+      "id": 4818877804073,
+      "key": "12",
+      "title": "Book XII",
+      "json": "json/12.json",
+      "created": 1745090290950,
+      "hash": "md5-MAi97bX5YgA1pcIv5yHcuw=="
+    },
+    {
+      "id": 1215818666544,
+      "key": "13",
+      "title": "Book XIII",
+      "json": "json/13.json",
+      "created": 1745090290956,
+      "hash": "md5-o4nu07SSu7Ozh9U/+N2XyA=="
+    },
+    {
+      "id": 4035745469690,
+      "key": "14",
+      "title": "Book XIV",
+      "json": "json/14.json",
+      "created": 1745090290959,
+      "hash": "md5-cDtP7gGMZB6A9CPwOYWILA=="
+    },
+    {
+      "id": 2974458034591,
+      "key": "15",
+      "title": "Book XV",
+      "json": "json/15.json",
+      "created": 1745090290965,
+      "hash": "md5-hOkx4MO3TZ4lnktEo3cB8A=="
+    },
+    {
+      "id": 6967483209376,
+      "key": "16",
+      "title": "Book XVI",
+      "json": "json/16.json",
+      "created": 1745090290970,
+      "hash": "md5-CqtuCF8bpjLqf8lp5zL/8g=="
+    },
+    {
+      "id": 3720476942433,
+      "key": "17",
+      "title": "Book XVII",
+      "json": "json/17.json",
+      "created": 1745090290973,
+      "hash": "md5-3rUx18ca4tCjpq/BHqt7Ew=="
+    },
+    {
+      "id": 3355549522960,
+      "key": "18",
+      "title": "Book XVIII",
+      "json": "json/18.json",
+      "created": 1745090290974,
+      "hash": "md5-TpAZF4XSoEyI+o/aT302qQ=="
+    },
+    {
+      "id": 6243284450855,
+      "key": "19",
+      "title": "Book XIX",
+      "json": "json/19.json",
+      "created": 1745090290982,
+      "hash": "md5-AVTiUzH1NsBnNBbSZYLXBw=="
+    },
+    {
+      "id": 3905456308719,
+      "key": "20",
+      "title": "Book XX",
+      "json": "json/20.json",
+      "created": 1745090291002,
+      "hash": "md5-md1QYzZRVWVf7fSMAhupEQ=="
+    }
+  ],
+  "created": 1745090290779,
+  "hash": "md5-bH7XGPfhfTkzo287E/eQYA=="
+}
