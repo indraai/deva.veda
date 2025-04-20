@@ -335,11 +335,11 @@ const VEDA = new Deva({
     avbooks,
   },
   onReady(data, resolve) {
-    this.prompt(this.vars.messages.ready);
+    this.prompt(this._messages.ready);
     return resolve(data);
   },
   onError(err, data, reject) {
-    this.prompt(this.vars.messages.error);
+    this.prompt(this._messages.error);
     console.log(err);
     return reject(err);
   },
