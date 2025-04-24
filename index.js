@@ -2,10 +2,11 @@
 // The Rig Veda Deva
 import Deva from '@indra.ai/deva';
 import pkg from './package.json' with {type:'json'};
+const {agent,vars} = pkg.data;
 import utils from './utils.js';
 
 import data from './data/index.js';
-const {agent,vars,rigveda} = data;
+const {rigveda} = data;
 
 import {manu, manuhash, laws} from './data/laws/index.js';
 import {bookimport} from './data/rigveda/index.js';
@@ -174,9 +175,6 @@ const VEDA = new Deva({
             processed.text,
             '::end:content',
             '::begin:meta',
-            `button[💬 Ask Veda]:#veda ask Om Please write a story > ${encodeURIComponent(processed.text)} Om`,
-            `button[🔈 Speak Hymn]:#chat speech:${agent.profile.voice} ${encodeURIComponent(processed.text)}`,
-            `key: ${processed.key}`,
             `title: ${processed.title}`,
             processed.people.length ? `people: ${processed.people.join(', ')}` : '',
             processed.places.length ? `places: ${processed.places.join(', ')}` : '',
