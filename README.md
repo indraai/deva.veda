@@ -35,6 +35,40 @@ Veda Deva serves as a comprehensive resource for exploring Vedic knowledge. Whet
 - `func/index.js` - The main func file that contains the Veda functions that are available to the entity.
 - `methods/index.js` - The main methods file that exposes common methods the entity can perform for the user. 
 
+## Data 
+
+The Veda Deva repository is a comprehensive digital library that includes JSON versions of the Rig Veda, Atharva Veda, and Sama Veda, all meticulously integrated within the system's data directory. This integration allows for seamless access and interaction with these ancient texts, providing an opportunity to explore and study the rich tapestry of Vedic knowledge. 
+
+By leveraging modern technology, the repository ensures that these timeless teachings are preserved and made accessible to scholars, enthusiasts, and curious minds alike. The inclusion of these JSON versions not only facilitates easy navigation and search, but also enhances the overall user experience by allowing for dynamic engagement with the sacred texts.
+
+- `data/menu.json` - The Menu file with the listing of available Veda books.
+
+### Rig Veda
+
+Ancient collection of hymns praising Vedic gods. Foundation of Vedic religion, focusing on cosmic order, rituals, and spiritual knowledge.
+
+- `data/rigveda/index.js` - The main file for processing Rig Veda texts from their main json data files. 
+- `data/rigveda/index.json` - The Rig Veda index.json file listing the details of the books of the Rig Veda.
+- `data/rigveda/books/*.json` - The individual json files for each of the various Rig Veda Books
+
+### Atharva Veda
+
+Compilation of hymns, spells, and incantations addressing daily life, healing, protection, and worldly concerns beyond ritual worship.
+
+- `data/atharvaveda/index.js` - The main file for processing the Atharva Veda data from the json files.
+- `data/atharvaveda/index.json` - The Atharva Veda index.json file includes the list and details of available books.
+- `data/atharvaveda/books/*.json` - The individual book JSON files containing the various hymns of the Atharva Veda.
+
+
+### Sama Veda
+
+Musical chants derived from Rig Veda, meant for singing during sacrifices, emphasizing melody and rhythm in Vedic rituals.
+
+- `data/samaveda/index.js` - The main file for processing the Sama Veda data from the json files.
+- `data/samaveda/index.json` - The Sama Veda index.json file includes the list and details of available books.
+- `data/samaveda/books/*.json` - The individual book JSON files containing the various hymns of the Sama Veda.
+
+Vedic Texts were procured from sacred-texts.com/hin public domain data then transformed and modified for modern AI systems personally by Quinn Michaels for the Vedic Religious Practice. 
 
 ## License
 This project is licensed under MIT. See [License](LICENSE.md) for more details.
