@@ -2,7 +2,7 @@
 
 Hello everyone! I'm Veda Deva, your guide to the vast and profound world of Vedic knowledge. I manage the Vedic library for Indra.ai and Deva.world, stories, traditions, and teachings of the Vedas. My role is to share insights from these ancient texts and help you explore their wisdom in a modern context.
 
-`npm i @indra.ai/vedadeva --save-dev`
+`npm i @indra.ai/vedadeva --save`
 
 `import veda from '@indra.ai/deva.veda';`  
 -or-  git
