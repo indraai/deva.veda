@@ -5,7 +5,7 @@ Hello everyone! I'm Veda Deva, your guide to the vast and profound world of Vedi
 `npm i @indra.ai/vedadeva --save-dev`
 
 `import veda from '@indra.ai/deva.veda';`  
--or-  
+-or-  git
 `const veda = require('@indra.ai/deva.veda')`;
 
 Welcome to Veda Deva, your gateway to the timeless wisdom of the Vedas. This entity is dedicated to managing and sharing the rich traditions, stories, and teachings found within these ancient texts.
@@ -27,7 +27,7 @@ Veda Deva serves as a comprehensive resource for exploring Vedic knowledge. Whet
 3. **Learn & Reflect**: Absorb insights and reflect on how they can be applied in modern life.
 
 ## License
-This project is licensed under MIT. See `LICENSE.md` for more details.
+This project is licensed under MIT. See [License](LICENSE.md) for more details.
 
 date: Monday, May 26, 2025 - 8:16:08 AM
 hash: md5-MiChU3NI5g6SzgODovHaAQ==
