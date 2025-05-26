@@ -4,7 +4,9 @@ Hello everyone! I'm Veda Deva, your guide to the vast and profound world of Vedi
 
 `npm i @indra.ai/vedadeva --save-dev`
 
-`const veda = require('@indra.ai/vedadeva')`;
+`import veda from '@indra.ai/deva.veda';`  
+-or-  
+`const veda = require('@indra.ai/deva.veda')`;
 
 Welcome to Veda Deva, your gateway to the timeless wisdom of the Vedas. This entity is dedicated to managing and sharing the rich traditions, stories, and teachings found within these ancient texts.
 
