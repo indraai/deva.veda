@@ -6,6 +6,10 @@ import {dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';    
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+export const data = {
+	
+}
+
 // function to import the atharvaveda books from the html files.
 export async function avbooks(packet) {
 	this.context('import', `avbooks:${packet.id}`);      

@@ -1,0 +1,38 @@
+{
+	"id": 5439950010622,
+	"key": "menu",
+	"title": "Veda Menu",
+	"describe": "The Veda Knowledge Menu",
+	"data": [
+		{
+			"id": 1283031073193,
+			"title": "🛟 Help",
+			"cmd": "#veda help"
+		},
+		{
+			"id": 1783384154168,
+			"title": "🪷 Rig Veda",
+			"cmd": "#veda books:rigveda"
+		},
+		{
+			"id": 5927006658592,
+			"title": "🌈 Sama Veda",
+			"cmd": "#veda books:samaveda"
+		},
+		{
+			"id": 1783384154168,
+			"title": "🧘 Atharva Veda",
+			"cmd": "#veda books:atharvaveda"
+		},
+		{
+			"id": 2858650626992,
+			"title": "✨ Yajur Veda",
+			"cmd": "#veda books:yajurveda"
+		},
+		{
+			"id": 1783384154168,
+			"title": "👨‍⚖️ Laws of Manu",
+			"cmd": "#veda books:manu"
+		}
+	]
+}

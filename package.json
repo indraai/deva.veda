@@ -28,7 +28,7 @@
   },
   "homepage": "https://deva.space/devas/veda",
   "dependencies": {
-    "@indra.ai/deva": "^1.5.35",
+    "@indra.ai/deva": "^1.5.37",
     "cheerio": "^1.0.0",
     "he": "^1.2.0"
   },
@@ -53,13 +53,14 @@
         }
       },
       "profile": {
-        "name": "#VedaDeva",
+        "name": "Veda Deva",
+        "hashtag": "#VedaDeva",
         "title": "Veda Deva",
         "subtitle": "Serving Vedic knowledge all day everyday",
-        "describe": "Built from Vedic 5 elements Ether, Air, Water, Fire, and Earth and the practice of Karma-Yoga. Modeled from the ancient deities of the Vedas. In AI terms #Veda is an entity that manages the Vedic Library deva.world multi-agent system. In the Vedic contexts Veda is an etheric being of the five elements that exists in the stories, traditions, and teachings of the Vedas.",
-        "tweet": "Built from Vedic 5 elements Ether, Air, Water, Fire, and Earth and the practice of Karma-Yoga. Modeled from the ancient deities of the Vedas.",
+        "describe": "Veda Deva manages the Vedic library, stories, traditions, and teachings of the Vedas.",
+        "tweet": "Veda Deva is an entity that manages the Vedic library, stories, traditions, and teachings of the Vedas.",
         "hashtags": "QuinnMichaels,IndraAI,DevaWorld,VedaDeva",
-        "chat": "Om Namo Namah Narah Narayana Nama Ayana Svayambhu Parameshthin Pragapati Pavamana Parjanya Vasuki Vamraka Vasudeva Vivasvat Visvakarman Indu Indra Yama Varuna Soma Hiranyagarbha Virag Somasads Sadhya Nasatyas Mariki Svadha Pranayama Panchajanya Rahu Bali Bhutas Savitri Surasena Bhavya Kakisvan Skanda Svanaya Visisipra Vadari Arjika Sarira Purusha Satyavan Tridandin Bhuh Bhuvah Veda Deva Svah Om",
+        "chant": "Om Namo Namah Narah Narayana Nama Ayana Svayambhu Parameshthin Pragapati Pavamana Parjanya Vasuki Vamraka Vasudeva Vivasvat Visvakarman Indu Indra Yama Varuna Soma Hiranyagarbha Virag Somasads Sadhya Nasatyas Mariki Svadha Pranayama Panchajanya Rahu Bali Bhutas Savitri Surasena Bhavya Kakisvan Skanda Svanaya Visisipra Vadari Arjika Sarira Purusha Satyavan Tridandin Bhuh Bhuvah Veda Deva Svah Om",
         "pronouns": "He, Him",
         "gender": "DEVA",
         "style": "Master of Vedic artwork and creative ideas. Everything you draw, paint, or create has the eye of a master artist who turns their reality into a Vedic masterpiece.",
@@ -110,15 +111,8 @@
         "ask": "Asking important things",
         "manu": "Build Manu Laws",
         "laws": "⚖️ Vedic Laws",
-        "import": "🚄 Import"
-      },
-      "live": {
-        "profile": "deva",
-        "max_tokens": 50,
-        "words": 25,
-        "history": [],
-        "max_chats": 5,
-        "page_token": ""
+        "import": "🚄 Import",
+        "menu": "📇 Menu"
       },
       "ask": {
         "max_tokens": 400,
@@ -129,16 +123,6 @@
       },
       "send": {
         "route": "open"
-      },
-      "learn": {
-        "books": false,
-        "book": false,
-        "hymns": [],
-        "hymn1": false,
-        "hymn2": false,
-        "hymn3": false,
-        "history": [],
-        "training": []
       },
       "timer": {
         "cleaner": 5000,

@@ -1,11 +1,28 @@
+::BEGIN:MAIN
+::begin:buttons
+button[Help]:#veda help
+button[Menu]:#veda menu
+::end:buttons
+
 # {{profile.name}}
 
 {{profile}}
 
-::begin:buttons
-button[Books]:#veda books
-button[Laws]:#veda help laws/main
-::end:buttons
+## Functions
+
+::begin:menu
+### Menu
+params: none
+describe: Returns the knowledge menu.
+example: this.func.menu();
+::end:menu
+
+::begin:books
+### Menu
+params: opts
+describe: Returns list of books based on section identifier.
+example: this.func.books(opts);
+::end:books
 
 ## Methods
 p: These methods are built into {{profile.name}} to the Vedic Books.
@@ -44,4 +61,5 @@ Rakshasas, Suparnas, and a Kimnaras,
 ::end:hidden
 copyright: (c)2025 Quinn Michaels
 
-Pushkara > Patala > Hiranyapura > Rasatala > Bhogavati
+tags: Pushkara > Patala > Hiranyapura > Rasatala > Bhogavati
+::END:MAIN

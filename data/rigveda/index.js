@@ -3,35 +3,42 @@ import {dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';    
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-import index from './index.json' with {type:'json'};
-import book01 from './01.json' with {type:'json'};
-import book02 from './02.json' with {type:'json'};
-import book03 from './03.json' with {type:'json'};
-import book04 from './04.json' with {type:'json'};
-import book05 from './05.json' with {type:'json'};
-import book06 from './06.json' with {type:'json'};
-import book07 from './07.json' with {type:'json'};
-import book08 from './08.json' with {type:'json'};
-import book09 from './09.json' with {type:'json'};
-import book10 from './10.json' with {type:'json'};
+export async function rvbooks(packet) {
+  // first thing is to get the books list
+  this.prompt('get books');
 
-export const data = {
-  index: index,
-  books: [
-    book01.DATA,
-    book02.DATA,
-    book03.DATA,
-    book04.DATA,
-    book05.DATA,
-    book06.DATA,
-    book07.DATA,
-    book08.DATA,
-    book09.DATA,
-    book10.DATA,
-  ]
+  const vedaindex = {
+    id: this.lib.uid(),
+    title: 'Rig Veda Books',
+    describe: 'The Rig Veda is one of the most ancient texts known to man. Inside are stories, lessons, and knowledge to be found.',
+    orig: 'https://www.sacred-texts.com/hin/rigveda/index.htm',
+    api: 'data/rigveda/index.json',
+    data: [],
+    created: Date.now(),
+  };
+  
+  const bookspath = this.lib.path.join(__dirname, 'index.json');
+  const booksindex = this.lib.fs.readFileSync(bookspath);
+  const booksdata = JSON.parse(booksindex);
+  for (let book of booksdata.data) {
+    this.prompt(`📙 Book: ${book.key} ${book.title}`);
+    const bookpath = this.lib.path.join(__dirname, `${book.key}.json`);
+    const bookindex = this.lib.fs.readFileSync(bookpath);
+    const bookdata = JSON.parse(bookindex);
+    for (let hymn of bookdata.DATA) {
+      this.prompt(`📗 Hymn: ${hymn.title}`);
+      const hymnpath = this.lib.path.join(__dirname, 'hymns', `${hymn.key}.json`);
+      const hymnindex = this.lib.fs.readFileSync(hymnpath);
+      const hymndata = JSON.parse(hymnindex);
+
+      // write the original data to html files for backups.
+      // const htmlpath = this.lib.path.join(__dirname, '..', 'html', 'rigveda', book.key, `${hymn.key}.htm`);
+      // this.lib.fs.writeFileSync(htmlpath, hymndata.orig, {encoding:'utf8',flag:'w'});
+    }
+  }
 }
 
-export async function bookimport(packet) {
+export async function rvbooksold(packet) {
   this.context('json');
   // here we want to build text files for all the books that we can use in a custom agent.
   // first we need to get all the books

@@ -2,88 +2,100 @@
   "id": 6389811992509,
   "title": "Books",
   "describe": "The RigVeda is one of the most ancient texts known to man. Inside are stories, lessons, and knowledge to be found.",
-  "link": "index.html",
-  "api": "index.json",
-  "DATA": [
+  "orig": "https://www.sacred-texts.com/hin/rigveda/index.htm",
+  "api": "data/rigveda/index.json",
+  "data": [
     {
+      "id": 6422967982068,
       "key": "01",
       "title": "Book 1",
+      "api": "data/rigveda/books/01.json",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rvi01.htm",
-      "link": "01.html",
-      "api": "01.json",
-      "created": 1638549611243
+      "created": 1747590776552,
+      "hash": "md5-/MvmpkXKxVi/YlzOBLoc5A=="
     },
     {
+      "id": 4438585031331,
       "key": "02",
       "title": "Book 2",
+      "api": "data/rigveda/books/02.json",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rvi02.htm",
-      "link": "02.html",
-      "api": "02.json",
-      "created": 1638549611243
+      "created": 1747590776552,
+      "hash": "md5-PTsE85tF6sDk662lpmPSrg=="
     },
     {
+      "id": 4470919077921,
       "key": "03",
       "title": "Book 3",
+      "api": "data/rigveda/books/03.json",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rvi03.htm",
-      "link": "03.html",
-      "api": "03.json",
-      "created": 1638549611243
+      "created": 1747590776552,
+      "hash": "md5-QQ7cN3tWqnwGkUNh980QOA=="
     },
     {
+      "id": 3603859019231,
       "key": "04",
       "title": "Book 4",
+      "api": "data/rigveda/books/04.json",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rvi04.htm",
-      "link": "04.html",
-      "api": "04.json",
-      "created": 1638549611243
+      "created": 1747590776552,
+      "hash": "md5-IVXTZs2U7K8i1lu2v1U0CQ=="
     },
     {
+      "id": 1898056532480,
       "key": "05",
       "title": "Book 5",
+      "api": "data/rigveda/books/05.json",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rvi05.htm",
-      "link": "05.html",
-      "api": "05.json",
-      "created": 1638549611243
+      "created": 1747590776552,
+      "hash": "md5-pEqWiUHzn5TnSQL9XL0uhA=="
     },
     {
+      "id": 3825806980264,
       "key": "06",
       "title": "Book 6",
+      "api": "data/rigveda/books/06.json",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rvi06.htm",
-      "link": "06.html",
-      "api": "06.json",
-      "created": 1638549611243
+      "created": 1747590776552,
+      "hash": "md5-nbuFEdJuo/2KChjuwb/Ztg=="
     },
     {
+      "id": 5871033474415,
       "key": "07",
       "title": "Book 7",
+      "api": "data/rigveda/books/07.json",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rvi07.htm",
-      "link": "07.html",
-      "api": "07.json",
-      "created": 1638549611243
+      "created": 1747590776552,
+      "hash": "md5-+H9/1Y1/dbbdm5gyH/oK2w=="
     },
     {
+      "id": 1709081829616,
       "key": "08",
       "title": "Book 8",
+      "api": "data/rigveda/books/08.json",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rvi08.htm",
-      "link": "08.html",
-      "api": "08.json",
-      "created": 1638549611243
+      "created": 1747590776552,
+      "hash": "md5-5iPqh3k5wgJHd8/58GLeWg=="
     },
     {
+      "id": 7199942115475,
       "key": "09",
       "title": "Book 9",
+      "api": "data/rigveda/books/09.json",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rvi09.htm",
-      "link": "09.html",
-      "api": "09.json",
-      "created": 1638549611243
+      "created": 1747590776552,
+      "hash": "md5-sEZt6JEEjuMdC7fx8wZLAw=="
     },
     {
+      "id": 3852964875095,
       "key": "10",
       "title": "Book 10",
+      "api": "data/rigveda/books/10.json",
       "orig": "https://www.sacred-texts.com/hin/rigveda/rvi10.htm",
-      "link": "10.html",
-      "api": "10.json",
-      "created": 1638549611243
+      "created": 1747590776553,
+      "hash": "md5-nysST6EbsXQx3abtbt9jpQ=="
     }
-  ]
+  ],
+  "created": 1747590776553,
+  "hash": "md5-Hg8IlqIlflCHz1Sss+mVfw=="
 }

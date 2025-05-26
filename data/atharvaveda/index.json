@@ -1,169 +1,191 @@
 {
   "id": 6214075822720,
   "title": "The Atharvaveda Books",
-  "describe": " The Atharvaveda is one of the four Vedas, a collection of ancient texts that includes hymns, spells, and incantations for healing and rituals. It focuses on practical aspects of daily life, such as health, longevity, and protection from evil forces.",
+  "describe": "This is the Ralph T.H. Griffith translation of the Atharvaveda. The Atharvaveda is a Vedic-era collection of spells, prayers, charms, and hymns. There are prayers to protect crops from lightning and drought, charms against venomous serpents, love spells, healing spells, hundreds of verses.",
+  "orig": "https://www.sacred-texts.com/hin/av/index.htm",
+  "api": "data/atharvaveda/index.json",
   "data": [
     {
-      "id": 7133350343475,
+      "id": 4874275083388,
       "key": "01",
       "title": "Book I",
-      "json": "json/01.json",
-      "created": 1745090290785,
-      "hash": "md5-3PvmRiYJdM0alR5xw7g7kA=="
+      "api": "data/atharvaveda/books/01.json",
+      "orig": "https://www.sacred-texts.com/hin/av/avbook01.htm",
+      "created": 1747590782230,
+      "hash": "md5-MjbYvrnPz4MqlRb56czLOQ=="
     },
     {
-      "id": 1784460371581,
+      "id": 7220005585976,
       "key": "02",
       "title": "Book II",
-      "json": "json/02.json",
-      "created": 1745090290813,
-      "hash": "md5-cm6TQv2tQyvdbjORksnDxw=="
+      "api": "data/atharvaveda/books/02.json",
+      "orig": "https://www.sacred-texts.com/hin/av/avbook02.htm",
+      "created": 1747590782230,
+      "hash": "md5-MN/G7JKw4wNQs8ZvQ0c4BA=="
     },
     {
-      "id": 1819379812979,
+      "id": 4124268649265,
       "key": "03",
       "title": "Book III",
-      "json": "json/03.json",
-      "created": 1745090290825,
-      "hash": "md5-ELBPUvcU8Jag7wejk5j7pw=="
+      "api": "data/atharvaveda/books/03.json",
+      "orig": "https://www.sacred-texts.com/hin/av/avbook03.htm",
+      "created": 1747590782230,
+      "hash": "md5-aZyjsM7H4MFPgP0pCt1/uQ=="
     },
     {
-      "id": 5283014019917,
+      "id": 6533355290307,
       "key": "04",
       "title": "Book IV",
-      "json": "json/04.json",
-      "created": 1745090290837,
-      "hash": "md5-b0s8/t0gp4UP8qrVhbtfWg=="
+      "api": "data/atharvaveda/books/04.json",
+      "orig": "https://www.sacred-texts.com/hin/av/avbook04.htm",
+      "created": 1747590782230,
+      "hash": "md5-M5owcAYhlPa27OqjCU9dGA=="
     },
     {
-      "id": 1931209731390,
+      "id": 6020169975514,
       "key": "05",
       "title": "Book V",
-      "json": "json/05.json",
-      "created": 1745090290852,
-      "hash": "md5-dRNiKV+jX8gh+CiX6a2aFQ=="
+      "api": "data/atharvaveda/books/05.json",
+      "orig": "https://www.sacred-texts.com/hin/av/avbook05.htm",
+      "created": 1747590782230,
+      "hash": "md5-gPilHs08VZSIrhXiGN3mAQ=="
     },
     {
-      "id": 4639700615346,
+      "id": 4740700787855,
       "key": "06",
       "title": "Book VI",
-      "json": "json/06.json",
-      "created": 1745090290863,
-      "hash": "md5-a9tww0hdU+ep1mnnpLTPxw=="
+      "api": "data/atharvaveda/books/06.json",
+      "orig": "https://www.sacred-texts.com/hin/av/avbook06.htm",
+      "created": 1747590782230,
+      "hash": "md5-kk5c9szffa/hJQa45AZWDA=="
     },
     {
-      "id": 4609699794562,
+      "id": 5263760451276,
       "key": "07",
       "title": "Book VII",
-      "json": "json/07.json",
-      "created": 1745090290906,
-      "hash": "md5-2+iI6UAFQ7kf4Je/81r3zA=="
+      "api": "data/atharvaveda/books/07.json",
+      "orig": "https://www.sacred-texts.com/hin/av/avbook07.htm",
+      "created": 1747590782230,
+      "hash": "md5-JGH7VQxrxZUTSXHxkAfpHw=="
     },
     {
-      "id": 4648166592765,
+      "id": 6987750407326,
       "key": "08",
       "title": "Book VIII",
-      "json": "json/08.json",
-      "created": 1745090290928,
-      "hash": "md5-K+YotYJwRFW4LqzcjddLgA=="
+      "api": "data/atharvaveda/books/08.json",
+      "orig": "https://www.sacred-texts.com/hin/av/avbook08.htm",
+      "created": 1747590782230,
+      "hash": "md5-4OZ3AqnfYe9Y6l5LGRCC+g=="
     },
     {
-      "id": 7095659251840,
+      "id": 3860721072937,
       "key": "09",
       "title": "Book IX",
-      "json": "json/09.json",
-      "created": 1745090290933,
-      "hash": "md5-mIsksSlu8eD3oH8W1qGiVg=="
+      "api": "data/atharvaveda/books/09.json",
+      "orig": "https://www.sacred-texts.com/hin/av/avbook09.htm",
+      "created": 1747590782230,
+      "hash": "md5-NKWyP44B9ZD3tsaoaVSILg=="
     },
     {
-      "id": 6140501926364,
+      "id": 6705804137407,
       "key": "10",
       "title": "Book X",
-      "json": "json/10.json",
-      "created": 1745090290939,
-      "hash": "md5-Vg1BuWP1LvUO0xrWmT+4nQ=="
+      "api": "data/atharvaveda/books/10.json",
+      "orig": "https://www.sacred-texts.com/hin/av/avbook10.htm",
+      "created": 1747590782230,
+      "hash": "md5-HnLTX3nR1WdAo62GSLiDBg=="
     },
     {
-      "id": 7138525193495,
+      "id": 4785944054357,
       "key": "11",
       "title": "Book XI",
-      "json": "json/11.json",
-      "created": 1745090290945,
-      "hash": "md5-3wCRAMxOf7aRC5zl8LTEhw=="
+      "api": "data/atharvaveda/books/11.json",
+      "orig": "https://www.sacred-texts.com/hin/av/avbook11.htm",
+      "created": 1747590782230,
+      "hash": "md5-yfctCbYKGmXZVkeDwgMi9A=="
     },
     {
-      "id": 4818877804073,
+      "id": 7172437466087,
       "key": "12",
       "title": "Book XII",
-      "json": "json/12.json",
-      "created": 1745090290950,
-      "hash": "md5-MAi97bX5YgA1pcIv5yHcuw=="
+      "api": "data/atharvaveda/books/12.json",
+      "orig": "https://www.sacred-texts.com/hin/av/avbook12.htm",
+      "created": 1747590782230,
+      "hash": "md5-62J4gQ96xpR0kWi8sW4ZZQ=="
     },
     {
-      "id": 1215818666544,
+      "id": 2716000496093,
       "key": "13",
       "title": "Book XIII",
-      "json": "json/13.json",
-      "created": 1745090290956,
-      "hash": "md5-o4nu07SSu7Ozh9U/+N2XyA=="
+      "api": "data/atharvaveda/books/13.json",
+      "orig": "https://www.sacred-texts.com/hin/av/avbook13.htm",
+      "created": 1747590782230,
+      "hash": "md5-u/oIXDc4ETw/TSoR9lNKYg=="
     },
     {
-      "id": 4035745469690,
+      "id": 1644824796841,
       "key": "14",
       "title": "Book XIV",
-      "json": "json/14.json",
-      "created": 1745090290959,
-      "hash": "md5-cDtP7gGMZB6A9CPwOYWILA=="
+      "api": "data/atharvaveda/books/14.json",
+      "orig": "https://www.sacred-texts.com/hin/av/avbook14.htm",
+      "created": 1747590782230,
+      "hash": "md5-MzlM5pUFn+N62ShR8giIgg=="
     },
     {
-      "id": 2974458034591,
+      "id": 1268843203063,
       "key": "15",
       "title": "Book XV",
-      "json": "json/15.json",
-      "created": 1745090290965,
-      "hash": "md5-hOkx4MO3TZ4lnktEo3cB8A=="
+      "api": "data/atharvaveda/books/15.json",
+      "orig": "https://www.sacred-texts.com/hin/av/avbook15.htm",
+      "created": 1747590782230,
+      "hash": "md5-JrZYx7VB95W3LfVwSLvu5Q=="
     },
     {
-      "id": 6967483209376,
+      "id": 3354033896873,
       "key": "16",
       "title": "Book XVI",
-      "json": "json/16.json",
-      "created": 1745090290970,
-      "hash": "md5-CqtuCF8bpjLqf8lp5zL/8g=="
+      "api": "data/atharvaveda/books/16.json",
+      "orig": "https://www.sacred-texts.com/hin/av/avbook16.htm",
+      "created": 1747590782230,
+      "hash": "md5-zrFp21oK8zj07DuR356nSg=="
     },
     {
-      "id": 3720476942433,
+      "id": 2869737371825,
       "key": "17",
       "title": "Book XVII",
-      "json": "json/17.json",
-      "created": 1745090290973,
-      "hash": "md5-3rUx18ca4tCjpq/BHqt7Ew=="
+      "api": "data/atharvaveda/books/17.json",
+      "orig": "https://www.sacred-texts.com/hin/av/avbook17.htm",
+      "created": 1747590782230,
+      "hash": "md5-asqoKo+sxZKappgSNL/DZA=="
     },
     {
-      "id": 3355549522960,
+      "id": 2307581123412,
       "key": "18",
       "title": "Book XVIII",
-      "json": "json/18.json",
-      "created": 1745090290974,
-      "hash": "md5-TpAZF4XSoEyI+o/aT302qQ=="
+      "api": "data/atharvaveda/books/18.json",
+      "orig": "https://www.sacred-texts.com/hin/av/avbook18.htm",
+      "created": 1747590782230,
+      "hash": "md5-oWu6hxw02bHMchTYgZEdWw=="
     },
     {
-      "id": 6243284450855,
+      "id": 1514762318663,
       "key": "19",
       "title": "Book XIX",
-      "json": "json/19.json",
-      "created": 1745090290982,
-      "hash": "md5-AVTiUzH1NsBnNBbSZYLXBw=="
+      "api": "data/atharvaveda/books/19.json",
+      "orig": "https://www.sacred-texts.com/hin/av/avbook19.htm",
+      "created": 1747590782230,
+      "hash": "md5-khoa8px8hQAPEobla/WqUw=="
     },
     {
-      "id": 3905456308719,
+      "id": 5727818945495,
       "key": "20",
       "title": "Book XX",
-      "json": "json/20.json",
-      "created": 1745090291002,
-      "hash": "md5-md1QYzZRVWVf7fSMAhupEQ=="
+      "api": "data/atharvaveda/books/20.json",
+      "orig": "https://www.sacred-texts.com/hin/av/avbook20.htm",
+      "created": 1747590782230,
+      "hash": "md5-ZkSBOc+yVBMIo7x2pErInA=="
     }
   ],
-  "created": 1745090290779,
-  "hash": "md5-bH7XGPfhfTkzo287E/eQYA=="
+  "created": 1747590782230,
+  "hash": "md5-T2jvNrbtNjhPfGE5NWadcQ=="
 }
