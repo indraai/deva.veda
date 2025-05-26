@@ -29,11 +29,11 @@ Veda Deva serves as a comprehensive resource for exploring Vedic knowledge. Whet
 
 ## Files
 
-`index.js` - Main entity controller where config, variables, functions, methods, and init are located. 
-`utils.js` - Utilities for processing Vedic Data. Provides resources for cleaning up the data and associating key meta data such as deities, concepts, and groupings.
-`index.text.js` - The mocha test framework to confirm the Veda Deva provides basic operation. 
-`func/index.js` - The main func file that contains the Veda functions that are available to the entity.
-`methods/index.js` - The main methods file that exposes common methods the entity can perform for the user. 
+- `index.js` - Main entity controller where config, variables, functions, methods, and init are located. 
+- `utils.js` - Utilities for processing Vedic Data. Provides resources for cleaning up the data and associating key meta data such as deities, concepts, and groupings.
+- `index.text.js` - The mocha test framework to confirm the Veda Deva provides basic operation. 
+- `func/index.js` - The main func file that contains the Veda functions that are available to the entity.
+- `methods/index.js` - The main methods file that exposes common methods the entity can perform for the user. 
 
 
 ## License
