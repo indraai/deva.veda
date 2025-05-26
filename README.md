@@ -22,9 +22,19 @@ Veda Deva serves as a comprehensive resource for exploring Vedic knowledge. Whet
 - **Historical Narratives**: Discover historical contexts and narratives that shaped ancient Indian civilization.
 
 ## How to Use
+
 1. **Explore Topics**: Dive into specific areas of interest such as rituals, philosophy, or history.
 2. **Ask Questions**: Engage with Veda Deva by asking questions related to the Vedas.
 3. **Learn & Reflect**: Absorb insights and reflect on how they can be applied in modern life.
+
+## Files
+
+`index.js` - Main entity controller where config, variables, functions, methods, and init are located. 
+`utils.js` - Utilities for processing Vedic Data. Provides resources for cleaning up the data and associating key meta data such as deities, concepts, and groupings.
+`index.text.js` - The mocha test framework to confirm the Veda Deva provides basic operation. 
+`func/index.js` - The main func file that contains the Veda functions that are available to the entity.
+`methods/index.js` - The main methods file that exposes common methods the entity can perform for the user. 
+
 
 ## License
 This project is licensed under MIT. See [License](LICENSE.md) for more details.
