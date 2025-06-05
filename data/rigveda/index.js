@@ -1,4 +1,5 @@
 // set the __dirname
+import he from 'he';
 import {dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';    
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -25,16 +26,43 @@ export async function rvbooks(packet) {
     const bookpath = this.lib.path.join(__dirname, `${book.key}.json`);
     const bookindex = this.lib.fs.readFileSync(bookpath);
     const bookdata = JSON.parse(bookindex);
-    for (let hymn of bookdata.DATA) {
+    
+    const newbook = {
+      id: book.id, 
+      key: book.key, 
+      describe: bookdata.describe,
+      api: book.api,
+      orig: `https://sacred-texts.com/hin/rigveda/rvi${book.key}.htm`,
+      created: Date.now(),
+      data: [],
+    }
+    for (let hymn of bookdata.data) {
       this.prompt(`📗 Hymn: ${hymn.title}`);
       const hymnpath = this.lib.path.join(__dirname, 'hymns', `${hymn.key}.json`);
       const hymnindex = this.lib.fs.readFileSync(hymnpath);
       const hymndata = JSON.parse(hymnindex);
-
-      // write the original data to html files for backups.
-      // const htmlpath = this.lib.path.join(__dirname, '..', 'html', 'rigveda', book.key, `${hymn.key}.htm`);
-      // this.lib.fs.writeFileSync(htmlpath, hymndata.orig, {encoding:'utf8',flag:'w'});
-    }
+      
+      const hymntitle = hymndata.orig.split('<h3 align="center" align="center">')[1].split('</h3>')[0];
+      const hymnorig = he.decode(hymndata.orig);
+      const hymncontent = hymnorig.split('</h3>')[1].split('<p><HR>')[0]
+                                  .replace(/<p>\s?\d+?\.?\s?/gi, '\np: ')
+                                  .replace(/<br> \d+\.?\s?/g, '\np: ')
+                                  .replace(/<br>/g, '')
+                                  .replace(/<p>|<\/p>|<\/div>|<\/BODY>|<\/HTML>/gi, '').trim();
+      const newhymn = {
+        id: this.lib.uid(),
+        key: hymn.key,
+        title: hymntitle,
+        orig: `https://sacred-texts.com/hin/rigveda/rv${book.key}${hymn.key}.htm`,
+        content: hymncontent,
+        created: Date.now(),
+      }
+      newhymn.hash = this.lib.hash(newhymn);
+      newbook.data.push(newhymn);
+    } // end book data loop
+    // write the original data to html files for backups.
+    const newbookpath = this.lib.path.join(__dirname, 'books', `${newbook.key}.json`);
+    this.lib.fs.writeFileSync(newbookpath, JSON.stringify(newbook, null, 2), {encoding:'utf8',flag:'w'});
   }
 }
 
