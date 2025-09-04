@@ -28,7 +28,7 @@
   },
   "homepage": "https://deva.space/devas/veda",
   "dependencies": {
-    "@indra.ai/deva": "^1.5.52",
+    "@indra.ai/deva": "^1.5.53",
     "cheerio": "^1.0.0",
     "he": "^1.2.0"
   },
@@ -81,6 +81,19 @@
         "created": "August 23, 2022 @ 3:18 AM PST"
       }
     },
+    "laws": [
+      "After giving up even the above-mentioned sacrificial rites, a Brahmana should exert himself in (acquiring) the knowledge of the Soul, in extinguishing his passions, and in studying the Veda.",
+      "For that secures the attainment of the object of existence, especially in the case of a Brahmana, because by attaining that, not otherwise, a twice-born man has gained all his ends.",
+      "The Veda is the eternal eye of the manes, gods, and men; the Veda-ordinance (is) both beyond the sphere of (human) power, and beyond the sphere of (human) comprehension; that is a certain fact.",
+      "All those traditions (smriti) and those despicable systems of philosophy, which are not based on the Veda, produce no reward after death; for they are declared to be founded on Darkness.",
+      "All those doctrines, differing from the (Veda), which spring up and (soon) perish, are worthless and false, because they are of modern date.",
+      "The four castes, the three worlds, the four orders, the past, the present, and the future are all severally known by means of the Veda.",
+      "Sound, touch, colour, taste, and fifthly smell are known through the Veda alone, (their) production (is) through the (Vedic rites, which in this respect are) secondary acts.",
+      "The eternal lore of the Veda upholds all created beings; hence I hold that to be supreme, which is the means of (securing happiness to) these creatures.",
+      "Command of armies, royal authority, the office of a judge, and sovereignty over the whole world he (only) deserves who knows the Veda-science.",
+      "As a fire that has gained strength consumes even trees full of sap, even so he who knows the Veda burns out the taint of his soul which arises from (evil) acts.",
+      "In whatever order (a man) who knows the true meaning of the Veda-science may dwell, he becomes even while abiding in this world, fit for the union with Brahman."
+    ],
     "vars": {
       "messages": {
         "init": "🟠 INIT",

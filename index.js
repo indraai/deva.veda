@@ -32,7 +32,14 @@ const VEDA = new Deva({
   agent,
   vars,
   utils,
-  listeners: {},
+  listeners: {
+    'devacore:question'(packet) {
+      const echo = this.methods.echo('veda', 'q', packet);
+    },
+    'devacore:answer'(packet) {
+      const echo = this.methods.echo('veda', 'a', packet);
+    }    
+  },
   modules: {},
   deva: {},
   func,
