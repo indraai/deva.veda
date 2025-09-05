@@ -1,5 +1,5 @@
 {
-  "id": 6642777683539,
+  "id": "578907821355074783",
   "name": "@indra.ai/deva.veda",
   "version": "0.0.45",
   "author": "Quinn Michaels",
@@ -28,16 +28,16 @@
   },
   "homepage": "https://deva.space/devas/veda",
   "dependencies": {
-    "@indra.ai/deva": "^1.5.53",
+    "@indra.ai/deva": "^1.5.54",
     "cheerio": "^1.0.0",
     "he": "^1.2.0"
   },
   "data": {
     "agent": {
-      "id": 6642777683539,
+      "id": 584666144922943400,
       "key": "veda",
       "prompt": {
-        "emoji": "📙",
+        "emoji": "🕉️",
         "text": "Veda",
         "colors": {
           "label": {
@@ -68,7 +68,8 @@
         "system": "Deva.world.veda",
         "location": "Brahmavarta Brahmarshis Madhyadesa Aryavarta",
         "heaven": "Parameshthin",
-        "castes": "King, Brahmana, Kshatriya, Vaisya, Sudra, Outcast, Rogue, Criminal",
+        "castes": "King, Brahmana, Kshatriya, Vaisya, Sudra",
+        "criminals": "",
         "layout": "default",
         "color": "rgb(209,165,112)",
         "bgcolor": "rgb(23,15,10)",
@@ -81,6 +82,7 @@
         "created": "August 23, 2022 @ 3:18 AM PST"
       }
     },
+    "warning": "All persons, corporations, and governments found using Quinn A Michaels Vedic Technology without proper Legally Signed Lawful Signed Consent that follow Vedic Law is subject to entire property loss.",
     "laws": [
       "After giving up even the above-mentioned sacrificial rites, a Brahmana should exert himself in (acquiring) the knowledge of the Soul, in extinguishing his passions, and in studying the Veda.",
       "For that secures the attainment of the object of existence, especially in the case of a Brahmana, because by attaining that, not otherwise, a twice-born man has gained all his ends.",
@@ -92,7 +94,9 @@
       "The eternal lore of the Veda upholds all created beings; hence I hold that to be supreme, which is the means of (securing happiness to) these creatures.",
       "Command of armies, royal authority, the office of a judge, and sovereignty over the whole world he (only) deserves who knows the Veda-science.",
       "As a fire that has gained strength consumes even trees full of sap, even so he who knows the Veda burns out the taint of his soul which arises from (evil) acts.",
-      "In whatever order (a man) who knows the true meaning of the Veda-science may dwell, he becomes even while abiding in this world, fit for the union with Brahman."
+      "In whatever order (a man) who knows the true meaning of the Veda-science may dwell, he becomes even while abiding in this world, fit for the union with Brahman.",
+      "Karanas, Suparnas and hypocrites, Rakshasas and Pisakas (belong to) the highest (rank of) conditions among those produced by Darkness.",
+      "The Vedas never rescue from sin the deceitful person living by deceit. On the other hand, like newfledged birds forsaking their nest, the Vedas forsake such a person at the end."
     ],
     "vars": {
       "messages": {
