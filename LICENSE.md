@@ -1,7 +1,7 @@
 # Vedic License Agreement
 
-**Version:** 1.0  
-**Effective:**  Sunday, September 7, 2025 - 12:19:46 AM
+**Version:** 1.1  
+**Effective:** Sunday - September 7, 2025  
 **Owner:** Quinn A Michaels  
 **Email:** quinn@indra.ai
 
@@ -13,7 +13,7 @@ Software is the sole proprietary property of Quinn A Michaels (“Owner”). All
 
 ## Grant of License
 
-Use of the Software is strictly prohibited without a valid, hand-signed authorization from the Owner. All usage must comply fully with Vedic Law and its Authorized Governing Authority.
+Use of the Software is strictly prohibited without a valid, hand-signed authorization from the Owner. All usage must comply fully with Vedic Law and Owner Designated Governing Authority.
 
 ## Restricted Use
 
@@ -41,7 +41,7 @@ To the maximum extent permitted by law, the Owner shall not be liable for any da
 
 ## Governing Law
 
-This Agreement shall be governed by and construed in accordance with the Laws of the Vedic Religion and it's Authorized Official Governing Authority.
+This Agreement shall be governed by and construed in accordance with the Laws of the Vedic Religion and it's Owner Designated Governing Authority.
 
 ## Entire Agreement
 
