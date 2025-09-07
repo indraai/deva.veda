@@ -2,9 +2,23 @@
   "id": "578907821355074783",
   "name": "@indra.ai/deva.veda",
   "version": "0.0.49",
-  "author": "Quinn Michaels",
-  "license": "MIT",
-  "copyright": "2025",
+  "license": "VLA LICENSE.md",
+  "author": {
+    "name": "Quinn A Michaels",
+    "email": "quinn@indra.ai",
+    "url": "https://indra.ai/"
+  },
+  "funding": [
+    {
+      "type": "paypal",
+      "url": "https://paypal.me/rahulaclub"
+    },
+    {
+      "type": "patreon",
+      "url": "https://patreon.com/rahulaclub"
+    }
+  ],
+  "copyright": "(c)2025, Quinn A Michaels; All Rights Reserved.",
   "description": "The Veda Deva in deva.world",
   "main": "index.js",
   "type": "module",
@@ -79,7 +93,8 @@
         "background": "/assets/devas/veda/background.png",
         "owner": "Quinn Michaels",
         "creator": "Quinn Michaels",
-        "created": "August 23, 2022 @ 3:18 AM PST"
+        "created": "August 23, 2022 @ 3:18 AM PST",
+        "modified": "Sunday, September 7, 2025 - 12:21:28 AM"
       }
     },
     "warning": "All persons, corporations, and governments found using Quinn A Michaels Vedic Technology without proper Legally Signed Lawful Signed Consent that follow Vedic Law is subject to entire property loss.",

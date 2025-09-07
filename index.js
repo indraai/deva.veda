@@ -1,4 +1,8 @@
-// Copyright (c)2021 Quinn Michaels
+"use strict";
+// ©2025 Quinn A Michaels; All rights reserved. 
+// Legal Signature Required For Lawful Use.
+// Distributed under the Vedic License Agreement LICENSE.md
+
 // The Rig Veda Deva
 import Deva from '@indra.ai/deva';
 import pkg from './package.json' with {type:'json'};

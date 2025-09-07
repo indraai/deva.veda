@@ -75,3 +75,7 @@ This project is licensed under MIT. See [License](LICENSE.md) for more details.
 
 date: Monday, May 26, 2025 - 8:16:08 AM
 hash: md5-MiChU3NI5g6SzgODovHaAQ==
+
+©2025 Quinn A Michaels; All rights reserved. 
+Legal Signature Required For Lawful Use.
+Distributed under the Vedic License Agreement LICENSE.md

@@ -1,4 +1,7 @@
-// Copyright (c)2021 Quinn Michaels. All Rights Reserved
+// ©2025 Quinn A Michaels; All rights reserved. 
+// Legal Signature Required For Lawful Use.
+// Distributed under the Vedic License Agreement LICENSE.md
+
 import fs from 'fs'; // include for file system manipulation.
 import path from 'path'; // include for path joining
 import he from 'he'; // used for html entity encoding and decoding.

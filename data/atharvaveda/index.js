@@ -1,4 +1,8 @@
 "use strict";
+// ©2025 Quinn A Michaels; All rights reserved. 
+// Legal Signature Required For Lawful Use.
+// Distributed under the Vedic License Agreement LICENSE.md
+
 // set the __dirname
 import he from 'he';
 import * as cheerio from 'cheerio';
