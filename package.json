@@ -42,7 +42,7 @@
   },
   "homepage": "https://deva.space/devas/veda",
   "dependencies": {
-    "@indra.ai/deva": "^1.6.63",
+    "@indra.ai/deva": "^1.6.64",
     "cheerio": "^1.0.0",
     "he": "^1.2.0"
   },
@@ -118,7 +118,7 @@
         "init": "🟠 INIT",
         "start": "🔵 START",
         "enter": "🟢 ENTER",
-        "ready": "⭐️ READY!",
+        "ready": "🧘 Ready for Daily Veda Study.",
         "stop": "🔴 STOP",
         "exit": "🟡 EXIT",
         "done": "🟣 DONE",

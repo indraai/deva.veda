@@ -49,7 +49,7 @@ const VEDA = new Deva({
   func,
   methods,
   onReady(data, resolve) {
-    this.prompt(this._messages.ready);
+    this.prompt(this.vars.messages.ready);
     return resolve(data);
   },
   onError(err, data, reject) {
