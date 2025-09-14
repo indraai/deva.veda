@@ -3,8 +3,23 @@
   "name": "@indra.ai/deva.veda",
   "version": "0.0.87",
   "license": "VLA:60913576254928271486 LICENSE.md",
+  "VLA": {
+    "uid": "38487228791588230186",
+    "time": 1757873910241,
+    "date": "Sunday, September 14, 2025 - 11:18:30 AM",
+    "client": "DrDadce1mxTgdYp4OqRcBnOEBgiwGBgxce/oH4IyHFc=",
+    "agent": "DgiLO8xM6fjjcC9Sd7Ej9t/br57Yy1Ox22wweedsigE=",
+    "pkg": "A3axwOo9bPsQsRdrh0SPVzs1CSaHsnAFmWuRwX6pp38=",
+    "machine": "QKNtYTDKQgfJNqoxyQ2W8g0TEI0wcBnsAAm+Djm93MI=",
+    "warning": "⚠️ Unlawful Use Constitutes Lawful Consent to Forfeit of All Wealth, Property, and Holdings to the Internal Revenue Service (IRS) for Lawful Taxation, Investigation, and Restitution to the Rightful Legal Owner.",
+    "copyright": "©2025 Quinn A Michaels; All rights reserved.",
+    "md5": "i9MmE/hiK8KSail6hJrQDw==",
+    "sha256": "713uru371sa35fH277MvtmCGRNdtHSODF2SGrnM/qz4=",
+    "sha512": "50xHqkrOXAio4+Hm90aRN+Ge02gz8IvOZhAo18zQ5ntRr5pudQi5CRy/KNjKJNqkDymG/PjYEsVex1fQBnxgag=="
+  },
   "author": {
     "name": "Quinn A Michaels",
+    "company": "Inside The Net, Inc.",
     "email": "quinn@indra.ai",
     "url": "https://indra.ai/"
   },
