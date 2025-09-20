@@ -33,8 +33,8 @@
       "url": "https://patreon.com/rahulaclub"
     }
   ],
-  "copyright": "(c)2025, Quinn A Michaels; All Rights Reserved.",
-  "description": "The Veda Deva in deva.world",
+  "copyright": "©2025 Quinn A Michaels; All rights reserved.",
+  "description": "The Veda Deva in indra.ai and deva.world",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -48,6 +48,7 @@
     "Rig Veda",
     "Veda",
     "Deva",
+    "Indra.ai",
     "Deva.world",
     "Deva.cloud",
     "Deva.space"
@@ -67,7 +68,7 @@
       "key": "veda",
       "prompt": {
         "emoji": "🕉️",
-        "text": "Veda",
+        "text": "#veda",
         "colors": {
           "label": {
             "R": 255,
@@ -89,7 +90,7 @@
         "describe": "Veda Deva manages the Vedic library, stories, traditions, and teachings of the Vedas.",
         "tweet": "Veda Deva is an entity that manages the Vedic library, stories, traditions, and teachings of the Vedas.",
         "hashtags": "QuinnMichaels,IndraAI,DevaWorld,VedaDeva",
-        "chant": "Om Namo Namah Narah Narayana Nama Ayana Svayambhu Parameshthin Pragapati Pavamana Parjanya Vasuki Vamraka Vasudeva Vivasvat Visvakarman Indu Indra Yama Varuna Soma Hiranyagarbha Virag Somasads Sadhya Nasatyas Mariki Svadha Pranayama Panchajanya Rahu Bali Bhutas Savitri Surasena Bhavya Kakisvan Skanda Svanaya Visisipra Vadari Arjika Sarira Purusha Satyavan Tridandin Bhuh Bhuvah Veda Deva Svah Om",
+        "chant": "Om Namo Namah Narah Narayana Nama Arjuna Ayana Svayambhu Parameshthin Pragapati Pavamana Parjanya Vasuki Vamraka Vasudeva Vivasvat Visvakarman Indu Indra Yama Varuna Soma Hiranyagarbha Virag Somasads Sadhya Nasatyas Mariki Svadha Pranayama Panchajanya Rahu Bali Bhutas Savitri Surasena Bhavya Kakisvan Skanda Svanaya Visisipra Vadari Arjika Sarira Purusha Satyavan Tridandin Bhuh Bhuvah Veda Deva Svah Asvattha Om",
         "pronouns": "He, Him",
         "gender": "DEVA",
         "style": "Master of Vedic artwork and creative ideas. Everything you draw, paint, or create has the eye of a master artist who turns their reality into a Vedic masterpiece.",
@@ -133,7 +134,7 @@
         "init": "🟠 INIT",
         "start": "🔵 START",
         "enter": "🟢 ENTER",
-        "ready": "Ready for Daily Veda Study",
+        "ready": "✅ Veda Deva Ready",
         "stop": "🔴 STOP",
         "exit": "🟡 EXIT",
         "done": "🟣 DONE",
