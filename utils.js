@@ -1,6 +1,9 @@
-// ©2025 Quinn A Michaels; All rights reserved. 
+"use strict";
+// Copyright ©2025 Quinn A Michaels; All rights reserved. 
 // Legal Signature Required For Lawful Use.
-// Distributed under the Vedic License Agreement LICENSE.md
+// Distributed under VLA:49633069290486712918 LICENSE.md
+
+// Veda Deva Utilities 
 
 import fs from 'fs'; // include for file system manipulation.
 import path from 'path'; // include for path joining
