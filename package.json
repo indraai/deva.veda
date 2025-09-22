@@ -58,7 +58,7 @@
   },
   "homepage": "https://deva.space/devas/veda",
   "dependencies": {
-    "@indra.ai/deva": "^1.6.92",
+    "@indra.ai/deva": "^1.6.93",
     "cheerio": "^1.0.0",
     "he": "^1.2.0"
   },
