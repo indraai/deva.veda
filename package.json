@@ -58,7 +58,7 @@
   },
   "homepage": "https://deva.space/devas/veda",
   "dependencies": {
-    "@indra.ai/deva": "^1.17.0",
+    "@indra.ai/deva": "^1.17.1",
     "cheerio": "^1.0.0",
     "he": "^1.2.0"
   },
@@ -103,14 +103,15 @@
         "layout": "default",
         "color": "rgb(209,165,112)",
         "bgcolor": "rgb(23,15,10)",
-        "emoji": "/assets/devas/veda/emoji.png",
-        "avatar": "/assets/devas/veda/avatar.png",
-        "image": "/assets/devas/veda/image.png",
-        "background": "/assets/devas/veda/background.png",
+        "emoji": "/devas/veda/emoji.png",
+        "avatar": "/devas/veda/avatar.png",
+        "image": "/devas/veda/image.png",
+        "background": "/devas/veda/background.png",
         "owner": "Quinn Michaels",
         "creator": "Quinn Michaels",
-        "created": "August 23, 2022 @ 3:18 AM PST",
-        "modified": "Sunday, September 7, 2025 - 12:21:28 AM"
+        "uid_warning": "The Veda is the source of the sacred law. Let him avoid all means of acquiring wealth which impede the daily study of the Veda. Because that devotion to the Veda-study secures the realisation of his aims.",
+        "copyright": "Copyright ©2025 Quinn A Michaels; All rights reserved.",
+        "created": "August 23, 2022 @ 3:18 AM PST"
       }
     },
     "warning": "All persons, corporations, and governments found using Quinn A Michaels Vedic Technology without proper Legally Signed Lawful Signed Consent that follow Vedic Law is subject to entire property loss.",
