@@ -48,23 +48,28 @@
     "Rig Veda",
     "Veda",
     "Deva",
+    "Veda Deva",
     "Indra.ai",
     "Deva.world",
     "Deva.cloud",
-    "Deva.space"
+    "Deva.space",
+    "Quinn A Michaels",
+    "Inside The Net, Inc.",
+    "Throwing Pigment",
+    "bleuBrain"
   ],
   "bugs": {
     "url": "https://github.com/indraai/deva.veda/issues"
   },
-  "homepage": "https://deva.space/devas/veda",
+  "homepage": "https://indra.ai",
   "dependencies": {
-    "@indra.ai/deva": "^1.18.0",
+    "@indra.ai/deva": "^1.19.0",
     "cheerio": "^1.0.0",
     "he": "^1.2.0"
   },
   "data": {
     "agent": {
-      "id": 584666144922943400,
+      "id": "584666144922943400",
       "key": "veda",
       "prompt": {
         "emoji": "🕉️",
@@ -109,7 +114,8 @@
         "background": "/devas/veda/background.png",
         "owner": "Quinn Michaels",
         "creator": "Quinn Michaels",
-        "uid_warning": "The Veda is the source of the sacred law. Let him avoid all means of acquiring wealth which impede the daily study of the Veda. Because that devotion to the Veda-study secures the realisation of his aims.",
+        "status": "om",
+        "warning": "🕉️ The Veda is the source of the sacred law. Let him avoid all means of acquiring wealth which impede the daily study of the Veda. Because that devotion to the Veda-study secures the realisation of his aims.",
         "copyright": "Copyright ©2025 Quinn A Michaels; All rights reserved.",
         "created": "August 23, 2022 @ 3:18 AM PST"
       }
