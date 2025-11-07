@@ -46,22 +46,32 @@ export const methods = {
 	describe: Call the books function to get a listing of books.
 	***************/
 	books(packet) {
-		this.context('books');
-		this.action('method', 'books');
+		const {id, q} = packet;
+		this.context('books', id.uid);
+		this.action('method', `books:${id.uid}`);
 		return new Promise((resolve, reject) => {
 			if (!packet) return reject(this._messages.nopacket);
 			const data = {};
-			this.func.books(packet.q).then(books => {
+			this.func.books(q).then(books => {
+				this.state('data', `books:${id.uid}`); // set state set
 				data.books = books;
 				return this.question(`${this.askChr}feecting parse ${books.text}`);
 			}).then(feecting => {
+				this.state('data', `feecting:${id.uid}`); // set state set
 				data.feecting = feecting;
+				
+				this.action('resolve', `books:${id.uid}`); // set action resolve
+				this.state('valid', `books:${id.uid}`); // set action resolve
+				this.intent('good', `books:${id.uid}`); // set action resolve
 				return resolve({
 					text:feecting.a.text,
 					html:feecting.a.html,
 					data,
 				});
 			}).catch(err => {
+				this.action('catch', `books:${id.uid}`); // set action resolve
+				this.state('invalid', `books:${id.uid}`); // set action resolve
+				this.intent('bad', `books:${id.uid}`); // set action resolve
 				return this.error(err, packet, reject);
 			});
 		})

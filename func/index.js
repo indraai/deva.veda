@@ -71,12 +71,14 @@ export const func = {
 	describe: Return a list of books based on section identifier.
 	***************/
 	books(opts) {
+		const {id} = opts;
 		this.action('func', 'books');
 		return new Promise((resolve, reject) => {
+			this.action('try', `books:${id.uid}`); // set action try
 			try {
 				const agent = this.agent();
-				const section = opts.meta.params[1];
-				const booksfile = this.lib.path.join(__dirname, '..', 'data', section, 'index.json');
+				this.state('data', `books:${id.uid}`); // set state data
+				const booksfile = this.lib.path.join(__dirname, '..', 'data', 'rigveda', 'index.json');
 				const booksdata = this.lib.fs.readFileSync(booksfile);
 				const booksjson = JSON.parse(booksdata);
 	
@@ -93,7 +95,7 @@ export const func = {
 				const books = [];
 				// loop over the data and format it into a feecting command string
 				booksjson.data.forEach((book, idx) => {
-					books.push(`button[${book.title}]:${this.askChr}${agent.key} book:${section}:${book.key}`);
+					books.push(`button[${book.title}]:${this.askChr}${agent.key} book:${book.key}`);
 				});
 				const booktext = books.join('\n');
 				const bookshash = this.lib.hash(booktext);
@@ -103,6 +105,7 @@ export const func = {
 				text.push(`#color = {{profile.color}}`);
 				text.push(`#bgcolor = {{profile.bgcolor}}`);
 				text.push(`#bg = {{profile.background}}`);
+				text.push(`copyright: {{profile.copyright}}`);
 				text.push(`::end:hidden`);
 				text.push(`::END:BOOKS:${bookshash}`);
 				this.state('resolve', 'books');
