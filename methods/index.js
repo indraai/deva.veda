@@ -3,11 +3,6 @@
 // Legal Signature Required For Lawful Use.
 // Distributed under VLA:49633069290486712918 LICENSE.md
 
-import {manu, manuhash} from '../data/manu/index.js';
-import {rvbooks} from '../data/rigveda/index.js';
-import {avbooks} from '../data/atharvaveda/index.js';
-import {svbooks} from '../data/samaveda/index.js';
-
 import {dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';    
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -89,6 +84,7 @@ export const methods = {
 			const agent = this.agent();
 			const data = {};
 			this.func.book(packet.q).then(book => {
+				console.log('getting to resolve');
 				data.book = book;
 				return this.question(`${this.askChr}feecting parse ${book.text}`);
 			}).then(feecting => {
@@ -115,15 +111,16 @@ export const methods = {
 			this.context('hymn', packet.q.text);
 			const agent = this.agent();
 			let data;
-			this.func.hymn(packet.q.text).then(hymn => {
+			this.func.hymn(packet.q).then(hymn => {
 				data = hymn.data
 				const {text} = hymn;
-	
+				
 				this.talk(`chat:topic`, {
-					id: this.lib.uid(),
+					id: this.uid(),
 					data: `Current topic is Rig Veda hymn ${text}`,
 					created: Date.now(),
 				});
+				
 				return this.question(`${this.askChr}feecting parse:${agent.key} ${text}`);
 			}).then(feecting => {
 				return resolve({
@@ -132,6 +129,10 @@ export const methods = {
 					data,
 				});
 			}).catch(err => {
+				this.action('catch', `hymn:${packet.id.uid}`); // set action catch
+				this.state('invalid', `hymn${packet.id.uid}`); // set state invalid
+				this.intent('bad', `hymn${packet.id.uid}`); // set state invalid
+				console.log('hymn error', err);
 				return this.error(err, packet, reject);
 			});
 		});
@@ -183,7 +184,7 @@ export const methods = {
 				const data = [];
 				indexjson.data.forEach((item,index) => {
 					const newitem = {
-						id: this.lib.uid(),
+						id: this.uid(),
 						key: item.key,
 						title: item.title,
 						api: `data/${packet.q.text}/books/${item.key}.json`,
@@ -208,7 +209,4 @@ export const methods = {
 			}
 		});
 	},
-	rvbooks,
-	avbooks,
-	svbooks,
 };

@@ -76,7 +76,7 @@ export default {
 
     // next here we need to check for people places and things then add them to a meta index.
     // this will start with that we loop over he processing value key peple
-    const ret = {
+    const data = {
       key,
       title,
       book,
@@ -86,56 +86,78 @@ export default {
         original,
         sanskrit,
       },
-      people: [],
+      people: {
+        kings: [],
+        male: [],
+        female: [],
+      },
       places: [],
       things: [],
       groups: [],
       concepts: [],
     };
 
-    getProcessingData('people').forEach(person => {
-      const _reg = new RegExp(`(\\b)(${person})(\\b)`, 'gi');
-      const hasPerson = _reg.exec(ret.text);
-      if (hasPerson) {
-        if (!ret.people.includes(person)) ret.people.push(person);
+    const people = getProcessingData('people');
+    people.kings.forEach(king => {
+      const _reg = new RegExp(`(\\b)(${king})(\\b)`, 'gi');
+      const hasKing = _reg.exec(data.text);
+      if (hasKing) {
+        if (!data.people.kings.includes(king)) data.people.kings.push(king);
+        // ret.text = ret.text.replace(_reg, `$1@${person}$3`);
+      }
+    });
+    people.male.forEach(male => {
+      const _reg = new RegExp(`(\\b)(${male})(\\b)`, 'gi');
+      const hasMale = _reg.exec(data.text);
+      if (hasMale) {
+        if (!data.people.male.includes(male)) data.people.male.push(male);
+        // ret.text = ret.text.replace(_reg, `$1@${person}$3`);
+      }
+    });
+
+    people.female.forEach(female => {
+      const _reg = new RegExp(`(\\b)(${female})(\\b)`, 'gi');
+      const hasMale = _reg.exec(data.text);
+      if (hasMale) {
+        if (!data.people.female.includes(female)) data.people.female.push(female);
         // ret.text = ret.text.replace(_reg, `$1@${person}$3`);
       }
     });
 
     getProcessingData('places').forEach(place => {
       const _reg = new RegExp(`(^|\\b)(${place})(\\b)`, 'gi');
-      const hasPlace = _reg.exec(ret.text);
+      const hasPlace = _reg.exec(data.text);
       if (hasPlace) {
-        if (!ret.places.includes(place)) ret.places.push(place);
+        if (!data.places.includes(place)) data.places.push(place);
         // ret.text = ret.text.replace(_reg, `$1$${place}$3`);
       }
     });
 
     getProcessingData('things').forEach(thing => {
       const _reg = new RegExp(`(^|\\b)(${thing})(\\b)`, 'gi');
-      const hasThing = _reg.exec(ret.text);
+      const hasThing = _reg.exec(data.text);
       if (hasThing) {
-        if (!ret.things.includes(thing)) ret.things.push(thing);
+        if (!data.things.includes(thing)) data.things.push(thing);
         // ret.text = ret.text.replace(_reg, `$1#$2$3`);
       }
     });
 
     getProcessingData('groups').forEach(group => {
       const _reg = new RegExp(`(^|\\b)(${group})(\\b)`, 'gi');
-      const hasGroup = _reg.exec(ret.text);
+      const hasGroup = _reg.exec(data.text);
       if (hasGroup) {
-        if (!ret.groups.includes(group)) ret.groups.push(group);
+        if (!data.groups.includes(group)) data.groups.push(group);
         // ret.text = ret.text.replace(_reg, `$1#$2$3`);
       }
     });
 
     getProcessingData('concepts').forEach(concept => {
       const _reg = new RegExp(`(^|\\b)(${concept})(\\b)`, 'gi');
-      const hasConcept = _reg.exec(ret.text);
+      const hasConcept = _reg.exec(data.text);
       if (hasConcept) {
-        if (!ret.concepts.includes(concept)) ret.concepts.push(concept);
+        if (!data.concepts.includes(concept)) data.concepts.push(concept);
       }
     });
-    return ret;
+    return data;
   }
 };

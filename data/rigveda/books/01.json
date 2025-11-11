@@ -1,6 +1,7 @@
 {
   "id": 6422967982068,
   "key": "01",
+  "title": "Veda Book 1",
   "describe": "Book 1 contains a total of 191 hymns. Each hymn is dedicated to various deities and aspects of the Vedic tradition, offering insights into the cosmic and moral order, reverence for nature, and the interplay between benevolence and human endeavors.",
   "api": "data/rigveda/books/01.json",
   "orig": "https://sacred-texts.com/hin/rigveda/rvi01.htm",

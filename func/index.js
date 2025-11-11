@@ -3,14 +3,6 @@
 // Legal Signature Required For Lawful Use.
 // Distributed under VLA:49633069290486712918 LICENSE.md
 
-import {laws} from '../data/manu/index.js';
-import {avbooks} from '../data/atharvaveda/index.js';
-
-// set the __dirname
-import {dirname} from 'node:path';
-import {fileURLToPath} from 'node:url';    
-const __dirname = dirname(fileURLToPath(import.meta.url));
-
 export const func = {
 	/**************
 	func: menu
@@ -22,7 +14,8 @@ export const func = {
 		return new Promise((resolve, reject) => {
 			try {
 				const agent = this.agent();
-				const menufile = this.lib.path.join(__dirname, '..', 'data', 'menu.json');
+				const {dir} = this.info();
+				const menufile = this.lib.path.join(dir, 'data', 'menu.json');
 				const menudata = this.lib.fs.readFileSync(menufile);
 				const menujson = JSON.parse(menudata);
 				
@@ -72,17 +65,19 @@ export const func = {
 	***************/
 	books(opts) {
 		const {id} = opts;
-		this.action('func', 'books');
+		this.action('func', `book:${id.uid}`);
 		return new Promise((resolve, reject) => {
 			this.action('try', `books:${id.uid}`); // set action try
 			try {
 				const agent = this.agent();
+				const {dir} = this.info();
 				this.state('data', `books:${id.uid}`); // set state data
-				const booksfile = this.lib.path.join(__dirname, '..', 'data', 'rigveda', 'index.json');
+				const booksfile = this.lib.path.join(dir, 'data', 'rigveda', 'index.json');
 				const booksdata = this.lib.fs.readFileSync(booksfile);
 				const booksjson = JSON.parse(booksdata);
+
 	
-				this.state('set', 'books data');
+				this.state('set', `books:${id.uid}`);
 				const text = [
 					`::BEGIN:BOOKS:${booksjson.id}`,
 					`## ${booksjson.title}`,
@@ -93,22 +88,30 @@ export const func = {
 					'::begin:menu',
 				];
 				const books = [];
+
 				// loop over the data and format it into a feecting command string
 				booksjson.data.forEach((book, idx) => {
 					books.push(`button[${book.title}]:${this.askChr}${agent.key} book:${book.key}`);
 				});
+				
+
 				const booktext = books.join('\n');
-				const bookshash = this.lib.hash(booktext);
+				const bookshash = this.hash(booktext, 'sha256');
 				text.push(booktext);
 				text.push(`::end:menu`);
 				text.push(`::begin:hidden`);
 				text.push(`#color = {{profile.color}}`);
 				text.push(`#bgcolor = {{profile.bgcolor}}`);
-				text.push(`#bg = {{profile.background}}`);
+				text.push(`#bg = {{profile.background}}`);				
+				text.push(`hash: ${bookshash}`);
 				text.push(`copyright: {{profile.copyright}}`);
 				text.push(`::end:hidden`);
-				text.push(`::END:BOOKS:${bookshash}`);
-				this.state('resolve', 'books');
+				text.push(`::END:BOOKS:${id.uid}`);
+
+				this.action('resolve', `books:${id.uid}`);
+				this.state('valid', ` books:${id.uid}`);
+				this.intent('good', ` books:${id.uid}`);
+
 				return resolve({
 					id: booksjson.id,
 					title: booksjson.title,
@@ -119,7 +122,8 @@ export const func = {
 					created: Date.now(),
 				});
 			} catch (e) {
-				this.state('reject', 'books');
+				this.action('catch', `books:${id.uid}`);
+				this.intent('bad', ` books:${id.uid}`);
 				return reject(e);
 			}
 		});
@@ -130,37 +134,42 @@ export const func = {
 	describe: The book function calls the public facing api to get a listing of books to list to the user. originally this file came from sacred-texts.com but was migrated to indra.church with a json api.
 	***********/
 	book(opts) {
-		const section = opts.meta.params[1] || false;
-		const book = opts.meta.params[2] || false;
-		this.action('func', `${section} book ${book}`);
+		const book = opts.meta.params[1] || false;
+		this.action('func', `book:${book}:${opts.id.uid}`);
 		return new Promise((resolve, reject) => {
 			if (!book) return resolve(this.vars.messages.nobook);
+			const key = book.length < 2 ? `0${book}` : book;
+			
+			this.state('try', `book:${book}:${opts.id.uid}`); // set state try
 			try {
 				const agent = this.agent();
-				const key = book.length < 2 ? `0${book}` : book;
-				const filepath = this.lib.path.join(__dirname, '..', 'data', section, `${key}.json`)
+				const {dir} = this.info();
+				const filepath = this.lib.path.join(dir, 'data', 'rigveda', 'books', `${key}.json`)
 				const theFile = this.lib.fs.readFileSync(filepath);
 				const theJSON = JSON.parse(theFile);
 	
-				const {id, title, describe, DATA} = theJSON;
+				const {id, title, describe, data} = theJSON;
 	
-				this.state('set', `book data`);
+				this.state('data', `book:${book}:${key}:${opts.id.uid}`);
 				const _text = [
 					`::BEGIN:BOOK:${id}`,
 					`## ${title}`,
 					`p: ${describe}`,
 					'::begin:buttons',
 					`button[🗂️ Main]:${this.askChr}${agent.key} menu`,
-					`button[📚 Books]:${this.askChr}${agent.key} books:${section}`,
+					`button[📚 Books]:${this.askChr}${agent.key} books`,
 					'::end:buttons',
 					'::begin:menu',
 				];
+				
 				const _hymns = [];
-				DATA.forEach((hymn, idx) => {
-					_hymns.push(`button[${hymn.key} - ${hymn.title}]:#${agent.key} hymn ${hymn.key}`);
+
+				data.forEach((hymn, idx) => {
+					_hymns.push(`button[${hymn.key} - ${hymn.title}]:#${agent.key} hymn:${hymn.key}`);
 				});
+
 				const _hymnsText = _hymns.join('\n');
-				const _hymnsHash = this.lib.hash(_hymnsText);
+				const _hymnsHash = this.hash(_hymnsText, 'sha256');
 				_text.push(_hymnsText);
 				_text.push(`::end:menu`);
 				_text.push(`::begin:hidden`);
@@ -170,18 +179,18 @@ export const func = {
 				_text.push(`::end:hidden`);
 				_text.push(`::END:BOOK:${_hymnsHash}`);
 	
-				this.state('resolve', `${section} book ${book}`)
+				this.action('resolve', `book:${book}:${key}:${opts.id.uid}`);
 				return resolve({
 					id,
 					title,
 					describe,
 					text: _text.join('\n'),
-					data: DATA,
-					hash: this.lib.hash(JSON.stringify(DATA)),
+					data,
+					hash: this.hash(data, 'sha256'),
 					created: Date.now(),
 				});
 			} catch (e) {
-				this.state('reject', `${section} book ${book}`)
+				this.action('reject', `book:${key}:${opts.id.uid}`)
 				return reject(e);
 			}
 		});
@@ -192,15 +201,17 @@ export const func = {
 	params: packet
 	describe: The View function returns a specific hymn from one of the Books.
 	***************/
-	hymn(h) {
-		this.action('func', `hymn ${h}`);
+	hymn(opts) {
+		const {params} = opts.meta;
+		const _h = params[1];
+		this.action('func', `hymn:${_h}:${opts.id.uid}`);
 		return new Promise((resolve, reject) => {
-			if (!h) return resolve(this._messages.notext);
-			const id = this.lib.uid();
-			const agent = this.agent();
-	
+			if (!_h) return resolve(this._messages.notext);
 			try {
-				const hymnPath = this.lib.path.join(__dirname, 'data', 'rigveda', 'hymns', `${h}.json`);
+				const id = this.uid();
+				const agent = this.agent();
+				const {dir} = this.info();
+				const hymnPath = this.lib.path.join(dir, 'data', 'rigveda', 'hymns', `${_h}.json`);
 				const hymnExists = this.lib.fs.existsSync(hymnPath);
 				if (!hymnExists) return resolve(this.vars.messages.notfound);
 				// parse hymns
@@ -208,7 +219,7 @@ export const func = {
 				const _hymn = JSON.parse(theFile);
 				const processed = this.utils.process({key:_hymn.key,title:_hymn.title,content:_hymn.orig});
 	
-				this.state('set', `hymn ${h}`);
+				this.state('set', `hymn:${_h}:${opts.id.uid}`);
 				const hymn = [
 					`::BEGIN:HYMN:${processed.key}`,
 					`# ${processed.title}`,
@@ -217,21 +228,34 @@ export const func = {
 					'::end:content',
 					'::begin:meta',
 					`title: ${processed.title}`,
-					processed.people.length ? `people: ${processed.people.join(', ')}` : '',
+					processed.people.kings.length ? `kings: ${processed.people.kings.join(', ')}` : '',
+					processed.people.male.length ? `male: ${processed.people.male.join(', ')}` : '',
+					processed.people.female.length ? `female: ${processed.people.female.join(', ')}` : '',
 					processed.places.length ? `places: ${processed.places.join(', ')}` : '',
 					processed.things.length ? `things: ${processed.things.join(', ')}` : '',
 					processed.groups.length ? `groups: ${processed.groups.join(', ')}` : '',
 					processed.concepts.length ? `concepts: ${processed.concepts.join(', ')}` : '',
+					`uid: ${opts.id.uid}`,
+					`time: ${opts.id.time}`,
+					`date: ${opts.id.date}`,
+					`fingerprint: ${opts.id.fingerprint}`,
+					`md5: ${this.hash(processed.text, 'md5')}`,
+					`sha256: ${this.hash(processed.text, 'sha256')}`,
+					`sha512: ${this.hash(processed.text, 'sha512')}`,
+					`copyright: ${opts.id.copyright}`,
 					'::end:meta',
 					`::begin:hidden`,
 					`#color = {{profile.color}}`,
 					`#bgcolor = {{profile.bgcolor}}`,
 					`#bg = {{profile.background}}`,
+					`copyright: {{profile.copyright}}`,
 					`::end:hidden`,
-					`::END:HYMN:${this.lib.hash(processed)}`,
+					`::END:HYMN:${processed.key}`,
 				];
 	
-				this.state('resolve', `hymn ${h}`)
+				this.action('resolve', `hymn:${opts.id.uid}`)
+				this.state('valid', `hymn ${opts.id.uid}`)
+				this.intent('good', `hymn ${opts.id.uid}`)
 				return resolve({
 					id,
 					key: processed.key,
@@ -242,12 +266,12 @@ export const func = {
 					created: Date.now(),
 				});
 			} catch (e) {
-				this.state('reject', `hymn ${h}`)
-				return reject(e);
+				this.action('reject', `hymn ${opts.id.uid}`)
+				this.state('invalid', `hymn ${opts.id.uid}`)
+				this.intent('bad', `hymn ${opts.id.uid}`)
+				return this.err(e, opts, reject);
 			}
 		});
 	},
-	laws,
-	avbooks,	
 }
 

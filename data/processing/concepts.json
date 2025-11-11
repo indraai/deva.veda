@@ -3,6 +3,7 @@
   "describe": "This file is used in defining the concepts of the Rig Veda.",
   "copyright": "Copyright (c) Quinn Michaels. All rights reserved.",
   "DATA": [
+    "God",
     "Celestial",
     "Good",
     "Evil",
@@ -64,6 +65,7 @@
     "Creator",
     "Eternal Law",
     "Intelligence",
-    "Speech"
+    "Might",
+    "Assistance"
   ]
 }
