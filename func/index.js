@@ -137,7 +137,7 @@ export const func = {
 		const book = opts.meta.params[1] || false;
 		this.action('func', `book:${book}:${opts.id.uid}`);
 		return new Promise((resolve, reject) => {
-			if (!book) return resolve(this.vars.messages.nobook);
+			if (!book) return resolve({text:this.vars.messages.nobook});
 			const key = book.length < 2 ? `0${book}` : book;
 			
 			this.state('try', `book:${book}:${opts.id.uid}`); // set state try

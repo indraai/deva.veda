@@ -84,7 +84,7 @@ export const methods = {
 			const agent = this.agent();
 			const data = {};
 			this.func.book(packet.q).then(book => {
-				console.log('getting to resolve');
+				console.log('getting to resolve', book);
 				data.book = book;
 				return this.question(`${this.askChr}feecting parse ${book.text}`);
 			}).then(feecting => {
