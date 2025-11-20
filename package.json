@@ -63,7 +63,7 @@
   },
   "homepage": "https://indra.ai",
   "dependencies": {
-    "@indra.ai/deva": "^1.25.0",
+    "@indra.ai/deva": "^1.26.0",
     "cheerio": "^1.0.0",
     "he": "^1.2.0"
   },
