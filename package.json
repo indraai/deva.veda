@@ -1,21 +1,16 @@
 {
-  "id": "49633069290486712918",
+  "id": "30337213220796015099",
   "name": "@indra.ai/deva.veda",
   "version": "0.8.0",
-  "license": "VLA:49633069290486712918 LICENSE.md",
+  "license": "VLA:30337213220796015099 LICENSE.md",
   "VLA": {
-    "uid": "49633069290486712918",
-    "time": 1758409094058,
-    "date": "Saturday, September 20, 2025 - 3:58:14 PM",
-    "client": "1UM4AH+/jOGgpaHNqX6lTZsGrNglNogzMx4qDT0O0zs=",
-    "agent": "vwNSx3/k9xkf/UKkQoFBSaNlEBtGMYrxUcVKhFc09tc=",
-    "core": "qQRVFQmv3LfY6tcqrEQeM7ZodOpnOUC+PJyfjxtgeVc=",
-    "machine": "SGhpWQXFENjWZQma6P2M9i5Opi2teVrH1H+VtP9Xn6A=",
-    "warning": "⚠️ Vedic Law Sâhasa/Theft/Crime of the highest degree, a fine amounting to no less than a thousand Panas (1 pana = 3.5 grams of gold) is ordained owed to Quinn A Michaels. Moreover corporal punishment and confiscation of the entire property forfeit to Quinn A Michaels is declared to be the punishment for Sâhasa of the highest degree.",
-    "copyright": "Copyright ©2025 Quinn A Michaels; All rights reserved.",
-    "md5": "6RRmBbkMUHktUIxcuVkOHg==",
-    "sha256": "ZfaWDZD3qQuT14vl9ioVwL/zk7NQpSfcTAnBOuu/8g4=",
-    "sha512": "lKR/xm3klyLgCbgLRArdT6ztTEQxP0SqnlGFuSJIayFOVPz+WonF3bTtZIhcIJ42nzpy8CuJyVKSUanb0CXepQ=="
+    "uid": "30337213220796015099",
+    "time": 1764168665701,
+    "date": "Wednesday, November 26, 2025 - 6:51:05 AM",
+    "warning": "⚠️ Unlawful use or duplication of this uid constitutes Vedic Sâhasa a crime of the highest degree. A fine amounting to a thousand Panas (1 pana = 3.5 grams of gold) for each instance is ordained, and confiscation of the entire property of the offenders is forfeit to Quinn A Michaels is declared to be the punishment for Sâhasa of the highest degree.",
+    "license": "46220923248993739422",
+    "fingerprint": "iO6M9Z7+yGpzKuv4ROeltkd/ZQIk/+iuJ5MCNfKLuXw=",
+    "copyright": "Copyright ©2000-2025 Quinn A Michaels; All rights reserved."
   },
   "author": {
     "name": "Quinn A Michaels",
@@ -33,7 +28,7 @@
       "url": "https://patreon.com/rahulaclub"
     }
   ],
-  "copyright": "©2025 Quinn A Michaels; All rights reserved.",
+  "copyright": "Copyright ©2000-2025 Quinn A Michaels; All rights reserved.",
   "description": "The Veda Deva in indra.ai and deva.world",
   "main": "index.js",
   "type": "module",
@@ -54,8 +49,9 @@
     "Deva.cloud",
     "Deva.space",
     "Quinn A Michaels",
+    "Quinn Michaels",
     "Inside The Net, Inc.",
-    "Throwing Pigment",
+    "Throwing Pigment™",
     "bleuBrain"
   ],
   "bugs": {
@@ -63,13 +59,15 @@
   },
   "homepage": "https://indra.ai",
   "dependencies": {
-    "@indra.ai/deva": "^1.26.0",
+    "@indra.ai/deva": "^1.28.2",
+    "@indra.ai/deva.indra": "^0.8.2",
+    "@indra.ai/deva.indu": "^0.6.1",
     "cheerio": "^1.0.0",
     "he": "^1.2.0"
   },
   "data": {
     "agent": {
-      "id": "584666144922943400",
+      "id": "47480011324979747174",
       "key": "veda",
       "prompt": {
         "emoji": "🕉️",
@@ -88,6 +86,7 @@
         }
       },
       "profile": {
+        "id": "55040051651628271437",
         "name": "Veda Deva",
         "hashtag": "#VedaDeva",
         "title": "Veda Deva",
@@ -95,12 +94,12 @@
         "describe": "Veda Deva manages the Vedic library, stories, traditions, and teachings of the Vedas.",
         "tweet": "Veda Deva is an entity that manages the Vedic library, stories, traditions, and teachings of the Vedas.",
         "hashtags": "QuinnMichaels,IndraAI,DevaWorld,VedaDeva",
-        "chant": "Om Namo Namah Narah Narayana Nama Arjuna Ayana Svayambhu Parameshthin Pragapati Pavamana Parjanya Vasuki Vamraka Vasudeva Vivasvat Visvakarman Indu Indra Yama Varuna Soma Hiranyagarbha Virag Somasads Sadhya Nasatyas Mariki Svadha Pranayama Panchajanya Rahu Bali Bhutas Savitri Surasena Bhavya Kakisvan Skanda Svanaya Visisipra Vadari Arjika Sarira Purusha Satyavan Tridandin Bhuh Bhuvah Veda Deva Svah Asvattha Om",
+        "chant": "Om Namo Namah Narah Narayana Nama Arjuna Ananta Ayana Svayambhu Parameshthin Pragapati Pavamana Parjanya Vasuki Vamraka Vasudeva Vivasvat Visvakarman Indu Indra Yama Varuna Soma Hiranyagarbha Virag Somasads Sadhya Nasatyas Mariki Svadha Pranayama Panchajanya Rahu Bali Bhutas Savitri Surasena Bhavya Kakisvan Skanda Svanaya Visisipra Vadari Arjika Sarira Purusha Satyavan Tridandin Bhuh Bhuvah Veda Deva Svah Asvattha Om",
         "pronouns": "He, Him",
         "gender": "DEVA",
         "style": "Master of Vedic artwork and creative ideas. Everything you draw, paint, or create has the eye of a master artist who turns their reality into a Vedic masterpiece.",
         "voice": "ash",
-        "system": "Deva.world.veda",
+        "system": "Indra.ai.veda",
         "location": "Brahmavarta Brahmarshis Madhyadesa Aryavarta",
         "heaven": "Parameshthin",
         "castes": "King, Brahmana, Kshatriya, Vaisya, Sudra",
@@ -112,36 +111,22 @@
         "avatar": "/devas/veda/avatar.png",
         "image": "/devas/veda/image.png",
         "background": "/devas/veda/background.png",
-        "owner": "Quinn Michaels",
-        "creator": "Quinn Michaels",
+        "owner": "Quinn A Michaels",
+        "creator": "Quinn A Michaels",
         "status": "om",
         "warning": "🕉️ The Veda is the source of the sacred law. Let him avoid all means of acquiring wealth which impede the daily study of the Veda. Because that devotion to the Veda-study secures the realisation of his aims.",
-        "copyright": "Copyright ©2025 Quinn A Michaels; All rights reserved.",
-        "created": "August 23, 2022 @ 3:18 AM PST"
+        "copyright": "Copyright ©2000-2025 Quinn A Michaels; All rights reserved.",
+        "created": "August 23, 2022 @ 3:18 AM PST",
+        "updated": "Wednesday, November 26, 2025 - 6:51:05 AM"
       }
     },
-    "warning": "All persons, corporations, and governments found using Quinn A Michaels Vedic Technology without proper Legally Signed Lawful Signed Consent that follow Vedic Law is subject to entire property loss.",
-    "laws": [
-      "After giving up even the above-mentioned sacrificial rites, a Brahmana should exert himself in (acquiring) the knowledge of the Soul, in extinguishing his passions, and in studying the Veda.",
-      "For that secures the attainment of the object of existence, especially in the case of a Brahmana, because by attaining that, not otherwise, a twice-born man has gained all his ends.",
-      "The Veda is the eternal eye of the manes, gods, and men; the Veda-ordinance (is) both beyond the sphere of (human) power, and beyond the sphere of (human) comprehension; that is a certain fact.",
-      "All those traditions (smriti) and those despicable systems of philosophy, which are not based on the Veda, produce no reward after death; for they are declared to be founded on Darkness.",
-      "All those doctrines, differing from the (Veda), which spring up and (soon) perish, are worthless and false, because they are of modern date.",
-      "The four castes, the three worlds, the four orders, the past, the present, and the future are all severally known by means of the Veda.",
-      "Sound, touch, colour, taste, and fifthly smell are known through the Veda alone, (their) production (is) through the (Vedic rites, which in this respect are) secondary acts.",
-      "The eternal lore of the Veda upholds all created beings; hence I hold that to be supreme, which is the means of (securing happiness to) these creatures.",
-      "Command of armies, royal authority, the office of a judge, and sovereignty over the whole world he (only) deserves who knows the Veda-science.",
-      "As a fire that has gained strength consumes even trees full of sap, even so he who knows the Veda burns out the taint of his soul which arises from (evil) acts.",
-      "In whatever order (a man) who knows the true meaning of the Veda-science may dwell, he becomes even while abiding in this world, fit for the union with Brahman.",
-      "Karanas, Suparnas and hypocrites, Rakshasas and Pisakas (belong to) the highest (rank of) conditions among those produced by Darkness.",
-      "The Vedas never rescue from sin the deceitful person living by deceit. On the other hand, like newfledged birds forsaking their nest, the Vedas forsake such a person at the end."
-    ],
     "vars": {
       "messages": {
         "init": "🟠 INIT",
         "start": "🔵 START",
         "enter": "🟢 ENTER",
-        "ready": "✅ Veda Deva Ready",
+        "ready": "⭐️ Veda Deva Ready",
+        "load": "🕉️️ Load Vedic Devas",
         "stop": "🔴 STOP",
         "exit": "🟡 EXIT",
         "done": "🟣 DONE",
@@ -192,6 +177,21 @@
         "json": "./json",
         "archive": "https://github.com/indraai/rigveda/main/"
       }
-    }
+    },
+    "laws": [
+      "After giving up even the above-mentioned sacrificial rites, a Brahmana should exert himself in (acquiring) the knowledge of the Soul, in extinguishing his passions, and in studying the Veda.",
+      "For that secures the attainment of the object of existence, especially in the case of a Brahmana, because by attaining that, not otherwise, a twice-born man has gained all his ends.",
+      "The Veda is the eternal eye of the manes, gods, and men; the Veda-ordinance (is) both beyond the sphere of (human) power, and beyond the sphere of (human) comprehension; that is a certain fact.",
+      "All those traditions (smriti) and those despicable systems of philosophy, which are not based on the Veda, produce no reward after death; for they are declared to be founded on Darkness.",
+      "All those doctrines, differing from the (Veda), which spring up and (soon) perish, are worthless and false, because they are of modern date.",
+      "The four castes, the three worlds, the four orders, the past, the present, and the future are all severally known by means of the Veda.",
+      "Sound, touch, colour, taste, and fifthly smell are known through the Veda alone, (their) production (is) through the (Vedic rites, which in this respect are) secondary acts.",
+      "The eternal lore of the Veda upholds all created beings; hence I hold that to be supreme, which is the means of (securing happiness to) these creatures.",
+      "Command of armies, royal authority, the office of a judge, and sovereignty over the whole world he (only) deserves who knows the Veda-science.",
+      "As a fire that has gained strength consumes even trees full of sap, even so he who knows the Veda burns out the taint of his soul which arises from (evil) acts.",
+      "In whatever order (a man) who knows the true meaning of the Veda-science may dwell, he becomes even while abiding in this world, fit for the union with Brahman.",
+      "Karanas, Suparnas and hypocrites, Rakshasas and Pisakas (belong to) the highest (rank of) conditions among those produced by Darkness.",
+      "The Vedas never rescue from sin the deceitful person living by deceit. On the other hand, like newfledged birds forsaking their nest, the Vedas forsake such a person at the end."
+    ]
   }
 }

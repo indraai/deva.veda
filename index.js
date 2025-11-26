@@ -12,6 +12,16 @@ import utils from './utils.js';
 import {methods} from './methods/index.js';
 import {func} from './func/index.js';
 
+// Devas
+import indu from '@indra.ai/deva.indu';
+import indra from '@indra.ai/deva.indra';
+import soma from '@indra.ai/deva.soma';
+// import householder from '/Users/quinnmichaels/Dev/deva.space/devas/deva.householder/index.js';
+// import brahmana from '/Users/quinnmichaels/Dev/deva.space/devas/deva.brahmana/index.js';
+// import kshatriya from '/Users/quinnmichaels/Dev/deva.space/devas/deva.kshatriya/index.js';
+// import vaisya from '/Users/quinnmichaels/Dev/deva.space/devas/deva.vaisya/index.js';
+// import sudra from '/Users/quinnmichaels/Dev/deva.space/devas/deva.sudra/index.js';
+
 // set the __dirname
 import {dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';    
@@ -39,7 +49,11 @@ const VEDA = new Deva({
   utils,
   listeners: {},
   modules: {},
-  deva: {},
+  devas: {
+    indu,
+    indra,
+    soma,
+  },
   func,
   methods,
   onInit(data, resolve) {
@@ -49,6 +63,18 @@ const VEDA = new Deva({
     // return this.start if license_check passes otherwise stop.
     return license_check ? this.start(data, resolve) : this.stop(data, resolve);
   }, 
+  async onDone(data, resolve) {
+    // load the devas
+    for (let deva in this.devas) {
+      await this.load(deva, data.client);
+      // after the deva loads talk the event to set asset directory.
+      const id = this.devas[deva].uid();
+      const {dir} = this.devas[deva].info();
+      const {key} = this.devas[deva].agent();
+      this.talk(`deva:dir`, {id, key,dir});
+    }  
+    return this.ready(data, resolve);    
+  },
   onReady(data, resolve) {
     const {VLA} = this.info();
     this.prompt(`${this.vars.messages.ready} > VLA:${VLA.uid}`);
