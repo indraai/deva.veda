@@ -59,7 +59,7 @@
   },
   "homepage": "https://indra.ai",
   "dependencies": {
-    "@indra.ai/deva": "^1.29.2",
+    "@indra.ai/deva": "^1.29.4",
     "@indra.ai/deva.indra": "^0.8.2",
     "@indra.ai/deva.indu": "^0.6.1",
     "@indra.ai/deva.soma": "^0.6.1",
