@@ -34,7 +34,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "latest": "npm i @indra.ai/deva.indu@latest @indra.ai/deva.indra@latest @indra.ai/deva.soma@latest --save"
+    "latest": "npm i @indra.ai/deva@latest @indra.ai/deva.indu@latest @indra.ai/deva.indra@latest @indra.ai/deva.soma@latest --save"
   },
   "repository": {
     "type": "git",
@@ -60,7 +60,7 @@
   },
   "homepage": "https://indra.ai",
   "dependencies": {
-    "@indra.ai/deva": "^1.29.5",
+    "@indra.ai/deva": "^1.29.6",
     "@indra.ai/deva.indra": "^0.9.3",
     "@indra.ai/deva.indu": "^0.7.3",
     "@indra.ai/deva.soma": "^0.7.3",
