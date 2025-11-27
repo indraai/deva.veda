@@ -63,18 +63,6 @@ const VEDA = new Deva({
     // return this.start if license_check passes otherwise stop.
     return license_check ? this.start(data, resolve) : this.stop(data, resolve);
   }, 
-  async onDone(data, resolve) {
-    // load the devas
-    for (let deva in this.devas) {
-      await this.load(deva, data.client);
-      // after the deva loads talk the event to set asset directory.
-      const id = this.devas[deva].uid();
-      const {dir} = this.devas[deva].info();
-      const {key} = this.devas[deva].agent();
-      this.talk(`deva:dir`, {id, key,dir});
-    }  
-    return this.ready(data, resolve);    
-  },
   onReady(data, resolve) {
     const {VLA} = this.info();
     this.prompt(`${this.vars.messages.ready} > VLA:${VLA.uid}`);
