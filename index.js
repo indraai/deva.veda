@@ -50,9 +50,9 @@ const VEDA = new Deva({
   listeners: {},
   modules: {},
   devas: {
-    indu,
-    indra,
-    soma,
+    // indu,
+    // indra,
+    // soma,
   },
   func,
   methods,
@@ -66,7 +66,6 @@ const VEDA = new Deva({
   onReady(data, resolve) {
     const {VLA} = this.info();
     this.prompt(`${this.vars.messages.ready} > VLA:${VLA.uid}`);
-    return resolve(data);
   },
   onError(err, data, reject) {
     this.prompt(this._messages.error);
