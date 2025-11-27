@@ -50,9 +50,9 @@ const VEDA = new Deva({
   listeners: {},
   modules: {},
   devas: {
-    indu,
-    indra,
-    soma,
+    // indu,
+    // indra,
+    // soma,
   },
   func,
   methods,
@@ -63,7 +63,7 @@ const VEDA = new Deva({
     // return this.start if license_check passes otherwise stop.
     return license_check ? this.start(data, resolve) : this.stop(data, resolve);
   }, 
-  async onReady(data, resolve) {
+  onReady(data, resolve) {
     const {VLA} = this.info();
     this.prompt(`${this.vars.messages.ready} > VLA:${VLA.uid}`);
     return resolve(data);
