@@ -51,8 +51,8 @@ const VEDA = new Deva({
   modules: {},
   devas: {
     indu,
-    // indra,
-    // soma,
+    indra,
+    soma,
   },
   func,
   methods,
