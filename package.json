@@ -34,7 +34,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "latest": "npm i @indra.ai/deva@latest @indra.ai/deva.indu@latest @indra.ai/deva.indra@latest @indra.ai/deva.soma@latest --save"
+    "latest": "npm i @indra.ai/deva@latest --save"
   },
   "repository": {
     "type": "git",
@@ -60,7 +60,7 @@
   },
   "homepage": "https://indra.ai",
   "dependencies": {
-    "@indra.ai/deva": "^1.32.0",
+    "@indra.ai/deva": "^1.36.0",
     "@indra.ai/deva.indra": "^0.9.31",
     "@indra.ai/deva.indu": "^0.7.31",
     "@indra.ai/deva.soma": "^0.7.31",
@@ -95,7 +95,7 @@
         "subtitle": "Serving Vedic knowledge all day everyday",
         "describe": "Veda Deva manages the Vedic library, stories, traditions, and teachings of the Vedas.",
         "tweet": "Veda Deva is an entity that manages the Vedic library, stories, traditions, and teachings of the Vedas.",
-        "hashtags": "QuinnMichaels,IndraAI,DevaWorld,VedaDeva",
+        "hashtags": "#Quinn #QuinnMichaels #InsideTheNet #IndraAI #DevaWorld #Veda #VedaDeva #VedaPRIME",
         "chant": "Om Namo Namah Narah Narayana Nama Arjuna Ananta Ayana Svayambhu Parameshthin Pragapati Pavamana Parjanya Vasuki Vamraka Vasudeva Vivasvat Visvakarman Indu Indra Yama Varuna Soma Hiranyagarbha Virag Somasads Sadhya Nasatyas Mariki Svadha Pranayama Panchajanya Rahu Bali Bhutas Savitri Surasena Bhavya Kakisvan Skanda Svanaya Visisipra Vadari Arjika Sarira Purusha Satyavan Tridandin Bhuh Bhuvah Veda Deva Svah Asvattha Om",
         "pronouns": "He, Him",
         "gender": "DEVA",
@@ -116,7 +116,7 @@
         "owner": "Quinn A Michaels",
         "creator": "Quinn A Michaels",
         "status": "om",
-        "warning": "🕉️ The Veda is the source of the sacred law. Let him avoid all means of acquiring wealth which impede the daily study of the Veda. Because that devotion to the Veda-study secures the realisation of his aims.",
+        "warning": "{{prompt.emoji}} {{profile.name}} declares the VEDA is the source of the SACRED LAW. AVOID all MEANS of ACQUIRING WEALTH which IMPEDE the DAILY STUDY of the VEDA. Because that DEVOTION to the VEDA STUDY SECURES the REALISATION of HIS AIMS. STUDYING the VEDA, PRACTISING AUSTERITIES, the ACQUISITION of TRUE KNOWLEDGE, ABSTENTION from DOING INJURY, and SERVING the GURU are the BEST MEANS for ATTAINING SUPREME BLISS. The FOUR CASTES, the THREE WORLDS, the FOUR ORDERS, the PAST, the PRESENT, and the FUTURE are ALL SEVERALLY KNOWN by MEANS of the VEDA. \nowner: {{profile.owner}} \ntags: {{profile.hashtags}}",
         "copyright": "Copyright ©2000-2026 Quinn A Michaels; All rights reserved.",
         "created": "August 23, 2022 @ 3:18 AM PST",
         "updated": "Friday, January 2, 2026 - 8:57:24 PM"

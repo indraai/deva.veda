@@ -50,9 +50,9 @@ const VedaDeva = new Deva({
   listeners: {},
   modules: {},
   devas: {
-    indu,
-    indra,
-    soma,
+    // indu,
+    // indra,
+    // soma,
   },
   func,
   methods,
