@@ -117,7 +117,7 @@ export const methods = {
 				
 				this.talk(`chat:topic`, {
 					id: this.uid(),
-					data: `Current topic is Rig Veda hymn ${text}`,
+					data: `Rig Veda hymn ${text}`,
 					created: Date.now(),
 				});
 				

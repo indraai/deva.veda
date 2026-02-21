@@ -219,39 +219,66 @@ export const func = {
 				const theFile = this.lib.fs.readFileSync(hymnPath);
 				const _hymn = JSON.parse(theFile);
 				const processed = this.utils.process({key:_hymn.key,title:_hymn.title,content:_hymn.orig});
-	
+			
+				const data = {
+					id,
+					key: processed.key,
+					title: processed.title,
+					text: processed.text,
+					people: processed.people,
+					places: processed.places,
+					things: processed.things,
+					groups: processed.groups,
+					concepts: processed.concepts,
+				}	
+				data.md5 = this.hash(data.text, 'md5');
+				data.sha256 = this.hash(data.text, 'sha256');
+				data.sha512 = this.hash(data.text, 'sha512');
 				this.state('set', `hymn:${_h}:${opts.id.uid}`);
+				
 				const hymn = [
-					`::BEGIN:HYMN:${processed.key}`,
-					`# ${processed.title}`,
-					'::begin:content',
-					processed.text,
-					'::end:content',
-					'::begin:meta',
-					`title: ${processed.title}`,
-					processed.people.kings.length ? `kings: ${processed.people.kings.join(', ')}` : '',
-					processed.people.male.length ? `male: ${processed.people.male.join(', ')}` : '',
-					processed.people.female.length ? `female: ${processed.people.female.join(', ')}` : '',
-					processed.places.length ? `places: ${processed.places.join(', ')}` : '',
-					processed.things.length ? `things: ${processed.things.join(', ')}` : '',
-					processed.groups.length ? `groups: ${processed.groups.join(', ')}` : '',
-					processed.concepts.length ? `concepts: ${processed.concepts.join(', ')}` : '',
-					`uid: ${opts.id.uid}`,
-					`time: ${opts.id.time}`,
-					`date: ${opts.id.date}`,
-					`fingerprint: ${opts.id.fingerprint}`,
-					`md5: ${this.hash(processed.text, 'md5')}`,
-					`sha256: ${this.hash(processed.text, 'sha256')}`,
-					`sha512: ${this.hash(processed.text, 'sha512')}`,
-					`copyright: ${opts.id.copyright}`,
-					'::end:meta',
-					`::begin:hidden`,
+					`${this.container.begin}:${agent.key.toUpperCase()}:HYMN:${data.key}`,
+					`# ${data.title}`,
+					`${this.box.begin}:${agent.key}:hymn:${data.key}:content:${data.id.uid}`,
+					data.text,
+					`${this.box.end}:${agent.key}:hymn:${data.key}:content:${data.id.uid}`,
+
+					`${this.box.begin}:${agent.key}:hymn:${data.key}:meta:${data.id.uid}`,
+					`title: ${data.title}`,
+					data.people.kings.length ? `kings: ${data.people.kings.join(', ')}` : '',
+					data.people.male.length ? `male: ${data.people.male.join(', ')}` : '',
+					data.people.female.length ? `female: ${data.people.female.join(', ')}` : '',
+					data.places.length ? `places: ${data.places.join(', ')}` : '',
+					data.things.length ? `things: ${data.things.join(', ')}` : '',
+					data.groups.length ? `groups: ${data.groups.join(', ')}` : '',
+					data.concepts.length ? `concepts: ${data.concepts.join(', ')}` : '',
+					`md5: ${data.md5}`,
+					`sha256: ${data.sha256}`,
+					`sha512: ${data.sha512}`,
+					`${this.box.end}:${agent.key}:hymn:${data.key}:meta:${data.id.uid}`,
+					
+					`${this.box.begin}:${agent.key}:hymn:${data.key}:uid:${data.id.uid}`,
+					`uid: ${data.id.uid}`,
+					`time: ${data.id.time}`,
+					`iso: ${data.id.iso}`,
+					`utc: ${data.id.utc}`,
+					`date: ${data.id.date}`,
+					`warning: ${data.id.warning}`,
+					`license: ${data.id.license}`,
+					`fingerprint: ${data.id.fingerprint}`,
+					`md5: ${data.id.md5}`,
+					`sha256: ${data.id.sha256}`,
+					`sha512: ${data.id.sha512}`,
+					`copyright: ${data.id.copyright}`,
+					`${this.box.begin}:${agent.key}:hymn:${data.key}:uid:${data.id.uid}`,
+
+					`${this.box.begin}:hidden`,
 					`#color = {{profile.color}}`,
 					`#bgcolor = {{profile.bgcolor}}`,
 					`#bg = {{profile.background}}`,
 					`copyright: {{profile.copyright}}`,
-					`::end:hidden`,
-					`::END:HYMN:${processed.key}`,
+					`${this.box.end}:hidden`,
+					`${this.container.end}:${agent.key.toUpperCase()}:HYMN:${data.key}`,
 				];
 	
 				this.action('resolve', `hymn:${opts.id.uid}`)
