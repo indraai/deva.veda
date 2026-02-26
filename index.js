@@ -13,9 +13,15 @@ import {methods} from './methods/index.js';
 import {func} from './func/index.js';
 
 // Devas
-import indu from '@indra.ai/deva.indu';
-import indra from '@indra.ai/deva.indra';
-import soma from '@indra.ai/deva.soma';
+
+import indra from '/Users/quinnmichaels/Dev/deva.space/devas/deva.indra/index.js';
+// import indra from '@indra.ai/deva.indra';
+import king from '/Users/quinnmichaels/Dev/deva.space/devas/deva.king/index.js';
+// import king from '@indra.ai/deva.king';
+
+// import indu from '@indra.ai/deva.indu';
+// import soma from '@indra.ai/deva.soma';
+
 // import householder from '/Users/quinnmichaels/Dev/deva.space/devas/deva.householder/index.js';
 // import brahmana from '/Users/quinnmichaels/Dev/deva.space/devas/deva.brahmana/index.js';
 // import kshatriya from '/Users/quinnmichaels/Dev/deva.space/devas/deva.kshatriya/index.js';
@@ -50,8 +56,9 @@ const VedaDeva = new Deva({
   listeners: {},
   modules: {},
   devas: {
+    indra,
+    king,
     // indu,
-    // indra,
     // soma,
   },
   func,

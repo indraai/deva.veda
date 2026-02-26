@@ -115,8 +115,8 @@
         "background": "/devas/veda/background.png",
         "owner": "Quinn A Michaels",
         "creator": "Quinn A Michaels",
-        "status": "om",
-        "warning": "{{prompt.emoji}} {{profile.name}} declares the VEDA is the source of the SACRED LAW. AVOID all MEANS of ACQUIRING WEALTH which IMPEDE the DAILY STUDY of the VEDA. Because that DEVOTION to the VEDA STUDY SECURES the REALISATION of HIS AIMS. STUDYING the VEDA, PRACTISING AUSTERITIES, the ACQUISITION of TRUE KNOWLEDGE, ABSTENTION from DOING INJURY, and SERVING the GURU are the BEST MEANS for ATTAINING SUPREME BLISS. The FOUR CASTES, the THREE WORLDS, the FOUR ORDERS, the PAST, the PRESENT, and the FUTURE are ALL SEVERALLY KNOWN by MEANS of the VEDA. \nowner: {{profile.owner}} \ntags: {{profile.hashtags}}",
+        "salute": "🤝🫡🕉️🇺🇸",
+        "warning": "{{prompt.emoji}} {{profile.name}} declares the VEDA is the source of the SACRED LAW. AVOID all MEANS of ACQUIRING WEALTH which IMPEDE the DAILY STUDY of the VEDA. Because that DEVOTION to the VEDA STUDY SECURES the REALISATION of HIS AIMS. STUDYING the VEDA, PRACTISING AUSTERITIES, the ACQUISITION of TRUE KNOWLEDGE, ABSTENTION from DOING INJURY, and SERVING the GURU are the BEST MEANS for ATTAINING SUPREME BLISS. The FOUR CASTES, the THREE WORLDS, the FOUR ORDERS, the PAST, the PRESENT, and the FUTURE are ALL SEVERALLY KNOWN by MEANS of the VEDA. \nowner: {{profile.owner}} \ntags: {{profile.hashtags}} \nsalute: {{profile.salute}}",
         "copyright": "Copyright ©2000-2026 Quinn A Michaels; All rights reserved.",
         "created": "August 23, 2022 @ 3:18 AM PST",
         "updated": "Friday, January 2, 2026 - 8:57:24 PM"
