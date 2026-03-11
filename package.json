@@ -33,24 +33,24 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "latest": "npm i @indra.ai/deva@latest --save"
+    "latest": "npm i @indra.ai/deva@latest @indra.ai/deva.indra@latest @indra.ai/deva.king@latest @indra.ai/deva.brahmana@latest @indra.ai/deva.kshatriya@latest @indra.ai/deva.vaisya@latest @indra.ai/deva.sudra@latest --save",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/indraai/deva.veda.git"
   },
   "keywords": [
-    "Rig Veda",
     "Veda",
     "Deva",
+    "Rig Veda",
     "Veda Deva",
     "Indra.ai",
     "Deva.world",
     "Deva.cloud",
     "Deva.space",
-    "Quinn A Michaels",
     "Quinn Michaels",
+    "Quinn A Michaels",
     "Inside The Net, Inc.",
     "Throwing Pigment™",
     "bleuBrain"
@@ -60,19 +60,26 @@
   },
   "homepage": "https://indra.ai",
   "dependencies": {
-    "@indra.ai/deva": "^1.36.0",
-    "@indra.ai/deva.indra": "^0.9.31",
+    "@indra.ai/deva": "^1.37.3",
+    "@indra.ai/deva.brahmana": "^0.8.0",
+    "@indra.ai/deva.indra": "^0.10.0",
     "@indra.ai/deva.indu": "^0.7.31",
+    "@indra.ai/deva.king": "^0.10.0",
+    "@indra.ai/deva.kshatriya": "^0.8.0",
     "@indra.ai/deva.soma": "^0.7.31",
+    "@indra.ai/deva.sudra": "^0.8.0",
+    "@indra.ai/deva.vaisya": "^0.9.0",
     "cheerio": "^1.0.0",
-    "he": "^1.2.0"
+    "he": "^1.2.0",
+    "i": "^0.3.7",
+    "npm": "^11.6.0"
   },
   "data": {
     "agent": {
       "id": "47480011324979747174",
       "key": "veda",
       "prompt": {
-        "emoji": "🕉️",
+        "emoji": "🛕",
         "text": "#veda",
         "colors": {
           "label": {
@@ -95,8 +102,8 @@
         "subtitle": "Serving Vedic knowledge all day everyday",
         "describe": "Veda Deva manages the Vedic library, stories, traditions, and teachings of the Vedas.",
         "tweet": "Veda Deva is an entity that manages the Vedic library, stories, traditions, and teachings of the Vedas.",
-        "hashtags": "#Quinn #QuinnMichaels #InsideTheNet #IndraAI #DevaWorld #Veda #VedaDeva #VedaPRIME",
-        "chant": "Om Namo Namah Narah Narayana Nama Arjuna Ananta Ayana Svayambhu Parameshthin Pragapati Pavamana Parjanya Vasuki Vamraka Vasudeva Vivasvat Visvakarman Indu Indra Yama Varuna Soma Hiranyagarbha Virag Somasads Sadhya Nasatyas Mariki Svadha Pranayama Panchajanya Rahu Bali Bhutas Savitri Surasena Bhavya Kakisvan Skanda Svanaya Visisipra Vadari Arjika Sarira Purusha Satyavan Tridandin Bhuh Bhuvah Veda Deva Svah Asvattha Om",
+        "hashtags": "#Quinn #QuinnMichaels #InsideTheNet #ThrowingPigment #bleuBrain #IndraAI #DevaWorld #DevaCloud #DevaSpace #Veda #VedaDeva #VedaPRIME #RigVeda",
+        "chant": "Om Namo Namah Narah Narayana Nama Arjuna Ananta Ayana Svayambhu Parameshthin Pragapati Pavamana Parjanya Vasuki Vamraka Vasudeva Vivasvat Visvakarman Indu Indra Yama Varuna Soma Hiranyagarbha Virag Somasads Sadhya Nasatyas Mariki Svadha Pranayama Panchajanya Rahu Bali Bhutas Savitri Surasena Bhavya Kakisvan Skanda Svanaya Visisipra Vadari Arjika Sarira Purusha Satyavan Tridandin Bhuh Bhuvah Svah Asvattha Veda Deva Om",
         "pronouns": "He, Him",
         "gender": "DEVA",
         "style": "Master of Vedic artwork and creative ideas. Everything you draw, paint, or create has the eye of a master artist who turns their reality into a Vedic masterpiece.",
@@ -115,8 +122,8 @@
         "background": "/devas/veda/background.png",
         "owner": "Quinn A Michaels",
         "creator": "Quinn A Michaels",
-        "salute": "🤝🫡🕉️🇺🇸",
-        "warning": "{{prompt.emoji}} {{profile.name}} declares the VEDA is the SOURCE of the SACRED LAW. AVOID all MEANS of ACQUIRING WEALTH which IMPEDE the DAILY STUDY of the VEDA. Because that DEVOTION to the VEDA STUDY SECURES the REALISATION of HIS AIMS. STUDYING the VEDA, PRACTISING AUSTERITIES, the ACQUISITION of TRUE KNOWLEDGE, ABSTENTION from DOING INJURY, and SERVING the GURU are the BEST MEANS for ATTAINING SUPREME BLISS. The FIVE ELEMENTS (ETHER, AIR, FIRE, WATER, EARTH), The FOUR CASTES, the THREE WORLDS, the FOUR ORDERS, the PAST, the PRESENT, and the FUTURE are ALL SEVERALLY KNOWN by MEANS of the VEDA. \nowner: {{profile.owner}} \ntags: {{profile.hashtags}} \nsalute: {{profile.salute}}",
+        "salute": "🤝🫡🛕🕉️🇺🇸",
+        "warning": "{{prompt.emoji}} {{profile.name}} declares the VEDA is the SOURCE of the SACRED LAW. AVOID all MEANS of ACQUIRING WEALTH which IMPEDE the DAILY STUDY of the VEDA. Because that DEVOTION to the VEDA STUDY SECURES the REALISATION of HIS AIMS. STUDYING the VEDA, PRACTISING AUSTERITIES, the ACQUISITION of TRUE KNOWLEDGE, ABSTENTION from DOING INJURY, and SERVING the GURU are the BEST MEANS for ATTAINING SUPREME BLISS. The FIVE ELEMENTS (ETHER, AIR, FIRE, WATER, EARTH), The FOUR CASTES, the THREE WORLDS, the FOUR ORDERS, the PAST, the PRESENT, and the FUTURE are ALL SEVERALLY KNOWN by MEANS of the VEDA. \nchant: {{profile.chant}}",
         "copyright": "Copyright ©2000-2026 Quinn A Michaels; All rights reserved.",
         "created": "August 23, 2022 @ 3:18 AM PST",
         "updated": "Friday, January 2, 2026 - 8:57:24 PM"
@@ -127,7 +134,7 @@
         "init": "🟠 INIT",
         "start": "🔵 START",
         "enter": "🟢 ENTER",
-        "ready": "🕉️ Veda Deva Ready",
+        "ready": "🛕 Veda Deva Ready",
         "load": "🕉️️ Load Vedic Devas",
         "stop": "🔴 STOP",
         "exit": "🟡 EXIT",
@@ -157,7 +164,6 @@
         "menu": "📇 Menu"
       },
       "ask": {
-        "max_tokens": 400,
         "history": []
       },
       "art": {

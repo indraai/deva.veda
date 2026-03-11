@@ -14,19 +14,27 @@ import {func} from './func/index.js';
 
 // Devas
 
-import indra from '/Users/quinnmichaels/Dev/deva.space/devas/deva.indra/index.js';
-// import indra from '@indra.ai/deva.indra';
-import king from '/Users/quinnmichaels/Dev/deva.space/devas/deva.king/index.js';
-// import king from '@indra.ai/deva.king';
+import indra from '@indra.ai/deva.indra';
+// import indra from '/Users/quinnmichaels/Dev/deva.space/devas/deva.indra/index.js';
+
+import king from '@indra.ai/deva.king';
+// import king from '/Users/quinnmichaels/Dev/deva.space/devas/deva.king/index.js';
+
+import brahmana from '@indra.ai/deva.brahmana';
+// import brahmana from '/Users/quinnmichaels/Dev/deva.space/devas/deva.brahmana/index.js';
+
+import kshatriya from '@indra.ai/deva.kshatriya';
+// import kshatriya from '/Users/quinnmichaels/Dev/deva.space/devas/deva.kshatriya/index.js';
+
+import vaisya from '@indra.ai/deva.vaisya';
+// import vaisya from '/Users/quinnmichaels/Dev/deva.space/devas/deva.vaisya/index.js';
+
+import sudra from '@indra.ai/deva.sudra';
+// import sudra from '/Users/quinnmichaels/Dev/deva.space/devas/deva.sudra/index.js';
 
 // import indu from '@indra.ai/deva.indu';
 // import soma from '@indra.ai/deva.soma';
 
-// import householder from '/Users/quinnmichaels/Dev/deva.space/devas/deva.householder/index.js';
-// import brahmana from '/Users/quinnmichaels/Dev/deva.space/devas/deva.brahmana/index.js';
-// import kshatriya from '/Users/quinnmichaels/Dev/deva.space/devas/deva.kshatriya/index.js';
-// import vaisya from '/Users/quinnmichaels/Dev/deva.space/devas/deva.vaisya/index.js';
-// import sudra from '/Users/quinnmichaels/Dev/deva.space/devas/deva.sudra/index.js';
 
 // set the __dirname
 import {dirname} from 'node:path';
@@ -58,6 +66,10 @@ const VedaDeva = new Deva({
   devas: {
     indra,
     king,
+    brahmana,
+    kshatriya,
+    vaisya,
+    sudra,
     // indu,
     // soma,
   },
