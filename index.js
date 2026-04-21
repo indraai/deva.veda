@@ -13,7 +13,6 @@ import {methods} from './methods/index.js';
 import {func} from './func/index.js';
 
 // Devas
-
 import indra from '@indra.ai/deva.indra';
 // import indra from '/Users/quinnmichaels/Dev/deva.space/devas/deva.indra/index.js';
 
@@ -32,9 +31,11 @@ import vaisya from '@indra.ai/deva.vaisya';
 import sudra from '@indra.ai/deva.sudra';
 // import sudra from '/Users/quinnmichaels/Dev/deva.space/devas/deva.sudra/index.js';
 
+// import merit from '@indra.ai/deva.merit';
+import merit from '/Users/quinnmichaels/Dev/deva.space/devas/deva.merit/index.js';
+
 // import indu from '@indra.ai/deva.indu';
 // import soma from '@indra.ai/deva.soma';
-
 
 // set the __dirname
 import {dirname} from 'node:path';
@@ -70,6 +71,7 @@ const VedaDeva = new Deva({
     kshatriya,
     vaisya,
     sudra,
+    merit,
     // indu,
     // soma,
   },
