@@ -13,8 +13,8 @@ import {methods} from './methods/index.js';
 import {func} from './func/index.js';
 
 // Devas
-import indra from '@indra.ai/deva.indra';
-// import indra from '/Users/quinnmichaels/Dev/deva.space/devas/deva.indra/index.js';
+// import indra from '@indra.ai/deva.indra';
+import indra from '/Users/quinnmichaels/Dev/deva.space/devas/deva.indra/index.js';
 
 import king from '@indra.ai/deva.king';
 // import king from '/Users/quinnmichaels/Dev/deva.space/devas/deva.king/index.js';
