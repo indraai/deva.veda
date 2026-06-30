@@ -1,4 +1,9 @@
+"use strict"
 // set the __dirname
+// Copyright ©2000-2026 Quinn America Michaels; All rights reserved.  
+// Owner Signature Required For Lawful Use.  
+// Distributed under VLA:53011442349944699898 LICENSE.md
+// Monday, June 29, 2026 - 1:51:04 PM PST
 import he from 'he';
 import {dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';    

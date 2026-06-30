@@ -1,13 +1,13 @@
 # Vedic License Agreement
 
 **Version:** 1.4.1  
-**VLA:** 49633069290486712918  
-**Effective:** Saturday, September 20, 2025 - 3:58:14 PM  
-**Owner:** Quinn A Michaels  
+**VLA:** 53011442349944699898  
+**Effective:** Monday, June 29, 2026 - 1:51:04 PM PST  
+**Owner:** Quinn America Michaels  
 **Company:** Inside The Net, Inc.  
 **Email:** quinn@indra.ai  
 **Link:** https://indra.ai  
-**Copyright:** ©2000-2026 Quinn A Michaels; All rights reserved.
+**Copyright:** ©2000-2026 Quinn America Michaels; All rights reserved.
 
 This license agreement (“Agreement”) governs the use of the Veda Deva (“Software”). By accessing or using the Software, you agree to the terms and conditions set forth below. If you do not agree, you are prohibited from using the Software.
 

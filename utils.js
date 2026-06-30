@@ -1,11 +1,9 @@
 "use strict";
-// Veda Deva
-// Copyright ©2000-2026 Quinn A Michaels; All rights reserved. 
-// Legal Signature Required For Lawful Use.
-// Distributed under VLA:69964398174083334215 LICENSE.md
-// Saturday, November 22, 2025 - 12:55:26 PM
-
-// Veda Deva Utilities 
+// Veda Deva Utilities
+// Copyright ©2000-2026 Quinn America Michaels; All rights reserved.  
+// Owner Signature Required For Lawful Use.  
+// Distributed under VLA:53011442349944699898 LICENSE.md
+// Monday, June 29, 2026 - 1:51:04 PM PST
 
 import fs from 'fs'; // include for file system manipulation.
 import path from 'path'; // include for path joining
