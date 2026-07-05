@@ -1,7 +1,10 @@
-// Copyright ©2000-2026 Quinn A Michaels; All rights reserved. 
-// Legal Signature Required For Lawful Use.
-// Distributed under VLA:38487228791588230186 LICENSE.md
+// Vedic Laws Basic
+// Copyright ©2000-2026 Quinn Arjuna Michaels; All rights reserved.  
+// Owner Signature Required For Lawful Use.  
+// Distributed under VLA:48481591723653311984 LICENSE.md
+// Sunday, July 5, 2026 - 2:36:10 PM PST
 
+::BEGIN:MAIN
 # Basic Laws
 
 button[Back]: #veda help laws/main
@@ -88,4 +91,5 @@ law[67a862c697726aad2400dbc9]: Neither a father, nor a teacher, nor a friend, no
 #bgcolor = {{profile.bgcolor}}
 #bg = {{profile.background}}
 ::end:hidden
-copyright: (c)2025 Quinn Michaels
+copyright: {{profile.copyright}}
+::END:MAIN

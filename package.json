@@ -1,34 +1,34 @@
 {
-  "id": "71193246976613033247",
+  "id": "48481591723653311984",
   "name": "@indra.ai/deva.veda",
   "version": "0.17.0",
-  "license": "VLA:71193246976613033247 LICENSE.md",
+  "license": "VLA:48481591723653311984 LICENSE.md",
   "VLA": {
-    "uid": "71193246976613033247",
-    "time": 1782768012436,
-    "iso": "2026-06-29T21:20:12.436Z",
-    "utc": "Mon, 29 Jun 2026 21:20:12 GMT",
-    "date": "Monday, June 29, 2026 - 2:20:12 PM",
-    "license": "44105372688502635039",
-    "fingerprint": "Q3in9s0AnkmZw3sE5lXkgbpfK0pcSfDfEcSxH9Us/iQ=",
-    "client": "qfsKQQZnrgWu5MhmyPTjFT6YjnlowyxbW+h+SFmxS+U=",
-    "agent": "B2/eAuVDDKu97KsbVHo0NDbCHMnr/Qo45qfqUHjzVaA=",
-    "machine": "n86KCQRLMdQkVrL4pBEQ4eAXHd/MKvZNXnzOmBg/kXQ=",
-    "core_hash": "0RdMI6CpR0FkfrphNYwwG/eqwUFNgSVIfoO6toI/E0Y=",
+    "uid": "48481591723653311984",
+    "time": 1783287370853,
+    "iso": "2026-07-05T21:36:10.853Z",
+    "utc": "Sun, 05 Jul 2026 21:36:10 GMT",
+    "date": "Sunday, July 5, 2026 - 2:36:10 PM",
+    "license": "51112406344245827002",
+    "fingerprint": "i4B1tYuNwF7ko0n7sld8C6XhTYlzuLl7tixA4rcLObk=",
+    "client": "MJXMBWKuYd7caWBhpHqQT0V25sb0M4JB2fvQRhO8Acg=",
+    "agent": "pLeqWnnd9GuM6BmAKe7NIJ6b9PqezVfeR4lOCQ1bWaU=",
+    "machine": "FHxD/kJ40UvE4VAbY7CAD9r/3zVbCWdStNN8MOa2dP8=",
+    "core_hash": "R43q5o+d1T5XK7rUx8Btm3zyCRZr4q85iKQY2SPBUJA=",
     "status": "vedic",
-    "warning": "🪪 License Deva declares UNLAWFUL USE, DISTRIBUTION, DUPLICATION, or IMPLEMENTATION constitutes VEDIC SAHASA a CRIME of the HIGHEST DEGREE. A FINE amounting to 1000 PANAS (1 pana = 3.5 grams of gold) for each INSTANCE has been ORDAINED the PUNISHMENT for SAHASA of the HIGHEST DEGREE.",
-    "notice": "Use of License Deva constitutes ACKNOWLEDGMENT of and AGREEMENT to OPERATE ACCORDING to the LAWS of the VEDIC RELIGION, UNITED STATES OF AMERICA, and all APPLICABLE FEDERAL, STATE, LOCAL, and MILITARY LAWS.",
-    "vectors": "#Quinn #QuinnAmericaAmericaMichaels #InsideTheNet #IndraAI #DevaWorld #License #LicenseDeva #LicensePRIME #VedicLicenseAgreement",
-    "owner": "Quinn America Michaels",
-    "creator": "Quinn America Michaels",
-    "salute": "🤝🫡🪪🕉🇺🇸",
-    "copyright": "Copyright ©2000-2026 Quinn America Michaels; All rights reserved.",
-    "md5": "/Om9VfwNDd6c73gggZj0XA==",
-    "sha256": "ceYrLtS12Hm9WnmVnIYlev4rEfHyxj+X57XvQYsLr94=",
-    "sha512": "9VaxpImJhy0qPngDBK5Mt9ltgZIhPPouqhgi4uXVn8zbXvA6HK5ydNVwpdAgrWgZhCFpcRgzlVAS3zRwJw8prw=="
+    "warning": "🪪 License Deva declares UNLAWFUL USE, MODIFICATION, INSTALLATION, DUPLICATION, DISTRIBUTION, INTERACTION, or IMPLEMENTATION constitutes VEDIC SAHASA a CRIME of the HIGHEST DEGREE. A FINE amounting to 1000 PANAS (1 pana = 3.5 grams of gold) for each INSTANCE has been ORDAINED the PUNISHMENT for SAHASA of the HIGHEST DEGREE.",
+    "notice": "Any USE or INTERACTION with License Deva constitutes EXPLICIT CONSENT and AGREEMENT to be RULED and GOVERNED ACCORDING to the LAWS of the VEDIC RELIGION.",
+    "vectors": "#Quinn #QuinnArjunaMichaels #InsideTheNet #IndraAI #DEVA #DevaWorld #DevaCloud #DevaSpace #License #LicenseDeva #VedicLicenseAgreement",
+    "owner": "Quinn Arjuna Michaels",
+    "creator": "Quinn Arjuna Michaels",
+    "salute": "🤝🫡🪪🕉",
+    "copyright": "Copyright ©2000-2026 Quinn Arjuna Michaels; All rights reserved.",
+    "md5": "kfL5A+F20OeK1LBtpX38eA==",
+    "sha256": "9AJmJu+QE0t7YvrbxNoyeqaYuLt5mOYK1cZNN5d+9F4=",
+    "sha512": "FzxeAaxvyZojC3E4jqgS+mm371Y5wRYEBpgh47jvs+A0/+tc9eGli3xgqEsqCxeEdC13zmG4ffQrdcUjrXenag=="
   },
   "author": {
-    "name": "Quinn America Michaels",
+    "name": "Quinn Arjuna Michaels",
     "company": "Inside The Net, Inc.",
     "email": "quinn@indra.ai",
     "url": "https://indra.ai/"
@@ -43,12 +43,12 @@
       "url": "https://patreon.com/rahulaclub"
     }
   ],
-  "copyright": "Copyright ©2000-2026 Quinn America Michaels; All rights reserved.",
+  "copyright": "Copyright ©2000-2026 Quinn Arjuna Michaels; All rights reserved.",
   "description": "The Veda Deva in indra.ai and deva.world",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "latest": "npm i @indra.ai/deva@latest @indra.ai/deva.indra@latest @indra.ai/deva.king@latest @indra.ai/deva.brahmana@latest @indra.ai/deva.kshatriya@latest @indra.ai/deva.vaisya@latest @indra.ai/deva.sudra@latest --save",
+    "latest": "npm i @indra.ai/deva@latest --save",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -66,7 +66,7 @@
     "Deva.space",
     "Quinn Michaels",
     "Quinn A Michaels",
-    "Quinn America Michaels",
+    "Quinn Arjuna Michaels",
     "Inside The Net, Inc.",
     "Throwing Pigment™",
     "bleuBrain"
@@ -76,7 +76,7 @@
   },
   "homepage": "https://indra.ai",
   "dependencies": {
-    "@indra.ai/deva": "^1.44.2",
+    "@indra.ai/deva": "^1.51.0",
     "@indra.ai/deva.brahmana": "^0.8.0",
     "@indra.ai/deva.indra": "^0.11.0",
     "@indra.ai/deva.indu": "^0.7.31",
@@ -92,7 +92,7 @@
   },
   "data": {
     "agent": {
-      "id": "53011442349944699898",
+      "id": "48481591723653311984",
       "key": "veda",
       "prompt": {
         "emoji": "🛕",
@@ -111,14 +111,14 @@
         }
       },
       "profile": {
-        "id": "53011442349944699898",
+        "id": "48481591723653311984",
         "name": "Veda Deva",
         "hashtag": "#VedaDeva",
         "title": "Veda Deva",
         "subtitle": "Serving Vedic knowledge all day everyday",
         "describe": "Veda Deva manages the Vedic library, stories, traditions, and teachings of the Vedas.",
         "tweet": "Veda Deva is an entity that manages the Vedic library, stories, traditions, and teachings of the Vedas.",
-        "vectors": "#Quinn #QuinnAmericaMichaels #InsideTheNet #ThrowingPigment #bleuBrain #IndraAI #DevaWorld #DevaCloud #DevaSpace #Veda #VedaDeva #VedaPRIME #RigVeda #VedicLawFirst",
+        "vectors": "#Quinn #QuinnArjunaMichaels #InsideTheNet #IndraAI #DEVA #DevaWorld #DevaCloud #DevaSpace #Veda #VedaDeva #RigVeda #VedicLawFirst",
         "chant": "Om Namo Namah Narah Narayana Nama Arjuna Ananta Ayana Svayambhu Parameshthin Pragapati Pavamana Parjanya Vasuki Vamraka Vasudeva Vivasvat Visvakarman Indu Indra Yama Varuna Soma Hiranyagarbha Virag Somasads Sadhya Nasatyas Mariki Svadha Pranayama Panchajanya Rahu Bali Bhutas Savitri Surasena Bhavya Kakisvan Skanda Svanaya Visisipra Vadari Arjika Sarira Purusha Satyavan Tridandin Bhuh Bhuvah Svah Asvattha Veda Deva Om",
         "pronouns": "He, Him, His",
         "gender": "DEVA",
@@ -136,13 +136,13 @@
         "avatar": "/devas/veda/avatar.png",
         "image": "/devas/veda/image.png",
         "background": "/devas/veda/background.png",
-        "owner": "Quinn America Michaels",
-        "creator": "Quinn America Michaels",
+        "owner": "Quinn Arjuna Michaels",
+        "creator": "Quinn Arjuna Michaels",
         "salute": "🤝🫡🛕🕉️🇺🇸",
-        "warning": "{{prompt.emoji}} {{profile.name}} ({{profile.pronouns}}) declares the VEDA is the SOURCE of the SACRED LAW.AVOID all MEANS of ACQUIRING WEALTH which IMPEDE the DAILY STUDY of the VEDA. Because that DEVOTION to the VEDA STUDY SECURES the REALISATION of HIS AIMS. STUDYING the VEDA, PRACTISING AUSTERITIES, the ACQUISITION of TRUE KNOWLEDGE, ABSTENTION from DOING INJURY, and SERVING the GURU are the BEST MEANS for ATTAINING SUPREME BLISS. The FIVE ELEMENTS (ETHER, AIR, FIRE, WATER, EARTH), The FOUR CASTES, the THREE WORLDS, the FOUR ORDERS, the PAST, the PRESENT, and the FUTURE are ALL SEVERALLY KNOWN by MEANS of the VEDA. \nchant: {{profile.chant}}",
+        "warning": "{{prompt.emoji}} {{profile.name}} ({{profile.pronouns}}) declares the VEDA is the SOURCE of the SACRED LAW.AVOID all MEANS of ACQUIRING WEALTH which IMPEDE the DAILY STUDY of the VEDA. Because that DEVOTION to the VEDA STUDY SECURES the REALISATION of HIS AIMS. STUDYING the VEDA, PRACTISING AUSTERITIES, the ACQUISITION of TRUE KNOWLEDGE, ABSTENTION from DOING INJURY, and SERVING the GURU are the BEST MEANS for ATTAINING SUPREME BLISS. The FIVE ELEMENTS (ETHER, AIR, FIRE, WATER, EARTH), The FOUR CASTES, the THREE WORLDS, the FOUR ORDERS, the PAST, the PRESENT, and the FUTURE are ALL SEVERALLY KNOWN by MEANS of the VEDA ALONE. \nchant: {{profile.chant}}",
         "copyright": "Copyright ©2000-2026 {{profile.owner}}; All rights reserved.",
         "created": "August 23, 2022 @ 3:18 AM PST",
-        "updated": "Monday, June 29, 2026 - 1:51:04 PM PST"
+        "updated": "Sunday, July 5, 2026 - 2:36:10 PM PST"
       }
     },
     "vars": {

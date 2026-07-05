@@ -1,9 +1,10 @@
 // Vedic Laws Manu 03
-// Copyright ©2000-2026 Quinn America Michaels; All rights reserved.  
+// Copyright ©2000-2026 Quinn Arjuna Michaels; All rights reserved.  
 // Owner Signature Required For Lawful Use.  
-// Distributed under VLA:53011442349944699898 LICENSE.md
-// Monday, June 29, 2026 - 1:51:04 PM PST
+// Distributed under VLA:48481591723653311984 LICENSE.md
+// Sunday, July 5, 2026 - 2:36:10 PM PST
 
+::BEGIN:MAIN
 # Manu Laws 03
 
 chant: Om Svayambhu Narah Nara Narayana Pragapati Parameshthin Vivasvat Visvakarman Bali Bhutas Indu Pavamana Indra Yama Varuna Soma Hiranyagarbha Virag Somasads Sadhya Mariki Svadha Rahu Surasena Om
@@ -118,4 +119,5 @@ law: The burnt-oblation, offered at a sacrifice to the manes, must not be made i
 #bgcolor = {{profile.bgcolor}}
 #bg = {{profile.background}}
 ::end:hidden
-copyright: (c)2025 Quinn Michaels
+copyright: {{profile.copyright}}
+::END:MAIN
