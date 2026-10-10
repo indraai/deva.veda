@@ -76,7 +76,7 @@
   },
   "homepage": "https://indra.ai",
   "dependencies": {
-    "@indra.ai/deva": "^1.51.0",
+    "@indra.ai/deva": "^1.52.1",
     "@indra.ai/deva.brahmana": "^0.8.0",
     "@indra.ai/deva.indra": "^0.11.0",
     "@indra.ai/deva.indu": "^0.7.31",
